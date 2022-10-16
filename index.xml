@@ -163,6 +163,14 @@ Figure 1: A fancy pie chart.
     </item>
     
     <item>
+      <title>Drones Swarm Recharging: Modeling Using Agent-Based Simulation</title>
+      <link>https://lgrando1.github.io/publication/grando-2020/</link>
+      <pubDate>Wed, 04 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>https://lgrando1.github.io/publication/grando-2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Writing technical content in Markdown</title>
       <link>https://lgrando1.github.io/post/writing-technical-content/</link>
       <pubDate>Fri, 12 Jul 2019 00:00:00 +0000</pubDate>
@@ -266,7 +274,7 @@ data.head()
 
 
 
-&lt;div id=&#34;chart-578692341&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
+&lt;div id=&#34;chart-135694872&#34; class=&#34;chart&#34;&gt;&lt;/div&gt;
 &lt;script&gt;
   (function() {
     let a = setInterval( function() {
@@ -276,7 +284,7 @@ data.head()
       clearInterval( a );
 
       Plotly.d3.json(&#34;./line-chart.json&#34;, function(chart) {
-        Plotly.plot(&#39;chart-578692341&#39;, chart.data, chart.layout, {responsive: true});
+        Plotly.plot(&#39;chart-135694872&#39;, chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
