@@ -2,10 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://lgrando1.github.io/post/2023-planning/</loc>
-    <lastmod>2022-12-18T10:02:10-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://lgrando1.github.io/tag/courses/</loc>
     <lastmod>2022-12-18T10:02:10-03:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -15,6 +11,10 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://lgrando1.github.io/</loc>
+    <lastmod>2022-12-18T10:02:10-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/post/2023-planning/</loc>
     <lastmod>2022-12-18T10:02:10-03:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
