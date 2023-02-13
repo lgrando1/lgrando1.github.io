@@ -24,13 +24,13 @@
      &lt;style type = &#34;text/css&#34;&gt;
         body {
         background-color: lightblue;
-        justify-content: center;
+        justify-content: flex;
         }
         buttons {
         justify-content: center;
         }
         Article {
-        justify-content: center;
+        justify-content: flex;
         }
         h1 {
         color: navy;
@@ -49,10 +49,12 @@
 &lt;/head&gt;
 &lt;body&gt;
     &lt;h1&gt; Goal &lt;/h1&gt;
-    In 2023 February I started a System Analysis and Development Technologist course, and I will use this page to make my tests. &lt;br/&gt;
-    This website use Hugo as framework, Hugo uses markdown files to create HTML. This page I was writing directly in HTML and using inline CSS. &lt;br/&gt;
-    Important: This is a Work in Process webpage. I am in webpages learning process. If you have some tips, please let me know.
-&lt;p&gt;&lt;a href=&#34;https://theuselessweb.com/&#34;&gt; Maybe I will submit this page to this site: &lt;/a&gt;&lt;/p&gt;
+    In 2023 February, I started a System Analysis and Development Technologist course, and I will use this blog post to make my tests. &lt;br/&gt;
+    This website uses Hugo as framework. Hugo uses markdown to create HTML. I am learning HTML and CSS development, and this page is writing directly with this languages &lt;br/&gt;
+    Important: This is a Work in Process webpage. As I am in learning process, maybe will be so amateur. If you have some tips, please let me know. &lt;br/&gt;
+    I am having some problem yet, as Option List and forms. I will investigate what can be happen.
+&lt;p&gt;ps:
+&lt;a href=&#34;https://theuselessweb.com/&#34;&gt; Maybe I will submit this page to this site: &lt;/a&gt;&lt;/p&gt;
 &lt;h3&gt; Two of my so cute birds &lt;h3\&gt;
 &lt;p&gt;&lt;img title=&#34;Minha imagem&#34; src=&#34;leo.jpg&#34; alt=&#34;imagem2&#34;&gt;  &lt;br/&gt;&lt;/p&gt;
 &lt;/article&gt;
