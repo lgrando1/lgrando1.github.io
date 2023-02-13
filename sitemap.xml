@@ -2,15 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://lgrando1.github.io/post/teste/</loc>
+    <lastmod>2023-02-13T12:19:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/</loc>
+    <lastmod>2023-02-13T12:19:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/post/</loc>
+    <lastmod>2023-02-13T12:19:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tag/study/</loc>
+    <lastmod>2023-02-13T12:19:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tags/</loc>
+    <lastmod>2023-02-13T12:19:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tag/tests/</loc>
+    <lastmod>2023-02-13T12:19:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tag/webpages/</loc>
+    <lastmod>2023-02-13T12:19:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tag/wip/</loc>
+    <lastmod>2023-02-13T12:19:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://lgrando1.github.io/tag/courses/</loc>
     <lastmod>2022-12-18T10:02:10-03:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://lgrando1.github.io/tag/learning/</loc>
-    <lastmod>2022-12-18T10:02:10-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://lgrando1.github.io/</loc>
     <lastmod>2022-12-18T10:02:10-03:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -22,15 +50,7 @@
     <lastmod>2022-12-18T10:02:10-03:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://lgrando1.github.io/post/</loc>
-    <lastmod>2022-12-18T10:02:10-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://lgrando1.github.io/tag/self-development/</loc>
-    <lastmod>2022-12-18T10:02:10-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://lgrando1.github.io/tags/</loc>
     <lastmod>2022-12-18T10:02:10-03:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
