@@ -2,23 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://lgrando1.github.io/tag/data/</loc>
+    <lastmod>2023-03-18T12:09:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/</loc>
+    <lastmod>2023-03-18T12:09:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/post/</loc>
+    <lastmod>2023-03-18T12:09:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tag/rules/</loc>
+    <lastmod>2023-03-18T12:09:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tag/security/</loc>
+    <lastmod>2023-03-18T12:09:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tags/</loc>
+    <lastmod>2023-03-18T12:09:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tag/wip/</loc>
+    <lastmod>2023-03-18T12:09:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/post/rules/</loc>
+    <lastmod>2023-03-18T12:09:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://lgrando1.github.io/post/teste/</loc>
     <lastmod>2023-02-13T12:19:20-03:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://lgrando1.github.io/</loc>
-    <lastmod>2023-02-13T12:19:20-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://lgrando1.github.io/post/</loc>
-    <lastmod>2023-02-13T12:19:20-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://lgrando1.github.io/tag/study/</loc>
-    <lastmod>2023-02-13T12:19:20-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://lgrando1.github.io/tags/</loc>
     <lastmod>2023-02-13T12:19:20-03:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -27,10 +47,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://lgrando1.github.io/tag/webpages/</loc>
-    <lastmod>2023-02-13T12:19:20-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://lgrando1.github.io/tag/wip/</loc>
     <lastmod>2023-02-13T12:19:20-03:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
