@@ -5,12 +5,205 @@
     <link>https://lgrando1.github.io/post/</link>
       <atom:link href="https://lgrando1.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 19 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 07 Aug 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://lgrando1.github.io/media/icon_hu4fc79c7a5689779429e28d3f510b9e42_81098_512x512_fill_lanczos_center_3.png</url>
       <title>Posts</title>
       <link>https://lgrando1.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Números Complexos - Pt. 1</title>
+      <link>https://lgrando1.github.io/post/complex1/</link>
+      <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://lgrando1.github.io/post/complex1/</guid>
+      <description>&lt;h1 id=&#34;introdução&#34;&gt;Introdução&lt;/h1&gt;
+&lt;p&gt;Nesta série de postagens, trataremos dos numéros complexo.&lt;/p&gt;
+&lt;p&gt;Utilizando Python como línguagem de programação e efetuar os cálculos.&lt;/p&gt;
+&lt;h3 id=&#34;recursos-sugeridos&#34;&gt;Recursos sugeridos:&lt;/h3&gt;
+&lt;h4 id=&#34;manual-das-bibliotecas-que-iremos-utilizar-no-python&#34;&gt;Manual das bibliotecas que iremos utilizar no Python:&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.sympy.org/en/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.sympy.org/en/index.html&lt;/a&gt; (iremos utilizar nos próximos posts)&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://docs.python.org/3/library/cmath.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://docs.python.org/3/library/cmath.html&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;conteúdos-relacionando-números-complexos&#34;&gt;Conteúdos relacionando números complexos:&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://cienciaprogramada.com.br/2022/03/numeros-complexos-python-sympy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://cienciaprogramada.com.br/2022/03/numeros-complexos-python-sympy/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://pt.wikipedia.org/wiki/N%C3%BAmero_complexo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://pt.wikipedia.org/wiki/N%C3%BAmero_complexo&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;como-gerar-o-gráfico-vetôrial&#34;&gt;Como gerar o gráfico vetôrial&lt;/h4&gt;
+&lt;p&gt;&lt;a href=&#34;https://mrcreamio.wordpress.com/2018/10/26/how-to-add-two-vectors-in-2d-in-python-graphically/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://mrcreamio.wordpress.com/2018/10/26/how-to-add-two-vectors-in-2d-in-python-graphically/&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id=&#34;curso-recomendado-sobre-analíses-complexas&#34;&gt;Curso recomendado sobre analíses complexas&lt;/h4&gt;
+&lt;p&gt;Está me ajudando bastante para desenvolver está série:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.coursera.org/learn/complex-analysis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.coursera.org/learn/complex-analysis&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;1-números-complexos&#34;&gt;1. Números complexos&lt;/h1&gt;
+&lt;p&gt;Elemento de um sistema numérico que contém os números reais e um elemento especifico denominado &lt;em&gt;i&lt;/em&gt;, chamado de unidade imaginária, e que satisfaz a equação $i^2 = -1$.&lt;/p&gt;
+&lt;h2 id=&#34;plano-complexo&#34;&gt;Plano Complexo&lt;/h2&gt;
+&lt;p&gt;Os numeros complexos são expressoes da forma $z = x + iy$, onde:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$x$ é chamado com a parte real de $z$ ou $x = Re$ z;&lt;/li&gt;
+&lt;li&gt;$y$ é chamado com a parte imaginária de $z$ ou $y = Im$ z.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;img src=&#34;fig12.png&#34;&gt;
+&lt;p&gt;O conjunto de números complexos é chamado de plano complexo cujo simbolo é $\mathbb{C}$ e pode ser identificada como $\mathbb{R}^2$.&lt;/p&gt;
+&lt;p&gt;Os números reais é um conjunto dos planos complexos onde a parte imaginaria é zero.&lt;/p&gt;
+&lt;p&gt;O Python utiliza a letra $j$ para representar a parte imaginaria de um número complexo. É possivel utilizar a biblioteca &lt;a href=&#34;https://docs.python.org/3/library/cmath.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;cmath&lt;/a&gt; para efetuar operações de números complexos com esta línguagem e a biblioteca &lt;a href=&#34;https://www.sympy.org/en/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sympy&lt;/a&gt; para efetuar cálculos simbólicos.&lt;/p&gt;
+&lt;p&gt;Então a o numero $z = 2+3i$ pode ser descrito no Python como:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Definindo o número:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Imprime o numero&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Imprime o numero
+(2+3j)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Imprime a classe do objeto&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;type&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Imprime a classe do objeto
+&amp;lt;class &#39;complex&#39;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Imprime a parte real de z&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;real&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Imprime a parte real de z
+2.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Imprime a parte complexa de z&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;imag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Imprime a parte complexa de z
+3.0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;2-operações-básicas&#34;&gt;2. Operações Básicas&lt;/h1&gt;
+&lt;h2 id=&#34;21---adição&#34;&gt;2.1 - Adição&lt;/h2&gt;
+&lt;p&gt;Se $z = x + iy$ e $w = u + iv$, podemos representar z + w como:&lt;/p&gt;
+&lt;p&gt;$(x + iy) + (u + iv) = (x+u) + i(y+v)$, onde:&lt;/p&gt;
+&lt;p&gt;Re $(z+w)$ = Re $z$ + Re $w$ e Im $(z+w)$ = Im $z$ + Im $w$&lt;/p&gt;
+&lt;img src=&#34;fig112.png&#34;&gt;
+&lt;h2 id=&#34;22---subtração&#34;&gt;2.2 - Subtração&lt;/h2&gt;
+&lt;p&gt;Se $z = x + iy$ e $w = u + iv$, podemos representar z - w como:&lt;/p&gt;
+&lt;p&gt;$(x + iy) - (u + iv) = (x-u) + i(y-v)$, onde:&lt;/p&gt;
+&lt;p&gt;Re $(z-w)$ = Re $z$ - Re $w$ e Im $(z-w)$ = Im $z$ - Im $w$&lt;/p&gt;
+&lt;p&gt;Em Python para z = 1+4i e w = 4+2i&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;O valor de z+w é, &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;O valor de z-w é, &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;O valor de z+w é, (5+6j)
+O valor de z-w é, (-3+2j)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;o-módulo-de-um-número-complexos&#34;&gt;O módulo de um número complexos&lt;/h3&gt;
+&lt;p&gt;O módulo de um número complexo $z = x + iy$ é o comprimento do vetor $z$:&lt;/p&gt;
+&lt;p&gt;$|z| = \sqrt{x^2 + y^2}$&lt;/p&gt;
+&lt;img src=&#34;fig13.png&#34;&gt;
+&lt;p&gt;Em Python, pode obter este valor pelaa função abs(z), como por exemplo para&lt;/p&gt;
+&lt;p&gt;z = 1+4i
+w = 4+2i&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;O módulo de z é: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;abs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;O módulo de z é: 4.123105625617661
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;sa&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;O módulo de w é: &lt;/span&gt;&lt;span class=&#34;si&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;abs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;w&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;O módulo de w é: 4.47213595499958
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;23---multiplicação-de-números-complexos&#34;&gt;2.3 - Multiplicação de números complexos&lt;/h2&gt;
+&lt;p&gt;$(x+iy) \cdot (u-iv) = (xu-yv)+i(xv+yu) \in \mathbb{C}$&lt;/p&gt;
+&lt;p&gt;propriedades:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;associativas&lt;/em&gt;: $(z_1z_2)z_3 = z_1(z_2z_3)$,&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;comutativas&lt;/em&gt; $z_1z_2 = z_2z_1$&lt;/p&gt;
+&lt;p&gt;e &lt;em&gt;distributivas&lt;/em&gt; $z_1(z_2+z_3) = z_1z_2+ z_1z_3)$.&lt;/p&gt;
+&lt;p&gt;Exemplo&lt;/p&gt;
+&lt;p&gt;a = 2+4j&lt;/p&gt;
+&lt;p&gt;b = -7+5j&lt;/p&gt;
+&lt;p&gt;$(2+4j) \cdot (-7+5j) = (2 \cdot -7 - 5 \cdot 4) + j(2 \cdot 5 + 4 \cdot -7) = -34-18j$&lt;/p&gt;
+&lt;p&gt;No Python:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;7&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;a * b = &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;a * c = &amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Propriedades&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Associativa: (a*b)*c == a*(b*c)&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;a * b =  (-34-18j)
+a * c =  (2+14j)
+Associativa: (a*b)*c == a*(b*c)
+True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Commutativa: a*b == b*a&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Commutativa: a*b == b*a
+True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Distributiva: a*(b+c) == a*b + a*c&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Distributiva: a*(b+c) == a*b + a*c
+True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As Potências de $i$:&lt;/p&gt;
+&lt;p&gt;$i^0 = 1$&lt;/p&gt;
+&lt;p&gt;$i = 0 + 1i$&lt;/p&gt;
+&lt;p&gt;$i^2 = (0 + 1i)(0 + 1i) = (0\cdot0 - 1\cdot1) + i(0\cdot1+1\cdot0) = -1$&lt;/p&gt;
+&lt;p&gt;$i^3 = i^2 \cdot i = -1\cdot i = -i $&lt;/p&gt;
+&lt;p&gt;$i^4 = i^2 \cdot i^2 = -1\cdot -1 = 1 $&lt;/p&gt;
+&lt;p&gt;$i^5 = i^4 \cdot i = i $&lt;/p&gt;
+&lt;p&gt;$i^{100} = (i^4)^{25} = (1)^{25} = 1 $&lt;/p&gt;
+&lt;h3 id=&#34;o-conjugado-complexo&#34;&gt;O Conjugado Complexo&lt;/h3&gt;
+&lt;p&gt;O conjugado complexo de $z = x + iy$ é $\overline{z} = x - iy$&lt;/p&gt;
+&lt;p&gt;Propriedades:&lt;/p&gt;
+&lt;p&gt;$\overline{\overline{z}} = z$&lt;/p&gt;
+&lt;p&gt;$\overline{z+w} = \bar{z}+\bar{w}$&lt;/p&gt;
+&lt;p&gt;$\overline{z} = |\overline{z}|$&lt;/p&gt;
+&lt;p&gt;$z\overline{z} = (x+iy)(x-iy) = x^2+y^2 = |z|²$&lt;/p&gt;
+&lt;p&gt;$\frac{1}{z} = \frac{\overline{z}}{z\overline{z}}= \frac{\bar{z}}{|z|²}$&lt;/p&gt;
+&lt;p&gt;Para encontrar os valores Reais e imaginários de z, podemos fazer $z = \overline{z}$ ou $z = -\overline{z}$, resultando em:&lt;/p&gt;
+&lt;p&gt;$Re$ z $= \frac{z + \overline{z}}{2}$ e $Im$ z $= \frac{z - \overline{z}}{2i}$&lt;/p&gt;
+&lt;p&gt;$|z \cdot w| = |z|\cdot|w|$&lt;/p&gt;
+&lt;p&gt;$\overline{(\frac{z}{w})} = \frac{\overline{z}}{\overline{w}}$, quando $w \neq 0$&lt;/p&gt;
+&lt;p&gt;$|z| = 0$ se e somente se $z = 0$&lt;/p&gt;
+&lt;h3 id=&#34;algumas-desigualdades&#34;&gt;Algumas desigualdades:&lt;/h3&gt;
+&lt;p&gt;$-|z|\leq Re$ z $ \leq |z|$&lt;/p&gt;
+&lt;p&gt;$-|z|\leq Im$ z $ \leq |z|$&lt;/p&gt;
+&lt;h4 id=&#34;desigualdade-triangular&#34;&gt;Desigualdade triangular&lt;/h4&gt;
+&lt;p&gt;$|z+w| \leq |z| + |w|$&lt;/p&gt;
+&lt;p&gt;Generalizando:&lt;/p&gt;
+&lt;p&gt;$|z_1+z_2 + &amp;hellip; z_n| \leq |z_1| + |z_2|+ &amp;hellip; + |z_n|$&lt;/p&gt;
+&lt;h4 id=&#34;desigualdade-triangular-inversa&#34;&gt;Desigualdade triangular inversa&lt;/h4&gt;
+&lt;p&gt;$|z-w| \geq |z| - |w|$&lt;/p&gt;
+&lt;h2 id=&#34;24---divisão-de-números-complexos&#34;&gt;2.4 - Divisão de números Complexos&lt;/h2&gt;
+&lt;p&gt;Considere os números complexos $z = x + iy$ e $w = u + iv$, como ficaria $ \frac{z}{w} $, para $w \neq 0$?&lt;/p&gt;
+&lt;p&gt;Multiplica o numerador e o denominador pelo conjugado complexo do denominador.&lt;/p&gt;
+&lt;p&gt;$\frac{z}{w} = \frac{x+iy}{u+iv} = \frac{(x+iy)(u-iv)}{(u+iv)(u-iv)} = \frac{(xu+yv)+i(-xv+yu)}{u^2+v^2 + i(-uv+vu)}$&lt;/p&gt;
+&lt;p&gt;$\frac{z}{w}$ = $\frac{xu+yv}{u^2+v^2}+i \frac{yu-xv}{u^2+v^2 }$&lt;/p&gt;
+&lt;p&gt;Desta forma:&lt;/p&gt;
+&lt;p&gt;$\frac{1}{z} = \frac{1}{x+iy} = \frac{x-iy}{x^2+y^2}$, quando $z \neq 0$&lt;/p&gt;
+&lt;p&gt;Será continuado&lt;/p&gt;
+&lt;p&gt;Na parte 2 será apresentado a notação polar dos números complexos além da cartesiana.&lt;/p&gt;
+&lt;p&gt;ps: Estou aprendendo a utilizar o Jupyter Notebook junto com o Hugo. Este texto será aprimorado.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-httpsnotbyaifyi&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Not-By-AI&#34;
+           src=&#34;https://lgrando1.github.io/post/complex1/notai.svg&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      &lt;a href=&#34;https://notbyai.fyi/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://notbyai.fyi/&lt;/a&gt;
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Apenas um pedido</title>
