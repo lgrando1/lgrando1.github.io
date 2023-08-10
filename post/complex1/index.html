@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: August 7, 2023 --><html lang="en-us" >
+<!-- Last Published: August 9, 2023 --><html lang="en-us" >
 
 
 <head>
@@ -327,7 +327,7 @@
     />
   
   
-    <meta property="article:modified_time" content="2023-08-07T16:00:00-03:00">
+    <meta property="article:modified_time" content="2023-08-09T16:00:00-03:00">
   
 
 
@@ -358,7 +358,7 @@
   "headline": "Números Complexos - Pt. 1",
   
   "datePublished": "2023-08-07T00:00:00Z",
-  "dateModified": "2023-08-07T16:00:00-03:00",
+  "dateModified": "2023-08-09T16:00:00-03:00",
   
   "author": {
     "@type": "Person",
@@ -797,7 +797,7 @@
           Last updated on
       
     
-    Aug 7, 2023
+    Aug 9, 2023
   </span>
   
 
@@ -835,68 +835,77 @@
 
     <div class="article-style">
       <h1 id="introdução">Introdução</h1>
-<p>Nesta série de postagens, trataremos dos numéros complexo.</p>
-<p>Utilizando Python como línguagem de programação e efetuar os cálculos.</p>
+<p>Nesta série de postagens, trataremos dos números complexos.</p>
+<p>Utilizaremos o Python como linguagem de programação.</p>
+<p>A Parte 1 deste série considera as operações com as coordenadas cartesianas;</p>
 <h3 id="recursos-sugeridos">Recursos sugeridos:</h3>
-<h4 id="manual-das-bibliotecas-que-iremos-utilizar-no-python">Manual das bibliotecas que iremos utilizar no Python:</h4>
-<p><a href="https://www.sympy.org/en/index.html" target="_blank" rel="noopener">https://www.sympy.org/en/index.html</a> (iremos utilizar nos próximos posts)</p>
+<h4 id="manual-das-bibliotecas-que-utilizaremos-no-python">Manual das bibliotecas que utilizaremos no Python:</h4>
+<p><a href="https://www.sympy.org/en/index.html" target="_blank" rel="noopener">https://www.sympy.org/en/index.html</a> (utilizaremos nos próximos posts)</p>
 <p><a href="https://docs.python.org/3/library/cmath.html" target="_blank" rel="noopener">https://docs.python.org/3/library/cmath.html</a></p>
+<p>Os gráficos desta postagem foram realizadas como o Geogebra</p>
+<p><a href="https://www.geogebra.org/" target="_blank" rel="noopener">https://www.geogebra.org/</a></p>
 <h4 id="conteúdos-relacionando-números-complexos">Conteúdos relacionando números complexos:</h4>
 <p><a href="https://cienciaprogramada.com.br/2022/03/numeros-complexos-python-sympy/" target="_blank" rel="noopener">https://cienciaprogramada.com.br/2022/03/numeros-complexos-python-sympy/</a></p>
 <p><a href="https://pt.wikipedia.org/wiki/N%C3%BAmero_complexo" target="_blank" rel="noopener">https://pt.wikipedia.org/wiki/N%C3%BAmero_complexo</a></p>
-<h4 id="como-gerar-o-gráfico-vetôrial">Como gerar o gráfico vetôrial</h4>
-<p><a href="https://mrcreamio.wordpress.com/2018/10/26/how-to-add-two-vectors-in-2d-in-python-graphically/" target="_blank" rel="noopener">https://mrcreamio.wordpress.com/2018/10/26/how-to-add-two-vectors-in-2d-in-python-graphically/</a></p>
-<h4 id="curso-recomendado-sobre-analíses-complexas">Curso recomendado sobre analíses complexas</h4>
-<p>Está me ajudando bastante para desenvolver está série:</p>
+<h4 id="curso-recomendado-sobre-análises-complexas">Curso recomendado sobre análises complexas</h4>
+<p>Está me ajudando bastante para desenvolver esta série:</p>
 <p><a href="https://www.coursera.org/learn/complex-analysis" target="_blank" rel="noopener">https://www.coursera.org/learn/complex-analysis</a></p>
 <h1 id="1-números-complexos">1. Números complexos</h1>
-<p>Elemento de um sistema numérico que contém os números reais e um elemento especifico denominado <em>i</em>, chamado de unidade imaginária, e que satisfaz a equação $i^2 = -1$.</p>
+<p>Elemento de um sistema numérico que contém os números reais e um elemento especifico denominado $i$, chamado de unidade imaginária, e satisfaz a equação $i^2 = -1$.</p>
 <h2 id="plano-complexo">Plano Complexo</h2>
-<p>Os numeros complexos são expressoes da forma $z = x + iy$, onde:</p>
+<p>Os numeros complexos são expressoes da forma $z = x + iy$ ou $z = x + jy$, onde:</p>
 <ul>
-<li>$x$ é chamado com a parte real de $z$ ou $x = Re$ z;</li>
-<li>$y$ é chamado com a parte imaginária de $z$ ou $y = Im$ z.</li>
+<li>$x$ é a parte real de $z$ ou $x = Re$ z;</li>
+<li>$y$ é a parte imaginária de $z$ ou $y = Im$ z.</li>
 </ul>
+<p>A representação cartesiana de um número complexo $z = 2 + j1$:</p>
 <img src="fig12.png">
 <p>O conjunto de números complexos é chamado de plano complexo cujo simbolo é $\mathbb{C}$ e pode ser identificada como $\mathbb{R}^2$.</p>
-<p>Os números reais é um conjunto dos planos complexos onde a parte imaginaria é zero.</p>
+<p>Os números reais são um conjunto do plano complexo onde a parte imaginaria é zero.</p>
 <p>O Python utiliza a letra $j$ para representar a parte imaginaria de um número complexo. É possivel utilizar a biblioteca <a href="https://docs.python.org/3/library/cmath.html" target="_blank" rel="noopener">cmath</a> para efetuar operações de números complexos com esta línguagem e a biblioteca <a href="https://www.sympy.org/en/index.html" target="_blank" rel="noopener">Sympy</a> para efetuar cálculos simbólicos.</p>
 <p>Então a o numero $z = 2+3i$ pode ser descrito no Python como:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Definindo o número:</span>
 </span></span><span class="line"><span class="cl"><span class="n">z</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="n">j</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Imprime o numero&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Representação do número&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> 
-</span></span></code></pre></div><pre><code>Imprime o numero
+</span></span></code></pre></div><pre><code>Representação do número
 (2+3j)
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Imprime a classe do objeto&#34;</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Classe de z&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">z</span><span class="p">))</span> 
-</span></span></code></pre></div><pre><code>Imprime a classe do objeto
+</span></span></code></pre></div><pre><code>Classe de z
 &lt;class 'complex'&gt;
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Imprime a parte real de z&#34;</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Parte real de z&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">real</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>Imprime a parte real de z
+</span></span></code></pre></div><pre><code>Parte real de z
 2.0
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Imprime a parte complexa de z&#34;</span><span class="p">)</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Parte complexa de z&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>Imprime a parte complexa de z
+</span></span></code></pre></div><pre><code>Parte complexa de z
 3.0
 </code></pre>
 <h1 id="2-operações-básicas">2. Operações Básicas</h1>
 <h2 id="21---adição">2.1 - Adição</h2>
 <p>Se $z = x + iy$ e $w = u + iv$, podemos representar z + w como:</p>
 <p>$(x + iy) + (u + iv) = (x+u) + i(y+v)$, onde:</p>
-<p>Re $(z+w)$ = Re $z$ + Re $w$ e Im $(z+w)$ = Im $z$ + Im $w$</p>
+<ul>
+<li>Re$(z+w)$ = Re $z$ + Re $w$</li>
+<li>Im$(z+w)$ = Im $z$ + Im $w$</li>
+</ul>
 <img src="fig112.png">
 <h2 id="22---subtração">2.2 - Subtração</h2>
 <p>Se $z = x + iy$ e $w = u + iv$, podemos representar z - w como:</p>
 <p>$(x + iy) - (u + iv) = (x-u) + i(y-v)$, onde:</p>
-<p>Re $(z-w)$ = Re $z$ - Re $w$ e Im $(z-w)$ = Im $z$ - Im $w$</p>
+<ul>
+<li>Re $(z-w)$ = Re $z$ - Re $w$</li>
+<li>Im $(z-w)$ = Im $z$ - Im $w$</li>
+</ul>
 <p>Em Python para z = 1+4i e w = 4+2i</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">z</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="mi">4</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">w</span> <span class="o">=</span> <span class="mi">4</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;O valor de z+w é, </span><span class="si">{</span><span class="n">z</span><span class="o">+</span><span class="n">w</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
@@ -904,13 +913,13 @@
 </span></span></code></pre></div><pre><code>O valor de z+w é, (5+6j)
 O valor de z-w é, (-3+2j)
 </code></pre>
-<h3 id="o-módulo-de-um-número-complexos">O módulo de um número complexos</h3>
+<h3 id="o-módulo-de-um-número-complexo">O módulo de um número complexo</h3>
 <p>O módulo de um número complexo $z = x + iy$ é o comprimento do vetor $z$:</p>
 <p>$|z| = \sqrt{x^2 + y^2}$</p>
 <img src="fig13.png">
-<p>Em Python, pode obter este valor pelaa função abs(z), como por exemplo para</p>
-<p>z = 1+4i
-w = 4+2i</p>
+<p>Em Python, pode obter este valor pela função abs(z):</p>
+<p>z = 1+4i</p>
+<p>w = 4+2i</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;O módulo de z é: </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
 </span></span></code></pre></div><pre><code>O módulo de z é: 4.123105625617661
 </code></pre>
@@ -919,39 +928,58 @@ w = 4+2i</p>
 </code></pre>
 <h2 id="23---multiplicação-de-números-complexos">2.3 - Multiplicação de números complexos</h2>
 <p>$(x+iy) \cdot (u-iv) = (xu-yv)+i(xv+yu) \in \mathbb{C}$</p>
-<p>propriedades:</p>
-<p><em>associativas</em>: $(z_1z_2)z_3 = z_1(z_2z_3)$,</p>
-<p><em>comutativas</em> $z_1z_2 = z_2z_1$</p>
-<p>e <em>distributivas</em> $z_1(z_2+z_3) = z_1z_2+ z_1z_3)$.</p>
+<p>Propriedades:</p>
+<ul>
+<li>Associativas: $(z_1z_2)z_3 = z_1(z_2z_3)$;</li>
+<li>Comutativas: $z_1z_2 = z_2z_1$;</li>
+<li>Distributivas: $z_1(z_2+z_3) = z_1z_2+ z_1z_3)$.</li>
+</ul>
 <p>Exemplo</p>
 <p>a = 2+4j</p>
 <p>b = -7+5j</p>
-<p>$(2+4j) \cdot (-7+5j) = (2 \cdot -7 - 5 \cdot 4) + j(2 \cdot 5 + 4 \cdot -7) = -34-18j$</p>
-<p>No Python:</p>
+<p>$(2+4j) \cdot (-7+5j) = (2 \cdot -7 - 5 \cdot 4) + j(2 \cdot 5 + 4 \cdot -7)$</p>
+<p>$= -34-18j$</p>
+<p>Efetuando a multiplicação dos números a, b e c:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="o">+</span><span class="mi">4</span><span class="n">j</span>
 </span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">7</span><span class="o">+</span><span class="mi">5</span><span class="n">j</span>
 </span></span><span class="line"><span class="cl"><span class="n">c</span> <span class="o">=</span> <span class="mi">3</span><span class="o">+</span><span class="mi">1</span><span class="n">j</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;a * b = &#34;</span><span class="p">,</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;a * c = &#34;</span><span class="p">,</span> <span class="n">a</span> <span class="o">*</span> <span class="n">c</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#Propriedades</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Associativa: (a*b)*c == a*(b*c)&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">((</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="n">c</span> <span class="o">==</span> <span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">))</span>
 </span></span></code></pre></div><pre><code>a * b =  (-34-18j)
 a * c =  (2+14j)
-Associativa: (a*b)*c == a*(b*c)
+</code></pre>
+<p>Verificando se as propriedades são verdadeiras</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Propriedades</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Associativa: (a*b)*c == a*(b*c)&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="n">c</span> <span class="o">==</span> <span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Associativa: (a*b)*c == a*(b*c)
+
+
+
+
+
 True
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Commutativa: a*b == b*a&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span> <span class="o">==</span> <span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>Commutativa: a*b == b*a
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Comutativa: a*b == b*a&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">*</span><span class="n">b</span> <span class="o">==</span> <span class="n">b</span><span class="o">*</span><span class="n">a</span>
+</span></span></code></pre></div><pre><code>Comutativa: a*b == b*a
+
+
+
+
+
 True
 </code></pre>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Distributiva: a*(b+c) == a*b + a*c&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="p">)</span> <span class="o">==</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span> <span class="o">+</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="p">)</span> <span class="o">==</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span> <span class="o">+</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span>
 </span></span></code></pre></div><pre><code>Distributiva: a*(b+c) == a*b + a*c
+
+
+
+
+
 True
 </code></pre>
 <p>As Potências de $i$:</p>
@@ -962,19 +990,22 @@ True
 <p>$i^4 = i^2 \cdot i^2 = -1\cdot -1 = 1 $</p>
 <p>$i^5 = i^4 \cdot i = i $</p>
 <p>$i^{100} = (i^4)^{25} = (1)^{25} = 1 $</p>
-<h3 id="o-conjugado-complexo">O Conjugado Complexo</h3>
-<p>O conjugado complexo de $z = x + iy$ é $\overline{z} = x - iy$</p>
-<p>Propriedades:</p>
+<h3 id="o-conjugado-de-um-número-complexo">O Conjugado de um Número Complexo</h3>
+<p>O conjugado do número complexo $z = x + iy$ é $\overline{z} = x - iy$</p>
+<img src="fig113.png">
+<p>Propriedades do conjugado:</p>
 <p>$\overline{\overline{z}} = z$</p>
 <p>$\overline{z+w} = \bar{z}+\bar{w}$</p>
 <p>$\overline{z} = |\overline{z}|$</p>
 <p>$z\overline{z} = (x+iy)(x-iy) = x^2+y^2 = |z|²$</p>
 <p>$\frac{1}{z} = \frac{\overline{z}}{z\overline{z}}= \frac{\bar{z}}{|z|²}$</p>
-<p>Para encontrar os valores Reais e imaginários de z, podemos fazer $z = \overline{z}$ ou $z = -\overline{z}$, resultando em:</p>
-<p>$Re$ z $= \frac{z + \overline{z}}{2}$ e $Im$ z $= \frac{z - \overline{z}}{2i}$</p>
 <p>$|z \cdot w| = |z|\cdot|w|$</p>
 <p>$\overline{(\frac{z}{w})} = \frac{\overline{z}}{\overline{w}}$, quando $w \neq 0$</p>
 <p>$|z| = 0$ se e somente se $z = 0$</p>
+<p>Para encontrar os valores Reais e imaginários de z,</p>
+<p>podemos fazer $z = \overline{z}$ ou $z = -\overline{z}$, resultando em:</p>
+<p>$Re$ z $= \frac{z + \overline{z}}{2}$</p>
+<p>$Im$ z $= \frac{z - \overline{z}}{2i}$</p>
 <h3 id="algumas-desigualdades">Algumas desigualdades:</h3>
 <p>$-|z|\leq Re$ z $ \leq |z|$</p>
 <p>$-|z|\leq Im$ z $ \leq |z|$</p>
@@ -985,15 +1016,28 @@ True
 <h4 id="desigualdade-triangular-inversa">Desigualdade triangular inversa</h4>
 <p>$|z-w| \geq |z| - |w|$</p>
 <h2 id="24---divisão-de-números-complexos">2.4 - Divisão de números Complexos</h2>
-<p>Considere os números complexos $z = x + iy$ e $w = u + iv$, como ficaria $ \frac{z}{w} $, para $w \neq 0$?</p>
-<p>Multiplica o numerador e o denominador pelo conjugado complexo do denominador.</p>
+<p>Considere os números complexos $z = x + iy$ e $w = u + iv$,</p>
+<p>Para efetuar a divisão $ \frac{z}{w} $, para $w \neq 0$,</p>
+<p>multiplica o numerador e o denominador pelo conjugado complexo do denominador.</p>
 <p>$\frac{z}{w} = \frac{x+iy}{u+iv} = \frac{(x+iy)(u-iv)}{(u+iv)(u-iv)} = \frac{(xu+yv)+i(-xv+yu)}{u^2+v^2 + i(-uv+vu)}$</p>
 <p>$\frac{z}{w}$ = $\frac{xu+yv}{u^2+v^2}+i \frac{yu-xv}{u^2+v^2 }$</p>
 <p>Desta forma:</p>
 <p>$\frac{1}{z} = \frac{1}{x+iy} = \frac{x-iy}{x^2+y^2}$, quando $z \neq 0$</p>
+<p>Para $a = 2+4j$ e $b = -7+5j$</p>
+<p>$\frac{a}{b} = \frac {2 \cdot -7 + 4 \cdot 5}{-7^2+5^2}+i \frac{4 \cdot -7-2 \cdot 5}{-7^2+5^2} = 0.08108-i0.5135$</p>
+<p>No Python:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="o">+</span><span class="mi">4</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">7</span><span class="o">+</span><span class="mi">5</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl"><span class="n">c</span> <span class="o">=</span> <span class="mi">3</span><span class="o">+</span><span class="mi">1</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;a / b = &#34;</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;a / c = &#34;</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="n">c</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>a / b =  (0.08108108108108109-0.5135135135135136j)
+a / c =  (0.9999999999999999+1j)
+</code></pre>
 <p>Será continuado</p>
-<p>Na parte 2 será apresentado a notação polar dos números complexos além da cartesiana.</p>
-<p>ps: Estou aprendendo a utilizar o Jupyter Notebook junto com o Hugo. Este texto será aprimorado.</p>
+<p>Na parte 2 será apresentado a notação polar.</p>
+<p>ps: Estou aprendendo a utilizar o Jupyter Notebook com o Hugo. Este texto será aprimorado.</p>
 <p>
 
 
@@ -1031,6 +1075,8 @@ True
 <div class="article-tags">
   
   <a class="badge badge-light" href="/tag/matematica/">Matemática</a>
+  
+  <a class="badge badge-light" href="/tag/numeros/">números</a>
   
   <a class="badge badge-light" href="/tag/complexos/">complexos</a>
   

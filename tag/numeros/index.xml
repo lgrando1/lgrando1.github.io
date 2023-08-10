@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Matemática | Leonardo Grando</title>
-    <link>https://lgrando1.github.io/tag/matematica/</link>
-      <atom:link href="https://lgrando1.github.io/tag/matematica/index.xml" rel="self" type="application/rss+xml" />
-    <description>Matemática</description>
+    <title>números | Leonardo Grando</title>
+    <link>https://lgrando1.github.io/tag/numeros/</link>
+      <atom:link href="https://lgrando1.github.io/tag/numeros/index.xml" rel="self" type="application/rss+xml" />
+    <description>números</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 07 Aug 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://lgrando1.github.io/media/icon_hu4fc79c7a5689779429e28d3f510b9e42_81098_512x512_fill_lanczos_center_3.png</url>
-      <title>Matemática</title>
-      <link>https://lgrando1.github.io/tag/matematica/</link>
+      <title>números</title>
+      <link>https://lgrando1.github.io/tag/numeros/</link>
     </image>
     
     <item>
