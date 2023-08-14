@@ -488,7 +488,7 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
 &lt;p&gt;O valor principal de $w$ é quando $k=0$&lt;/p&gt;
 &lt;p&gt;Se $z = 1$, temos $r = 1$ e $\theta = 0$, resultando nas $n$ raizes da unidade&lt;/p&gt;
 &lt;p&gt;$\sqrt[n]{1} = (\cos \frac{2k \pi}{n} + i\sin \frac{2k \pi}{n})$&lt;/p&gt;
-&lt;p&gt;Encontre as raízes quadradas de 4i:&lt;/p&gt;
+&lt;p&gt;3.1 - Encontre as raízes quadradas de 4i:&lt;/p&gt;
 &lt;p&gt;$4i = 4e^{i\frac{\pi}{2}}$&lt;/p&gt;
 &lt;p&gt;Desta forma:&lt;/p&gt;
 &lt;p&gt;r = 4, $\theta = \frac{\pi}{2}$ e n = 2&lt;/p&gt;
@@ -512,7 +512,7 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;27&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;(1.5000000000000004+2.598076211353316j)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Encontre as raízes cúbicas de -27:&lt;/p&gt;
+&lt;p&gt;3.2 - Encontre as raízes cúbicas de -27:&lt;/p&gt;
 &lt;p&gt;$-27 = 27e^{i \pi}$&lt;/p&gt;
 &lt;p&gt;Desta forma:&lt;/p&gt;
 &lt;p&gt;r = 27, $\theta = \pi$ e n = 3&lt;/p&gt;
@@ -529,6 +529,13 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
 &lt;p&gt;$3(\cos \frac{5\pi}{3} + i\sin \frac{5\pi}{3})$&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pi&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;I&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;*&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;5&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;pi&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;$\displaystyle \frac{3}{2} - \frac{\sqrt{3} i}{2}$&lt;/p&gt;
+&lt;p&gt;3.3 - Determine $\sqrt[8]{\frac{i}{1-i}}$&lt;/p&gt;
+&lt;p&gt;$\frac{i}{i-1} = \frac{i(1+i)}{(1-i)(1+i)} = \frac{-1+i}{2} = \frac{ \sqrt 2}{2}(cos(\frac{3\pi}{4})+isin(\frac{3\pi}{4}))$&lt;/p&gt;
+&lt;p&gt;r = $\frac{1}{\sqrt{2}}$, $\theta = \frac{3\pi}{4}$, $n = 8$&lt;/p&gt;
+&lt;p&gt;{$\frac{2^{15/16}}{2} * (cos(\frac{3*\pi}{32}+\frac{k*\pi}{4})+ i* \sin(\frac{3*\pi}{32}+\frac{k*\pi}{4}), k = 0,1,2,&amp;hellip;,7$}&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Obtendo o valor numérico simplificado da primeira raiz:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(((&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;$\displaystyle 0.9164 + 0.278 i$&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     

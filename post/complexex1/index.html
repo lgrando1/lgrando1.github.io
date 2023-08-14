@@ -327,7 +327,7 @@
     />
   
   
-    <meta property="article:modified_time" content="2023-08-13T16:00:00-03:00">
+    <meta property="article:modified_time" content="2023-08-14T16:00:00-03:00">
   
 
 
@@ -358,7 +358,7 @@
   "headline": "Números Complexos - Pt.2 Exercícios",
   
   "datePublished": "2023-08-11T00:00:00Z",
-  "dateModified": "2023-08-13T16:00:00-03:00",
+  "dateModified": "2023-08-14T16:00:00-03:00",
   
   "author": {
     "@type": "Person",
@@ -804,7 +804,7 @@
           Last updated on
       
     
-    Aug 13, 2023
+    Aug 14, 2023
   </span>
   
 
@@ -1312,7 +1312,7 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$</p>
 <p>O valor principal de $w$ é quando $k=0$</p>
 <p>Se $z = 1$, temos $r = 1$ e $\theta = 0$, resultando nas $n$ raizes da unidade</p>
 <p>$\sqrt[n]{1} = (\cos \frac{2k \pi}{n} + i\sin \frac{2k \pi}{n})$</p>
-<p>Encontre as raízes quadradas de 4i:</p>
+<p>3.1 - Encontre as raízes quadradas de 4i:</p>
 <p>$4i = 4e^{i\frac{\pi}{2}}$</p>
 <p>Desta forma:</p>
 <p>r = 4, $\theta = \frac{\pi}{2}$ e n = 2</p>
@@ -1336,7 +1336,7 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="p">(</span><span class="o">-</span><span class="mi">27</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
 </span></span></code></pre></div><pre><code>(1.5000000000000004+2.598076211353316j)
 </code></pre>
-<p>Encontre as raízes cúbicas de -27:</p>
+<p>3.2 - Encontre as raízes cúbicas de -27:</p>
 <p>$-27 = 27e^{i \pi}$</p>
 <p>Desta forma:</p>
 <p>r = 27, $\theta = \pi$ e n = 3</p>
@@ -1353,6 +1353,13 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$</p>
 <p>$3(\cos \frac{5\pi}{3} + i\sin \frac{5\pi}{3})$</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="mi">3</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">+</span> <span class="n">I</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
 </span></span></code></pre></div><p>$\displaystyle \frac{3}{2} - \frac{\sqrt{3} i}{2}$</p>
+<p>3.3 - Determine $\sqrt[8]{\frac{i}{1-i}}$</p>
+<p>$\frac{i}{i-1} = \frac{i(1+i)}{(1-i)(1+i)} = \frac{-1+i}{2} = \frac{ \sqrt 2}{2}(cos(\frac{3\pi}{4})+isin(\frac{3\pi}{4}))$</p>
+<p>r = $\frac{1}{\sqrt{2}}$, $\theta = \frac{3\pi}{4}$, $n = 8$</p>
+<p>{$\frac{2^{15/16}}{2} * (cos(\frac{3*\pi}{32}+\frac{k*\pi}{4})+ i* \sin(\frac{3*\pi}{32}+\frac{k*\pi}{4}), k = 0,1,2,&hellip;,7$}</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Obtendo o valor numérico simplificado da primeira raiz:</span>
+</span></span><span class="line"><span class="cl"><span class="p">(((</span><span class="o">-</span><span class="mi">1</span><span class="o">+</span><span class="n">I</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">8</span><span class="p">))</span><span class="o">.</span><span class="n">n</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle 0.9164 + 0.278 i$</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
     </div>
 
