@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: August 13, 2023 --><html lang="en-us" >
+<!-- Last Published: August 14, 2023 --><html lang="en-us" >
 
 
 <head>
@@ -813,7 +813,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    5 min read
+    6 min read
   </span>
   
 
@@ -1301,7 +1301,7 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$</p>
     <div class="w-100" ><img src="./index_61_0.png" alt="png" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><h1 id="para-encontrar-raizes-e-valores-de-uxy-e-vxy">Para encontrar raizes e valores de u(x,y) e v(x,y)</h1>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><h3 id="3--para-encontrar-raizes-de-z">3- Para encontrar raizes de z</h3>
 <h3 id="fórmula-de-de-moivre">Fórmula de De Moivre</h3>
 <p>Se $n$ é um inteiro:</p>
 <p>$z^n = [r(\cos\theta + i\sin\theta)]^n = r^n(\cos n \theta + i\sin n \theta)]$</p>
@@ -1312,7 +1312,48 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$</p>
 <p>O valor principal de $w$ é quando $k=0$</p>
 <p>Se $z = 1$, temos $r = 1$ e $\theta = 0$, resultando nas $n$ raizes da unidade</p>
 <p>$\sqrt[n]{1} = (\cos \frac{2k \pi}{n} + i\sin \frac{2k \pi}{n})$</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
+<p>Encontre as raízes quadradas de 4i:</p>
+<p>$4i = 4e^{i\frac{\pi}{2}}$</p>
+<p>Desta forma:</p>
+<p>r = 4, $\theta = \frac{\pi}{2}$ e n = 2</p>
+<p>$\sqrt[2]{4e^{i\frac{\pi}{2}}} = \sqrt[2]{4}(\cos \frac{\frac{\pi}{2} + 2k \pi}{2} + i\sin \frac{\frac{\pi}{2} + 2k \pi}{2})$, k = 0,1</p>
+<p>Para k = 0</p>
+<p>$2* \cos(\frac{\pi}{4}) + i\sin(\frac{\pi}{4})$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span><span class="o">+</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="n">I</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">cmath</span><span class="o">.</span><span class="n">phase</span><span class="p">(</span><span class="n">a</span><span class="p">))</span> <span class="o">+</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">cmath</span><span class="o">.</span><span class="n">phase</span><span class="p">(</span><span class="n">a</span><span class="p">))</span><span class="o">*</span><span class="mi">1</span><span class="n">j</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle 1.4142135623731 + 1.41421356237309 i$</p>
+<p>Para k = 1</p>
+<p>$2* \cos(\frac{\pi}{4}+\pi) + i\sin(\frac{\pi}{4}+\pi)$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span><span class="o">+</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span><span class="o">*</span><span class="n">I</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">a</span>
+</span></span></code></pre></div><p>$\displaystyle -1.4142135623731 - 1.41421356237309 i$</p>
+<p>As raizes são:</p>
+<p>$= \pm (\sqrt(2) + i\sqrt(2))$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#A primeira raiz pode ser obtida pelo </span>
+</span></span><span class="line"><span class="cl"><span class="n">sqrt</span><span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">I</span><span class="p">)</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="nb">complex</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle \sqrt{2} + \sqrt{2} i$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="p">(</span><span class="o">-</span><span class="mi">27</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>(1.5000000000000004+2.598076211353316j)
+</code></pre>
+<p>Encontre as raízes cúbicas de -27:</p>
+<p>$-27 = 27e^{i \pi}$</p>
+<p>Desta forma:</p>
+<p>r = 27, $\theta = \pi$ e n = 3</p>
+<p>$\sqrt[3]{27e^{i\pi}} = \sqrt[3]{27}(\cos \frac{\pi + 2k \pi}{3} + i\sin \frac{\pi + 2k \pi}{3})$, k = 0,1,2</p>
+<p>Para k = 0</p>
+<p>$3* \cos(\frac{\pi}{3}) + i\sin(\frac{\pi}{3})$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="mi">3</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">+</span> <span class="n">I</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle \frac{3}{2} + \frac{\sqrt{3} i}{2}$</p>
+<p>Para k = 1</p>
+<p>$3(\cos {\pi} + i\sin {\pi})$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="mi">3</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span><span class="o">+</span> <span class="n">I</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle -3$</p>
+<p>Para k = 2</p>
+<p>$3(\cos \frac{5\pi}{3} + i\sin \frac{5\pi}{3})$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="mi">3</span><span class="o">*</span><span class="n">cos</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span><span class="o">+</span> <span class="n">I</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle \frac{3}{2} - \frac{\sqrt{3} i}{2}$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
     </div>
 
     
