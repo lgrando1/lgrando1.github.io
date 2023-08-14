@@ -317,7 +317,7 @@
 <meta property="twitter:image" content="https://lgrando1.github.io/media/icon_hu4fc79c7a5689779429e28d3f510b9e42_81098_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="Leonardo Grando" />
 <meta property="og:url" content="https://lgrando1.github.io/post/complexex1/" />
-<meta property="og:title" content="Números Complexos - Pt.1 Exercícios | Leonardo Grando" />
+<meta property="og:title" content="Números Complexos - Pt.2 Exercícios | Leonardo Grando" />
 <meta property="og:description" content="Exercícios operações básicas números complexos" /><meta property="og:image" content="https://lgrando1.github.io/media/icon_hu4fc79c7a5689779429e28d3f510b9e42_81098_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
@@ -327,7 +327,7 @@
     />
   
   
-    <meta property="article:modified_time" content="2023-08-11T16:00:00-03:00">
+    <meta property="article:modified_time" content="2023-08-13T16:00:00-03:00">
   
 
 
@@ -355,10 +355,10 @@
     "@type": "WebPage",
     "@id": "https://lgrando1.github.io/post/complexex1/"
   },
-  "headline": "Números Complexos - Pt.1 Exercícios",
+  "headline": "Números Complexos - Pt.2 Exercícios",
   
   "datePublished": "2023-08-11T00:00:00Z",
-  "dateModified": "2023-08-11T16:00:00-03:00",
+  "dateModified": "2023-08-13T16:00:00-03:00",
   
   "author": {
     "@type": "Person",
@@ -395,7 +395,7 @@
 
 
   
-  <title>Números Complexos - Pt.1 Exercícios | Leonardo Grando</title>
+  <title>Números Complexos - Pt.2 Exercícios | Leonardo Grando</title>
 
   
   
@@ -781,7 +781,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Números Complexos - Pt.1 Exercícios</h1>
+  <h1>Números Complexos - Pt.2 Exercícios</h1>
 
   
   <p class="page-subtitle">Exercícios sobre Números Complexos</p>
@@ -804,7 +804,7 @@
           Last updated on
       
     
-    Aug 11, 2023
+    Aug 13, 2023
   </span>
   
 
@@ -813,7 +813,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    4 min read
+    5 min read
   </span>
   
 
@@ -1117,12 +1117,56 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$</p>
 </span></span><span class="line"><span class="cl"><span class="n">plotapolar</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
 </span></span></code></pre></div><pre><code>(4.123105625617661, 0.24497866312686414)
 </code></pre>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./index_35_1.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#2d) d = 5 - 2j</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">cmath</span><span class="o">.</span><span class="n">polar</span><span class="p">(</span><span class="n">d</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">plotapolar</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
-</span></span></code></pre></div><h2 id="multiplicação-e-divisão-de-números-polares">Multiplicação e divisão de números polares</h2>
+</span></span></code></pre></div><pre><code>(5.385164807134504, -0.3805063771123649)
+</code></pre>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./index_36_1.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="multiplicação-e-divisão-de-números-polares">Multiplicação e divisão de números polares</h2>
 <p>Sendo:</p>
 <p>$z_1 = r_1(\cos\theta_1 + i\sin \theta_1)$</p>
 <p>$z_2 = r_2(\cos\theta_2 + i\sin \theta_2)$</p>
@@ -1142,12 +1186,122 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$</p>
 <p>$z_1z_2= r_1r_2[\cos(\theta_1+\theta_2) + i \sin(\theta_1+\theta_2)]$</p>
 <p>$a<em>b= 3.6</em>1[\cos(0.982+1.571) + i \sin(0.982+1.571)]$</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">cmath</span><span class="o">.</span><span class="n">polar</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plotapolar</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">cmath</span><span class="o">.</span><span class="n">phase</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="n">cmath</span><span class="o">.</span><span class="n">phase</span><span class="p">(</span><span class="n">b</span><span class="p">))</span><span class="o">+</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">cmath</span><span class="o">.</span><span class="n">phase</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="n">cmath</span><span class="o">.</span><span class="n">phase</span><span class="p">(</span><span class="n">b</span><span class="p">))</span><span class="o">*</span><span class="mi">1</span><span class="n">j</span><span class="p">)</span>
-</span></span></code></pre></div><p>2e) b * c =</p>
+</span></span></code></pre></div><pre><code>(3.605551275463989, 2.5535900500422257)
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plotapolar</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span>
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./index_40_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">abs</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">cmath</span><span class="o">.</span><span class="n">phase</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="n">cmath</span><span class="o">.</span><span class="n">phase</span><span class="p">(</span><span class="n">b</span><span class="p">))</span><span class="o">+</span><span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">cmath</span><span class="o">.</span><span class="n">phase</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">+</span><span class="n">cmath</span><span class="o">.</span><span class="n">phase</span><span class="p">(</span><span class="n">b</span><span class="p">))</span><span class="o">*</span><span class="mi">1</span><span class="n">j</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>(-3+2j)
+</code></pre>
+<p>2e) b * c =</p>
 <p>2f) a / c =</p>
 <p>2g) d / c =</p>
-<h1 id="para-encontrar-raizes-e-valores-de-uxy-e-vxy">Para encontrar raizes e valores de u(x,y) e v(x,y)</h1>
+<h3 id="utilizando-o-sympy">Utilizando o Sympy</h3>
+<p>A biblioteca Sympy possibilita a manipulação simbólica. O termo da unidade imaginária nesta biblioteca é o &ldquo;I&rdquo;:</p>
+<p>ps: Aqui o autor explica melhor a relação entre o Sympy e os complexos:</p>
+<p><a href="https://cienciaprogramada.com.br/2022/03/numeros-complexos-python-sympy/" target="_blank" rel="noopener">https://cienciaprogramada.com.br/2022/03/numeros-complexos-python-sympy/</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">I</span><span class="p">,</span> <span class="n">re</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">Abs</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">conjugate</span><span class="p">,</span> <span class="n">solve</span><span class="p">,</span> <span class="n">Symbol</span><span class="p">,</span> <span class="n">deg</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Utilizando a representação do Python padrão:</span>
+</span></span><span class="line"><span class="cl"><span class="n">z1</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl"><span class="n">z1</span>
+</span></span></code></pre></div><pre><code>(2+3j)
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Utilizando a representação do Sympy</span>
+</span></span><span class="line"><span class="cl"><span class="n">z</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span><span class="mi">3</span><span class="o">*</span><span class="n">I</span>
+</span></span><span class="line"><span class="cl"><span class="n">z</span>
+</span></span></code></pre></div><p>$\displaystyle 2 + 3 i$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Para obter a parte real de z</span>
+</span></span><span class="line"><span class="cl"><span class="n">re</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle 2$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Para obter a parte imaginária de z</span>
+</span></span><span class="line"><span class="cl"><span class="n">im</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle 3$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Para obter o módulo de z</span>
+</span></span><span class="line"><span class="cl"><span class="n">Abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle \sqrt{13}$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Para obter o conjugado de z</span>
+</span></span><span class="line"><span class="cl"><span class="n">conjugate</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle 2 - 3 i$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Para encontrar o argumento do complexo</span>
+</span></span><span class="line"><span class="cl"><span class="n">arg</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle \operatorname{atan}{\left(\frac{3}{2} \right)}$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Para encontrar o valor do argumento em radianos</span>
+</span></span><span class="line"><span class="cl"><span class="n">arg</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="o">.</span><span class="n">n</span><span class="p">()</span>
+</span></span></code></pre></div><p>$\displaystyle 0.982793723247329$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Para encontrar o valor em graus:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">deg</span><span class="p">(</span><span class="n">arg</span><span class="p">(</span><span class="n">z</span><span class="p">))</span><span class="o">.</span><span class="n">n</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle 56.31$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Representando a formula de Euler</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Realizando a importação necessarias:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">exp</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">symbols</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Para que o Sympy o theta</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">r</span><span class="p">,</span> <span class="n">theta</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="sa">r</span><span class="s2">&#34;r, \theta&#34;</span><span class="p">,</span> <span class="n">real</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">r</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="n">I</span> <span class="o">*</span> <span class="n">theta</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle r e^{i \theta}$</p>
+<p>Sympy possui os métodos &ldquo;expand&rdquo; e &ldquo;simplify&rdquo; para efetuar a manipulação algébricas de expressões:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">r</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="n">I</span> <span class="o">*</span> <span class="n">theta</span><span class="p">)</span><span class="o">.</span><span class="n">expand</span><span class="p">(</span><span class="nb">complex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle r \left(i \sin{\left(\theta \right)} + \cos{\left(\theta \right)}\right)$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">r</span><span class="o">*</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="n">I</span> <span class="o">*</span> <span class="n">sin</span><span class="p">(</span><span class="n">theta</span><span class="p">))</span><span class="o">.</span><span class="n">simplify</span><span class="p">()</span>
+</span></span></code></pre></div><p>$\displaystyle r e^{i \theta}$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">exp_polar</span><span class="p">,</span> <span class="n">pi</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="n">exp</span><span class="p">,</span> <span class="n">sqrt</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Para obter a forma algebrica da forma exponencia:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">atan</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">expr</span> <span class="o">=</span> <span class="p">(</span><span class="n">r</span> <span class="o">*</span> <span class="n">exp</span><span class="p">(</span><span class="n">I</span> <span class="o">*</span> <span class="n">theta</span><span class="p">))</span><span class="o">.</span><span class="n">subs</span><span class="p">({</span><span class="n">r</span><span class="p">:</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">13</span><span class="p">),</span> <span class="n">theta</span><span class="p">:</span> <span class="n">atan</span><span class="p">(</span><span class="s1">&#39;3/2&#39;</span><span class="p">)})</span>
+</span></span><span class="line"><span class="cl"><span class="n">expr</span>
+</span></span></code></pre></div><p>$\displaystyle \sqrt{13} e^{i \operatorname{atan}{\left(\frac{3}{2} \right)}}$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">expr</span><span class="o">.</span><span class="n">as_real_imag</span><span class="p">()</span>
+</span></span></code></pre></div><pre><code>(2, 3)
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plotapolar</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="n">j</span><span class="p">)</span>
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./index_61_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><h1 id="para-encontrar-raizes-e-valores-de-uxy-e-vxy">Para encontrar raizes e valores de u(x,y) e v(x,y)</h1>
 <h3 id="fórmula-de-de-moivre">Fórmula de De Moivre</h3>
 <p>Se $n$ é um inteiro:</p>
 <p>$z^n = [r(\cos\theta + i\sin\theta)]^n = r^n(\cos n \theta + i\sin n \theta)]$</p>
@@ -1196,7 +1350,7 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$</p>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplexex1%2F&amp;text=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.1&#43;Exerc%C3%ADcios" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplexex1%2F&amp;text=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.2&#43;Exerc%C3%ADcios" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1213,7 +1367,7 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$</p>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplexex1%2F&amp;t=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.1&#43;Exerc%C3%ADcios" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplexex1%2F&amp;t=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.2&#43;Exerc%C3%ADcios" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1232,7 +1386,7 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$</p>
         
       
       <li>
-        <a href="mailto:?subject=N%C3%BAmeros%20Complexos%20-%20Pt.1%20Exerc%C3%ADcios&amp;body=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplexex1%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+        <a href="mailto:?subject=N%C3%BAmeros%20Complexos%20-%20Pt.2%20Exerc%C3%ADcios&amp;body=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplexex1%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1249,7 +1403,7 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$</p>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplexex1%2F&amp;title=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.1&#43;Exerc%C3%ADcios" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplexex1%2F&amp;title=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.2&#43;Exerc%C3%ADcios" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1266,7 +1420,7 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$</p>
       
       
       <li>
-        <a href="whatsapp://send?text=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.1&#43;Exerc%C3%ADcios%20https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplexex1%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+        <a href="whatsapp://send?text=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.2&#43;Exerc%C3%ADcios%20https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplexex1%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1283,7 +1437,7 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$</p>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplexex1%2F&amp;title=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.1&#43;Exerc%C3%ADcios" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplexex1%2F&amp;title=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.2&#43;Exerc%C3%ADcios" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
