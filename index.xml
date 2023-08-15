@@ -589,7 +589,11 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
 &lt;p&gt;$\sqrt[n]{z} = \sqrt[n]{r}(\cos \frac{\theta + 2k \pi}{n} + i\sin \frac{\theta + 2k \pi}{n})$&lt;/p&gt;
 &lt;p&gt;$n = 2, \theta = arg(x+iy), r = \sqrt{x^2+y^2}$&lt;/p&gt;
 &lt;p&gt;$\sqrt[2]{x+yi} = \sqrt[4]{x^2+y^2}(\cos \frac{arg(x+iy)}{2} + i\sin \frac{arg(x+iy)}{2})$&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;h1 id=&#34;5---equações-de-cauchy-riemann&#34;&gt;5 - Equações de Cauchy-Riemann&lt;/h1&gt;
+&lt;p&gt;Critério para que uma função seja derivável, em relação a $z=x+jy$&lt;/p&gt;
+&lt;p&gt;$\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}$&lt;/p&gt;
+&lt;p&gt;$\frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}$&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
     </item>
     
     <item>
