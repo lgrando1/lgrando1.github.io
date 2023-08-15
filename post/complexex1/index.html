@@ -813,7 +813,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    6 min read
+    8 min read
   </span>
   
 
@@ -1301,7 +1301,7 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$</p>
     <div class="w-100" ><img src="./index_61_0.png" alt="png" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><h3 id="3--para-encontrar-raizes-de-z">3- Para encontrar raizes de z</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><h3 id="3--raizes-de-z">3- Raizes de z</h3>
 <h3 id="fórmula-de-de-moivre">Fórmula de De Moivre</h3>
 <p>Se $n$ é um inteiro:</p>
 <p>$z^n = [r(\cos\theta + i\sin\theta)]^n = r^n(\cos n \theta + i\sin n \theta)]$</p>
@@ -1360,7 +1360,60 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Obtendo o valor numérico simplificado da primeira raiz:</span>
 </span></span><span class="line"><span class="cl"><span class="p">(((</span><span class="o">-</span><span class="mi">1</span><span class="o">+</span><span class="n">I</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">8</span><span class="p">))</span><span class="o">.</span><span class="n">n</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
 </span></span></code></pre></div><p>$\displaystyle 0.9164 + 0.278 i$</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
+<h1 id="4---função-complexa">4 - Função complexa</h1>
+<p>Uma função complexa pode ser escrita da forma:</p>
+<p>$f(z) = u(x,y) + iv(x,y)$</p>
+<p>Onde:</p>
+<p>$z = x+iy$ e $u$ e $v$ funções reais que dependem de duas variáveis $x$ e $y$</p>
+<p>Exemplo 1:</p>
+<p>$f(z) = z^2 = (x + iy)^2 = x^2-y^2 + i 2xy$</p>
+<p>$u(x,y) = x^2-y^2$</p>
+<p>$v(x,y) = 2xy$</p>
+<p>Desta forma podemos calcular o valor de $z = 2 +2i$, sendo $x = 2$ e $y = 2$:</p>
+<p>$u(x,y) = x^2-y^2 = 4-4 = 0$</p>
+<p>$v(x,y) = 2xy = 8$</p>
+<p>$f(2+2i) = u(2,2) + iv(2,3) = 8i$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Resolvendo com o Sympy:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sympy</span>
+</span></span><span class="line"><span class="cl"><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x y a b c&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#definindo a expressão:</span>
+</span></span><span class="line"><span class="cl"><span class="n">expr</span> <span class="o">=</span> <span class="p">((</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">*</span><span class="n">I</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#Expandindo a expressão</span>
+</span></span><span class="line"><span class="cl"><span class="n">expr</span><span class="o">.</span><span class="n">expand</span><span class="p">()</span>
+</span></span></code></pre></div><p>$\displaystyle x^{2} + 2 i x y - y^{2}$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Substituindo os valores de x, y = 2</span>
+</span></span><span class="line"><span class="cl"><span class="n">expr</span><span class="o">.</span><span class="n">expand</span><span class="p">()</span><span class="o">.</span><span class="n">subs</span><span class="p">([(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="mi">2</span><span class="p">)])</span>
+</span></span></code></pre></div><p>$\displaystyle 8 i$</p>
+<p>Exemplo 2:</p>
+<p>$f(z) = 2z^3 - 4z+1$, onde $z = x + iy$</p>
+<p>$2(x+iy)^3-4(x+iy)+1$</p>
+<p>$(2x^3-6xy^2-4x+1)+i(6x^2y-2y^3 -4y)$</p>
+<p>$u(x,y) = 2x^3-6xy^2-4x+1$</p>
+<p>$y(x,y) = 6x^2y-2y^3 -4y$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">expr2</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">I</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="mi">4</span><span class="o">*</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">I</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">expr2</span><span class="o">.</span><span class="n">expand</span><span class="p">()</span>
+</span></span></code></pre></div><p>$\displaystyle 2 x^{3} + 6 i x^{2} y - 6 x y^{2} - 4 x - 2 i y^{3} - 4 i y + 1$</p>
+<p>Exemplo 3: f(z) = cos(z)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">expr3</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="o">*</span><span class="n">I</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">expr3</span>
+</span></span></code></pre></div><p>$\displaystyle \cos{\left(x + i y \right)}$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">expand_trig</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">expand_trig</span><span class="p">(</span><span class="n">expr3</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle - i \sin{\left(x \right)} \sinh{\left(y \right)} + \cos{\left(x \right)} \cosh{\left(y \right)}$</p>
+<p>Exemplo 4 -</p>
+<p>$f(z) = \sqrt z  = \sqrt{x+iy}$</p>
+<p>Utilizando a fórmula de De Moivre para expandir a função:</p>
+<p>Se $z = w^n$ e $w = \sqrt[n]{z}$</p>
+<p>$\sqrt[n]{z} = \sqrt[n]{r}(\cos \frac{\theta + 2k \pi}{n} + i\sin \frac{\theta + 2k \pi}{n})$</p>
+<p>$n = 2, \theta = arg(x+iy), r = \sqrt{x^2+y^2}$</p>
+<p>$\sqrt[2]{x+yi} = \sqrt[4]{x^2+y^2}(\cos \frac{arg(x+iy)}{2} + i\sin \frac{arg(x+iy)}{2})$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
     </div>
 
     
