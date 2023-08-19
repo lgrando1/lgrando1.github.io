@@ -13,12 +13,25 @@
     </image>
     
     <item>
-      <title>Números Complexos - Pt.2 Exercícios</title>
+      <title>Números Complexos - Pt.2</title>
       <link>https://lgrando1.github.io/post/complexex1/</link>
       <pubDate>Fri, 11 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://lgrando1.github.io/post/complexex1/</guid>
-      <description>&lt;h1 id=&#34;1-operações-básicas-com-números-complexos&#34;&gt;1. Operações Básicas com Números Complexos&lt;/h1&gt;
-&lt;p&gt;Sendo:&lt;/p&gt;
+      <description>&lt;h1 id=&#34;pt-2---forma-polarexponencialfunçõescauchy-riemann&#34;&gt;Pt 2 - Forma Polar/Exponencial/Funções/Cauchy-Riemann&lt;/h1&gt;
+&lt;p&gt;A Parte 1 deste série considera as operações com as coordenadas cartesianas;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Operações Básicas com Números Complexos
+1.1 - Utilizando o Python para efetuar os cálculos&lt;/li&gt;
+&lt;li&gt;Representação Polar/Exponencial
+2.1 Multiplicação e divisão de números polares
+2.2 - Utilizando o Sympy&lt;/li&gt;
+&lt;li&gt;Raízes de z&lt;/li&gt;
+&lt;li&gt;Função complexa&lt;/li&gt;
+&lt;li&gt;Equações de Cauchy-Riemann&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Código disponível aqui: &lt;a href=&#34;https://github.com/lgrando1/Notas_Numeros_Complexos/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/lgrando1/Notas_Numeros_Complexos/&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;1-operações-básicas-com-números-complexos&#34;&gt;1. Operações Básicas com Números Complexos&lt;/h1&gt;
+&lt;p&gt;Considere os números complexos abaixo:&lt;/p&gt;
 &lt;p&gt;a = 2 + 3j&lt;/p&gt;
 &lt;p&gt;b = 1j&lt;/p&gt;
 &lt;p&gt;c = 4 + 1j&lt;/p&gt;
@@ -38,7 +51,7 @@
 &lt;p&gt;Calcule o conjugado dos números complexos:&lt;/p&gt;
 &lt;p&gt;1l) $\bar{c}$&lt;/p&gt;
 &lt;p&gt;1m) $\overline{c+b}$&lt;/p&gt;
-&lt;h2 id=&#34;utilizando-o-python-para-efetuar-os-cálculos&#34;&gt;Utilizando o Python para efetuar os cálculos:&lt;/h2&gt;
+&lt;h2 id=&#34;11---utilizando-o-python-para-efetuar-os-cálculos&#34;&gt;1.1 - Utilizando o Python para efetuar os cálculos:&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Definindo os números&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;
@@ -132,7 +145,7 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./index_18_1.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./index_19_1.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Gráfico 1l&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -157,10 +170,10 @@
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./index_19_1.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./index_20_1.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h1 id=&#34;2---representação-polartrigonométrica&#34;&gt;2 - Representação Polar/Trigonométrica&lt;/h1&gt;
+&lt;h1 id=&#34;2-representação-polarexponencial&#34;&gt;2. Representação Polar/Exponencial&lt;/h1&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;Converta os números a seguir em polar:&lt;/li&gt;
 &lt;/ol&gt;
@@ -168,14 +181,20 @@
 &lt;p&gt;2b) b = 1j&lt;/p&gt;
 &lt;p&gt;2c) c = 4 + 1j&lt;/p&gt;
 &lt;p&gt;2d) d = 5 - 2j&lt;/p&gt;
-&lt;h2 id=&#34;formula-de-euler&#34;&gt;Formula de Euler:&lt;/h2&gt;
+&lt;p&gt;A fórmula de Euler:&lt;/p&gt;
 &lt;p&gt;$e^{j\theta} = \cos\theta + j\sin\theta$&lt;/p&gt;
-&lt;p&gt;Pode ser utilizada para representar um número complexo na formula polar:&lt;/p&gt;
+&lt;p&gt;Pode ser utilizada para representar um número complexo na fórmula polar:&lt;/p&gt;
 &lt;p&gt;$z = re^{j\theta} = r\cos\theta+jr\sin\theta = r(\cos\theta+j\sin\theta)$&lt;/p&gt;
 &lt;p&gt;Lembrando:
 $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
-&lt;p&gt;O principal argumento do ângulo é $-\pi &amp;lt; \theta &amp;lt; \pi$.&lt;/p&gt;
-&lt;p&gt;Outros valores são $\theta = \theta + 2n\pi$, onde $n = \pm 1, \pm 2, &amp;hellip;$&lt;/p&gt;
+&lt;p&gt;O principal argumento do ângulo: $-\pi &amp;lt; \theta &amp;lt; \pi$.&lt;/p&gt;
+&lt;p&gt;Outros valores possíveis para $\theta = \theta + 2n\pi$, onde $n = \pm 1, \pm 2, &amp;hellip;$&lt;/p&gt;
+&lt;p&gt;O número complexo $z = 1+1i$ pode ser representado das seguintes formas:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Forma cartesiana: $z = 1+1i$&lt;/li&gt;
+&lt;li&gt;Forma polar: $\sqrt{2}(\cos(\frac{\pi}{4}) + i \sin(\frac{\pi}{4}))$&lt;/li&gt;
+&lt;li&gt;Forma exponencial: $\sqrt{2}e^{i\pi/4}$&lt;/li&gt;
+&lt;/ol&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#definindo os números nos Python:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;
@@ -191,6 +210,9 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cmath&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;polar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;(3.605551275463989, 0.982793723247329)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;cmath&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;polar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;(1.0, 1.5707963267948966)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Neste caso (2a) o número 2 + 3j, pode ser representado como o valor&lt;/p&gt;
 &lt;p&gt;aproximado de r = 3,60 e o argumento de 0,98 radianos ou melhor (56,3 graus).&lt;/p&gt;
@@ -232,7 +254,7 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# função para plotar o número &lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;plotapolar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;):&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;fig&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ax&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;subplots&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;subplot_kw&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;projection&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;polar&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;figsize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;fig&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ax&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;subplots&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;subplot_kw&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;{&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;projection&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;polar&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;},&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;figsize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;ax&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;plot&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cmath&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;phase&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;abs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;marker&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;o&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;markersize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;15&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;color&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;red&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;ax&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;quiver&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;real&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;imag&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;scale&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;mf&#34;&gt;0.1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
@@ -255,7 +277,7 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./index_33_0.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./index_35_0.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2b) b = 1j&lt;/span&gt;
@@ -283,7 +305,7 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./index_34_1.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./index_36_1.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# 2c) c = 4 + 1j&lt;/span&gt;
@@ -311,7 +333,7 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./index_35_1.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./index_37_1.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#2d) d = 5 - 2j&lt;/span&gt;
@@ -339,10 +361,10 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./index_36_1.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./index_38_1.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;h2 id=&#34;multiplicação-e-divisão-de-números-polares&#34;&gt;Multiplicação e divisão de números polares&lt;/h2&gt;
+&lt;h2 id=&#34;21-multiplicação-e-divisão-de-números-polares&#34;&gt;2.1 Multiplicação e divisão de números polares&lt;/h2&gt;
 &lt;p&gt;Sendo:&lt;/p&gt;
 &lt;p&gt;$z_1 = r_1(\cos\theta_1 + i\sin \theta_1)$&lt;/p&gt;
 &lt;p&gt;$z_2 = r_2(\cos\theta_2 + i\sin \theta_2)$&lt;/p&gt;
@@ -383,7 +405,7 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./index_40_0.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./index_42_0.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;abs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;abs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;math&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cmath&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;phase&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cmath&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;phase&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;math&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cmath&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;phase&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;a&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cmath&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;phase&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;b&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -392,10 +414,8 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
 &lt;p&gt;2e) b * c =&lt;/p&gt;
 &lt;p&gt;2f) a / c =&lt;/p&gt;
 &lt;p&gt;2g) d / c =&lt;/p&gt;
-&lt;h3 id=&#34;utilizando-o-sympy&#34;&gt;Utilizando o Sympy&lt;/h3&gt;
+&lt;h2 id=&#34;22---utilizando-o-sympy&#34;&gt;2.2 - Utilizando o Sympy&lt;/h2&gt;
 &lt;p&gt;A biblioteca Sympy possibilita a manipulação simbólica. O termo da unidade imaginária nesta biblioteca é o &amp;ldquo;I&amp;rdquo;:&lt;/p&gt;
-&lt;p&gt;ps: Aqui o autor explica melhor a relação entre o Sympy e os complexos:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://cienciaprogramada.com.br/2022/03/numeros-complexos-python-sympy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://cienciaprogramada.com.br/2022/03/numeros-complexos-python-sympy/&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sympy&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;re&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;im&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Abs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;arg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;conjugate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;solve&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Symbol&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;deg&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Utilizando a representação do Python padrão:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;z1&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;+&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;j&lt;/span&gt;
@@ -474,10 +494,10 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
 
 &lt;figure  &gt;
   &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
-    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./index_61_0.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./index_63_0.png&#34; alt=&#34;png&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
   &lt;/div&gt;&lt;/figure&gt;
 &lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;3--raizes-de-z&#34;&gt;3- Raizes de z&lt;/h3&gt;
+&lt;h1 id=&#34;3-raízes-de-z&#34;&gt;3. Raízes de z&lt;/h1&gt;
 &lt;h3 id=&#34;fórmula-de-de-moivre&#34;&gt;Fórmula de De Moivre&lt;/h3&gt;
 &lt;p&gt;Se $n$ é um inteiro:&lt;/p&gt;
 &lt;p&gt;$z^n = [r(\cos\theta + i\sin\theta)]^n = r^n(\cos n \theta + i\sin n \theta)]$&lt;/p&gt;
@@ -536,13 +556,13 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Obtendo o valor numérico simplificado da primeira raiz:&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(((&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;8&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;n&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;$\displaystyle 0.9164 + 0.278 i$&lt;/p&gt;
-&lt;h1 id=&#34;4---função-complexa&#34;&gt;4 - Função complexa&lt;/h1&gt;
+&lt;h1 id=&#34;4-função-complexa&#34;&gt;4. Função complexa&lt;/h1&gt;
 &lt;p&gt;Uma função complexa pode ser escrita da forma:&lt;/p&gt;
 &lt;p&gt;$f(z) = u(x,y) + iv(x,y)$&lt;/p&gt;
 &lt;p&gt;Onde:&lt;/p&gt;
 &lt;p&gt;$z = x+iy$ e $u$ e $v$ funções reais que dependem de duas variáveis $x$ e $y$&lt;/p&gt;
-&lt;p&gt;Exemplo 1:&lt;/p&gt;
-&lt;p&gt;$f(z) = z^2 = (x + iy)^2 = x^2-y^2 + i 2xy$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Exemplo 1:&lt;/strong&gt;
+$f(z) = z^2 = (x + iy)^2 = x^2-y^2 + i 2xy$&lt;/p&gt;
 &lt;p&gt;$u(x,y) = x^2-y^2$&lt;/p&gt;
 &lt;p&gt;$v(x,y) = 2xy$&lt;/p&gt;
 &lt;p&gt;Desta forma podemos calcular o valor de $z = 2 +2i$, sendo $x = 2$ e $y = 2$:&lt;/p&gt;
@@ -563,8 +583,8 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Substituindo os valores de x, y = 2&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;expr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;expand&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;subs&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;([(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)])&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;$\displaystyle 8 i$&lt;/p&gt;
-&lt;p&gt;Exemplo 2:&lt;/p&gt;
-&lt;p&gt;$f(z) = 2z^3 - 4z+1$, onde $z = x + iy$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Exemplo 2:&lt;/strong&gt;
+$f(z) = 2z^3 - 4z+1$, onde $z = x + iy$&lt;/p&gt;
 &lt;p&gt;$2(x+iy)^3-4(x+iy)+1$&lt;/p&gt;
 &lt;p&gt;$(2x^3-6xy^2-4x+1)+i(6x^2y-2y^3 -4y)$&lt;/p&gt;
 &lt;p&gt;$u(x,y) = 2x^3-6xy^2-4x+1$&lt;/p&gt;
@@ -573,7 +593,8 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;expr2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;expand&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;$\displaystyle 2 x^{3} + 6 i x^{2} y - 6 x y^{2} - 4 x - 2 i y^{3} - 4 i y + 1$&lt;/p&gt;
-&lt;p&gt;Exemplo 3: f(z) = cos(z)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Exemplo 3:&lt;/strong&gt;
+$f(z) = cos(z)$&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;expr3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;I&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;expr3&lt;/span&gt;
@@ -582,8 +603,7 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;expand_trig&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;expr3&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;$\displaystyle - i \sin{\left(x \right)} \sinh{\left(y \right)} + \cos{\left(x \right)} \cosh{\left(y \right)}$&lt;/p&gt;
-&lt;p&gt;Exemplo 4 -&lt;/p&gt;
-&lt;p&gt;$f(z) = \sqrt z  = \sqrt{x+iy}$&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Exemplo 4 - $f(z) = \sqrt z  = \sqrt{x+iy}$&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;Utilizando a fórmula de De Moivre para expandir a função:&lt;/p&gt;
 &lt;p&gt;Se $z = w^n$ e $w = \sqrt[n]{z}$&lt;/p&gt;
 &lt;p&gt;$\sqrt[n]{z} = \sqrt[n]{r}(\cos \frac{\theta + 2k \pi}{n} + i\sin \frac{\theta + 2k \pi}{n})$&lt;/p&gt;
@@ -593,7 +613,74 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
 &lt;p&gt;Critério para que uma função seja derivável, em relação a $z=x+jy$&lt;/p&gt;
 &lt;p&gt;$\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}$&lt;/p&gt;
 &lt;p&gt;$\frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}$&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+&lt;p&gt;&lt;strong&gt;Exemplo&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Verificar se $f(z) = 2z^3 - 4z+1$, onde $z = x + iy$ é derivável utilizando as Equações de Cauchy-Riemann:&lt;/p&gt;
+&lt;p&gt;Encontrar u(x,y) e v(x,y):&lt;/p&gt;
+&lt;p&gt;$2(x+iy)^3-4(x+iy)+1$&lt;/p&gt;
+&lt;p&gt;$(2x^3-6xy^2-4x+1)+i(6x^2y-2y^3 -4y)$&lt;/p&gt;
+&lt;p&gt;$u(x,y) = 2x^3-6xy^2-4x+1$&lt;/p&gt;
+&lt;p&gt;$y(x,y) = 6x^2y-2y^3 -4y$&lt;/p&gt;
+&lt;p&gt;Utilizado o Sympy para efetuar as derivadas:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Importar o módulo de derivadas&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sympy&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;diff&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#inserindo as funções&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;u&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;6&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#imprimindo u&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;u&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;$\displaystyle 2 x^{3} - 6 x y^{2} - 4 x + 1$&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#imprimindo v&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;$\displaystyle 6 x^{2} y - 2 y^{3} - 4 y$&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Derivando a função u, em relação à variável x&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# A documentação do Sympy se encontra aqui: https://docs.sympy.org/latest/index.html&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;diff&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;$\displaystyle 6 x^{2} - 6 y^{2} - 4$&lt;/p&gt;
+&lt;p&gt;Verificando as equações de Cauchy-Riemann:&lt;/p&gt;
+&lt;p&gt;$\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}$&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;diff&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;diff&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;$\frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}$&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;diff&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;u&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;y&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;==&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;diff&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;v&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;True
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;$f(z)$ é derivável.&lt;/p&gt;
+&lt;h2 id=&#34;referências-bibliográficas&#34;&gt;Referências Bibliográficas&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;CMATH — MATHEMATICAL FUNCTIONS FOR COMPLEX NUMBERS.&lt;/strong&gt; 2023. Python documentation. Disponível em: &lt;a href=&#34;https://docs.python.org/3/library/cmath.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://docs.python.org/3/library/cmath.html&lt;/a&gt;. Acesso em: 19 ago. 2023.&lt;/p&gt;
+&lt;p&gt;MEURER, Aaron; SMITH, Christopher P.; PAPROCKI, Mateusz; ČERTÍK, Ondřej; KIRPICHEV, Sergey B.; ROCKLIN, Matthew; KUMAR, AMiT; IVANOV, Sergiu; MOORE, Jason K.; SINGH, Sartaj; RATHNAYAKE, Thilina; VIG, Sean; GRANGER, Brian E.; MULLER, Richard P.; BONAZZI, Francesco; GUPTA, Harsh; VATS, Shivam; JOHANSSON, Fredrik; PEDREGOSA, Fabian; … SCOPATZ, Anthony. &lt;strong&gt;SymPy: symbolic computing in Python&lt;/strong&gt;. PeerJ Computer Science, v. 3, p. e103, 2 jan. 2017. &lt;a href=&#34;https://doi.org/10.7717/peerj-cs.103&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://doi.org/10.7717/peerj-cs.103&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;LUCIO S. BUSTAMANTE, F. &lt;strong&gt;Números complexos com Python e SymPy&lt;/strong&gt;. Disponível em: &lt;a href=&#34;https://cienciaprogramada.com.br/2022/03/numeros-complexos-python-sympy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://cienciaprogramada.com.br/2022/03/numeros-complexos-python-sympy/&lt;/a&gt;. Acesso em: 1 ago. 2023.&lt;/p&gt;
+&lt;p&gt;PETRA, B.-T. &lt;strong&gt;Introdução à análise complexa&lt;/strong&gt;. Disponível em: &lt;a href=&#34;https://www.coursera.org/learn/complex-analysis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.coursera.org/learn/complex-analysis&lt;/a&gt;. Acesso em: 8 Mai. 2023.&lt;/p&gt;
+&lt;p&gt;URSINI, Edson L. &lt;strong&gt;Notas de Aulas TT413 - Métodos Matemáticos para Telecomunicacões.&lt;/strong&gt; [S. l.: s. n.], 2023.‌&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-httpsnotbyaifyi&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Not-By-AI&#34;
+           src=&#34;https://lgrando1.github.io/post/complexex1/notai.svg&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      &lt;a href=&#34;https://notbyai.fyi/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://notbyai.fyi/&lt;/a&gt;
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
     </item>
     
     <item>
@@ -601,22 +688,25 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
       <link>https://lgrando1.github.io/post/complex1/</link>
       <pubDate>Mon, 07 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://lgrando1.github.io/post/complex1/</guid>
-      <description>&lt;h1 id=&#34;introdução&#34;&gt;Introdução&lt;/h1&gt;
+      <description>&lt;h1 id=&#34;pt-1---introdução&#34;&gt;Pt 1 - Introdução&lt;/h1&gt;
 &lt;p&gt;Nesta série de postagens, trataremos dos números complexos.&lt;/p&gt;
 &lt;p&gt;Utilizaremos o Python como linguagem de programação.&lt;/p&gt;
 &lt;p&gt;A Parte 1 deste série considera as operações com as coordenadas cartesianas;&lt;/p&gt;
-&lt;h3 id=&#34;recursos-sugeridos&#34;&gt;Recursos sugeridos:&lt;/h3&gt;
-&lt;h4 id=&#34;manual-das-bibliotecas-que-utilizaremos-no-python&#34;&gt;Manual das bibliotecas que utilizaremos no Python:&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.sympy.org/en/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.sympy.org/en/index.html&lt;/a&gt; (utilizaremos nos próximos posts)&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.python.org/3/library/cmath.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://docs.python.org/3/library/cmath.html&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Os gráficos desta postagem foram realizadas como o Geogebra&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.geogebra.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.geogebra.org/&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;conteúdos-relacionando-números-complexos&#34;&gt;Conteúdos relacionando números complexos:&lt;/h4&gt;
-&lt;p&gt;&lt;a href=&#34;https://cienciaprogramada.com.br/2022/03/numeros-complexos-python-sympy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://cienciaprogramada.com.br/2022/03/numeros-complexos-python-sympy/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://pt.wikipedia.org/wiki/N%C3%BAmero_complexo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://pt.wikipedia.org/wiki/N%C3%BAmero_complexo&lt;/a&gt;&lt;/p&gt;
-&lt;h4 id=&#34;curso-recomendado-sobre-análises-complexas&#34;&gt;Curso recomendado sobre análises complexas&lt;/h4&gt;
-&lt;p&gt;Está me ajudando bastante para desenvolver esta série:&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.coursera.org/learn/complex-analysis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.coursera.org/learn/complex-analysis&lt;/a&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Números complexos&lt;/p&gt;
+&lt;p&gt;1.1 - O módulo de um número complexo&lt;/p&gt;
+&lt;p&gt;1.2 - O Conjugado de um Número Complexo&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Operações Básicas&lt;/p&gt;
+&lt;p&gt;2.1 - Adição&lt;/p&gt;
+&lt;p&gt;2.2 - Subtração&lt;/p&gt;
+&lt;p&gt;2.3 - Multiplicação de números complexos&lt;/p&gt;
+&lt;p&gt;2.4 - Divisão de números Complexos&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Código disponível aqui: &lt;a href=&#34;https://github.com/lgrando1/Notas_Numeros_Complexos/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/lgrando1/Notas_Numeros_Complexos/&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;1-números-complexos&#34;&gt;1. Números complexos&lt;/h1&gt;
 &lt;p&gt;Elemento de um sistema numérico que contém os números reais e um elemento especifico denominado $i$, chamado de unidade imaginária, e satisfaz a equação $i^2 = -1$.&lt;/p&gt;
 &lt;h2 id=&#34;plano-complexo&#34;&gt;Plano Complexo&lt;/h2&gt;
@@ -695,7 +785,7 @@ $|z| = r = \sqrt{x^2 + y^2} = \sqrt{z\bar{z}}$&lt;/p&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;conjugate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;())&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;(3-2j)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;algumas-desigualdades-re&#34;&gt;Algumas desigualdades re:&lt;/h3&gt;
+&lt;h3 id=&#34;algumas-desigualdades&#34;&gt;Algumas desigualdades:&lt;/h3&gt;
 &lt;p&gt;$-|z|\leq Re$ z $ \leq |z|$&lt;/p&gt;
 &lt;p&gt;$-|z|\leq Im$ z $ \leq |z|$&lt;/p&gt;
 &lt;h4 id=&#34;desigualdade-triangular&#34;&gt;Desigualdade triangular&lt;/h4&gt;
@@ -799,8 +889,13 @@ True
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;a / b =  (0.08108108108108109-0.5135135135135136j)
 a / c =  (1.0769230769230769+0.6153846153846155j)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Na parte 2 será apresentado a notação polar para os números complexos.&lt;/p&gt;
-&lt;p&gt;Sugestões e correções por favor me avisar.&lt;/p&gt;
+&lt;h2 id=&#34;referências-bibliográficas&#34;&gt;Referências Bibliográficas&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;CMATH — MATHEMATICAL FUNCTIONS FOR COMPLEX NUMBERS.&lt;/strong&gt; 2023. Python documentation. Disponível em: &lt;a href=&#34;https://docs.python.org/3/library/cmath.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://docs.python.org/3/library/cmath.html&lt;/a&gt;. Acesso em: 19 ago. 2023.&lt;/p&gt;
+&lt;p&gt;MEURER, Aaron; SMITH, Christopher P.; PAPROCKI, Mateusz; ČERTÍK, Ondřej; KIRPICHEV, Sergey B.; ROCKLIN, Matthew; KUMAR, AMiT; IVANOV, Sergiu; MOORE, Jason K.; SINGH, Sartaj; RATHNAYAKE, Thilina; VIG, Sean; GRANGER, Brian E.; MULLER, Richard P.; BONAZZI, Francesco; GUPTA, Harsh; VATS, Shivam; JOHANSSON, Fredrik; PEDREGOSA, Fabian; … SCOPATZ, Anthony. &lt;strong&gt;SymPy: symbolic computing in Python&lt;/strong&gt;. PeerJ Computer Science, v. 3, p. e103, 2 jan. 2017. &lt;a href=&#34;https://doi.org/10.7717/peerj-cs.103&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://doi.org/10.7717/peerj-cs.103&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;GEOGEBRA. 2023. &lt;strong&gt;GeoGebra&lt;/strong&gt;. Disponível em: &lt;a href=&#34;https://www.geogebra.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.geogebra.org/&lt;/a&gt;. Acesso em: 19 ago. 2023.&lt;/p&gt;
+&lt;p&gt;LUCIO S. BUSTAMANTE, F. &lt;strong&gt;Números complexos com Python e SymPy&lt;/strong&gt;. Disponível em: &lt;a href=&#34;https://cienciaprogramada.com.br/2022/03/numeros-complexos-python-sympy/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://cienciaprogramada.com.br/2022/03/numeros-complexos-python-sympy/&lt;/a&gt;. Acesso em: 1 ago. 2023.&lt;/p&gt;
+&lt;p&gt;PETRA, B.-T. &lt;strong&gt;Introdução à análise complexa&lt;/strong&gt;. Disponível em: &lt;a href=&#34;https://www.coursera.org/learn/complex-analysis&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.coursera.org/learn/complex-analysis&lt;/a&gt;. Acesso em: 8 Mai. 2023.&lt;/p&gt;
+&lt;p&gt;URSINI, Edson L. &lt;strong&gt;Notas de Aulas TT413 - Métodos Matemáticos para Telecomunicacões.&lt;/strong&gt; [S. l.: s. n.], 2023.‌&lt;/p&gt;
 &lt;p&gt;
 
 
