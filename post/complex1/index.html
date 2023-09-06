@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: September 5, 2023 --><html lang="en-us" >
+<!-- Last Published: September 6, 2023 --><html lang="en-us" >
 
 
 <head>
@@ -275,7 +275,7 @@
 
   
 
-<meta name="description" content="Tópico: Operações básicas e derivadas" />
+<meta name="description" content="O que são números e algumas operações básicas" />
 
 
 
@@ -317,17 +317,17 @@
 <meta property="twitter:image" content="https://lgrando1.github.io/media/icon_hu4fc79c7a5689779429e28d3f510b9e42_81098_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="Leonardo Grando" />
 <meta property="og:url" content="https://lgrando1.github.io/post/complex1/" />
-<meta property="og:title" content="Números Complexos - Pt. 3 | Leonardo Grando" />
-<meta property="og:description" content="Tópico: Operações básicas e derivadas" /><meta property="og:image" content="https://lgrando1.github.io/media/icon_hu4fc79c7a5689779429e28d3f510b9e42_81098_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+<meta property="og:title" content="Números Complexos - Pt. 1 | Leonardo Grando" />
+<meta property="og:description" content="O que são números e algumas operações básicas" /><meta property="og:image" content="https://lgrando1.github.io/media/icon_hu4fc79c7a5689779429e28d3f510b9e42_81098_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
     <meta
       property="article:published_time"
-      content="2023-09-05T00:00:00&#43;00:00"
+      content="2023-08-07T00:00:00&#43;00:00"
     />
   
   
-    <meta property="article:modified_time" content="2023-09-05T16:00:00-03:00">
+    <meta property="article:modified_time" content="2023-08-19T16:00:00-03:00">
   
 
 
@@ -355,10 +355,10 @@
     "@type": "WebPage",
     "@id": "https://lgrando1.github.io/post/complex1/"
   },
-  "headline": "Números Complexos - Pt. 3",
+  "headline": "Números Complexos - Pt. 1",
   
-  "datePublished": "2023-09-05T00:00:00Z",
-  "dateModified": "2023-09-05T16:00:00-03:00",
+  "datePublished": "2023-08-07T00:00:00Z",
+  "dateModified": "2023-08-19T16:00:00-03:00",
   
   "author": {
     "@type": "Person",
@@ -373,7 +373,7 @@
       "url": "https://lgrando1.github.io/media/icon_hu4fc79c7a5689779429e28d3f510b9e42_81098_192x192_fill_lanczos_center_3.png"
     }
   },
-  "description": "Tópico: Operações básicas e derivadas"
+  "description": "O que são números e algumas operações básicas"
 }
 </script>
 
@@ -395,7 +395,7 @@
 
 
   
-  <title>Números Complexos - Pt. 3 | Leonardo Grando</title>
+  <title>Números Complexos - Pt. 1 | Leonardo Grando</title>
 
   
   
@@ -415,7 +415,7 @@
 </head>
 
 
-<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="04e7252706ebbfb129825c6a8e2a4a5c" >
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="718d6e0a2b0a6ba6585412b1ca109191" >
 
   
   
@@ -788,10 +788,10 @@
   
   
 <div class="article-container pt-3">
-  <h1>Números Complexos - Pt. 3</h1>
+  <h1>Números Complexos - Pt. 1</h1>
 
   
-  <p class="page-subtitle">Resolvendo alguns exercícios</p>
+  <p class="page-subtitle">Números complexos e operações basicas</p>
   
 
   
@@ -811,7 +811,7 @@
           Last updated on
       
     
-    Sep 5, 2023
+    Aug 19, 2023
   </span>
   
 
@@ -848,315 +848,214 @@
   <div class="article-container">
 
     <div class="article-style">
-      <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#importar as bibliotecas</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-</span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">cmath</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;text.usetex&#34;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;font.family&#34;</span><span class="p">:</span> <span class="s2">&#34;sans-serif&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">    <span class="s2">&#34;font.sans-serif&#34;</span><span class="p">:</span> <span class="s2">&#34;Helvetica&#34;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="p">})</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#import sympy </span>
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">I</span><span class="p">,</span> <span class="n">re</span><span class="p">,</span> <span class="n">im</span><span class="p">,</span> <span class="n">Abs</span><span class="p">,</span> <span class="n">arg</span><span class="p">,</span> <span class="n">conjugate</span><span class="p">,</span> <span class="n">solve</span><span class="p">,</span> <span class="n">Symbol</span><span class="p">,</span> <span class="n">deg</span><span class="p">,</span> <span class="n">sqrt</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">exp</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">symbols</span>
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">exp_polar</span><span class="p">,</span> <span class="n">pi</span><span class="p">,</span> <span class="n">I</span><span class="p">,</span> <span class="n">sqrt</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># função para plotar o número - Modificado para o Sympy</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">def</span> <span class="nf">plotapolar</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">subplot_kw</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;projection&#39;</span><span class="p">:</span> <span class="s1">&#39;polar&#39;</span><span class="p">},</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
-</span></span><span class="line"><span class="cl">    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">arg</span><span class="p">(</span><span class="n">z</span><span class="p">),</span> <span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">),</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">markersize</span><span class="o">=</span><span class="mi">15</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">re</span><span class="p">(</span><span class="n">z</span><span class="p">)),</span> <span class="nb">float</span><span class="p">(</span><span class="n">im</span><span class="p">(</span><span class="n">z</span><span class="p">)),</span> <span class="n">scale</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</span></span></code></pre></div><h1 id="lista-com-alguns-exercicíos-envolvendo-números-complexos">Lista com alguns exercicíos envolvendo números complexos</h1>
-<h2 id="1-expresse-1-sqrt3i-na-forma-polar-faça-o-gráfico">1. Expresse $1-\sqrt{3}i$ na forma polar (faça o gráfico)</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">z</span> <span class="o">=</span> <span class="mi">1</span><span class="o">-</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span><span class="o">*</span><span class="n">I</span>
-</span></span><span class="line"><span class="cl"><span class="n">z</span>
-</span></span></code></pre></div><p>$\displaystyle 1 - \sqrt{3} i$</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
-</span></span></code></pre></div><p>$\displaystyle 2$</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">arg</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
-</span></span></code></pre></div><p>$\displaystyle - \frac{\pi}{3}$</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plotapolar</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
-</span></span></code></pre></div><p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="./index_8_0.png" alt="png" loading="lazy" data-zoomable /></div>
-  </div></figure>
-</p>
-<h2 id="2-faça-o-gráfico-de-z-112i005">2. Faça o gráfico de $|z-(1.1+2i)|&lt;0.05$</h2>
-<p>Expandindo resulta em uma equação da reta,</p>
-<p>$\sqrt{(x-1.1)^2+I*(y-2)^2} &lt; 0.05$</p>
-<p>O gráfico abaixo mostra os pontos (pintados) para os pontos solicitados.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># ponto central do circulo</span>
-</span></span><span class="line"><span class="cl"><span class="n">z</span> <span class="o">=</span> <span class="mf">1.1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">I</span>
-</span></span><span class="line"><span class="cl">  
-</span></span><span class="line"><span class="cl"><span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span> <span class="mi">0</span> <span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="p">,</span> <span class="mi">150</span> <span class="p">)</span> 
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#raio do circulo maior, apenas para referencia</span>
-</span></span><span class="line"><span class="cl"><span class="n">radius</span> <span class="o">=</span> <span class="mi">1</span> 
-</span></span><span class="line"><span class="cl"><span class="c1">#raio do circulo menor</span>
-</span></span><span class="line"><span class="cl"><span class="n">radius1</span> <span class="o">=</span> <span class="mf">0.05</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Desenhando o circulo maior</span>
-</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">re</span><span class="p">(</span><span class="n">z</span><span class="p">))</span> <span class="o">-</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span> <span class="n">theta</span> <span class="p">)</span> 
-</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">im</span><span class="p">(</span><span class="n">z</span><span class="p">))</span> <span class="o">-</span> <span class="n">radius</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span> <span class="n">theta</span> <span class="p">)</span> 
-</span></span><span class="line"><span class="cl"><span class="c1"># Desenhando o circulo menor, aberto</span>
-</span></span><span class="line"><span class="cl"><span class="n">a1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">re</span><span class="p">(</span><span class="n">z</span><span class="p">))</span> <span class="o">-</span> <span class="n">radius1</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span> <span class="n">theta</span> <span class="p">)</span> 
-</span></span><span class="line"><span class="cl"><span class="n">b1</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">im</span><span class="p">(</span><span class="n">z</span><span class="p">))</span> <span class="o">-</span> <span class="n">radius1</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span> <span class="n">theta</span> <span class="p">)</span> 
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Pintando a area desejada </span>
-</span></span><span class="line"><span class="cl"><span class="n">Drawing_colored_circle</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">Circle</span><span class="p">((</span> <span class="nb">float</span><span class="p">(</span><span class="n">re</span><span class="p">(</span><span class="n">z</span><span class="p">))</span> <span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">im</span><span class="p">(</span><span class="n">z</span><span class="p">))</span> <span class="p">),</span> <span class="n">radius1</span> <span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># Plotando a figura:</span>
-</span></span><span class="line"><span class="cl"><span class="n">figure</span><span class="p">,</span> <span class="n">axes</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span> 
-</span></span><span class="line"><span class="cl"><span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">axes</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span> <span class="n">a1</span><span class="p">,</span> <span class="n">b1</span> <span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;dotted&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">axes</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span> <span class="n">Drawing_colored_circle</span> <span class="p">)</span> 
-</span></span><span class="line"><span class="cl"><span class="n">axes</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span> <span class="mi">1</span> <span class="p">)</span> 
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">axes</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&#34;Real (z)&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">axes</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&#34;Imag (z)&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#para criar a anotação e a seta indicativa</span>
-</span></span><span class="line"><span class="cl"><span class="n">axes</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\varepsilon &lt; 0.05$&#39;</span><span class="p">,</span> <span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">re</span><span class="p">(</span><span class="n">z</span><span class="p">))</span><span class="o">+</span><span class="mf">0.01</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="n">im</span><span class="p">(</span><span class="n">z</span><span class="p">))</span><span class="o">+</span><span class="mf">0.01</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">            <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mf">0.75</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">),</span> <span class="n">textcoords</span><span class="o">=</span><span class="s1">&#39;axes fraction&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">shrink</span><span class="o">=</span><span class="mf">0.05</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">            <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">            <span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">verticalalignment</span><span class="o">=</span><span class="s1">&#39;top&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#plt.title( &#39;Parametric Equation Circle&#39; ) </span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> 
-</span></span></code></pre></div><p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="./index_10_0.png" alt="png" loading="lazy" data-zoomable /></div>
-  </div></figure>
-</p>
-<h2 id="3---faça-o-gráfico-de-rez-geq-1">3 - Faça o gráfico de $\Re(z) \geq 1$</h2>
-<p>se $z = x + yi$</p>
-<p>Então $\Re(z) = x$ e desta forma seria a área maior e igual a 1.</p>
-<p>São os pontos ilustrados abaixo:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Código apenas para representação:</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
-</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;solid&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">xlim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">xticks</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">       <span class="n">ylim</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">yticks</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl"><span class="n">x1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl"><span class="n">x2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&#34;Real (z)&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&#34;Imag (z)&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">ax</span><span class="o">.</span><span class="n">fill_betweenx</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">where</span><span class="o">=</span><span class="p">(</span><span class="n">x1</span> <span class="o">&gt;</span> <span class="n">x2</span><span class="p">),</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;C0&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> 
-</span></span></code></pre></div><p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="./index_12_0.png" alt="png" loading="lazy" data-zoomable /></div>
-  </div></figure>
-</p>
-<h2 id="4---ache-a-imagem-da-linha-rez--1-sob-o-plano-fz--z2-onde-fz-dá-origem-à-imagem-em-fw-faça-o-gráfico">4 - Ache a imagem da linha $Re(z) = 1$ sob o plano $f(z) = z^2$. Onde $f(z)$ dá origem à imagem em $f(w)$. Faça o gráfico</h2>
-<p>$w = f(z) = z^2 = (x+yi)^2 = x^2-y^2+2xyi$</p>
-<p>$u = x^2-y^2$
-$v = 2xy$</p>
-<p>Como $\Re(z) = x$ então neste caso para $x = 1$</p>
-<p>Resultando em:</p>
-<p>$v = 2y \rightarrow \frac{v}{2}$</p>
-<p>$u = 1-y^2 \rightarrow 1- \frac{v^2}{4}$</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">((</span><span class="mi">12</span><span class="p">,</span><span class="mi">5</span><span class="p">)))</span>
-</span></span><span class="line"><span class="cl">           
-</span></span><span class="line"><span class="cl"><span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax2</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax1</span><span class="o">.</span><span class="n">vlines</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">ymin</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="n">ymax</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;solid&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax1</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&#34;Plano z&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&#34;Real (z)&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&#34;Imag (z)&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mf">0.01</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">u</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">v</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax2</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&#34;Plano w&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax2</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&#34;Real(w) = u(x,y)&#34;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&#34;Imag(w) = v(x,y)&#34;</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>Text(0, 0.5, 'Imag(w) = v(x,y)')
-</code></pre>
-<p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<figure  >
-  <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="./index_15_1.png" alt="png" loading="lazy" data-zoomable /></div>
-  </div></figure>
-</p>
-<h2 id="5-diferencie">5. Diferencie:</h2>
-<p>Lembrando:</p>
-<p>Suponha que $f$ e $g$ são diferenciaveis em $z$, e $h$ é diferenciavel em $f(z)$. Sendo $c \in 	\mathbb{C}$</p>
-<p>1 - $(cf)&rsquo;(z) = cf&rsquo;(z)$;</p>
-<p>2 - $(f+g)&rsquo;(z) = f&rsquo;(z)+g&rsquo;(z)$;</p>
-<p>3 - Regra do Produto:</p>
-<p>$(f \cdot g)&rsquo;(z) = f&rsquo;(z)g(z)+f(z)g&rsquo;(z)$;</p>
-<p>4 - Regra do quociente:</p>
-<p>$(\frac{f}{g})&rsquo;(z) = \frac{g(z)f&rsquo;(z)-f(z)g&rsquo;(z)}{g(z)^2}$, para $g(z) \neq 0$;</p>
-<p>5 - Regra da cadeia:</p>
-<p>5 - $(h \circ f)&rsquo;(z) = h&rsquo;(f(z))f&rsquo;(z)$.</p>
-<p>a) $f(z) = 3z^4-5z^3+2z$</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">sympy</span>
-</span></span><span class="line"><span class="cl"><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">sympy</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x y a b c z&#39;</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">expr</span> <span class="o">=</span> <span class="mi">3</span><span class="o">*</span><span class="n">z</span><span class="o">**</span><span class="mi">4</span><span class="o">-</span><span class="mi">5</span><span class="o">*</span><span class="n">z</span><span class="o">**</span><span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">z</span>
-</span></span><span class="line"><span class="cl"><span class="n">expr</span>
-</span></span></code></pre></div><p>$\displaystyle 3 z^{4} - 5 z^{3} + 2 z$</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Importar o módulo de derivadas</span>
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">diff</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">diff</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
-</span></span></code></pre></div><p>$\displaystyle 12 z^{3} - 15 z^{2} + 2$</p>
-<p>b) $f(z) = \frac{z^2}{4z+1}$</p>
-<p>Para resolver, não esquecer:</p>
+      <h1 id="pt-1---introdução">Pt 1 - Introdução</h1>
+<p>Nesta série de postagens, trataremos dos números complexos.</p>
+<p>Utilizaremos o Python como linguagem de programação.</p>
+<p>A Parte 1 deste série considera as operações com as coordenadas cartesianas;</p>
 <ol>
-<li>Utilizar a regra do quociente</li>
-<li>lembrar que $g(z) \neq 0$</li>
+<li>
+<p>Números complexos</p>
+<p>1.1 - O módulo de um número complexo</p>
+<p>1.2 - O Conjugado de um Número Complexo</p>
+</li>
+<li>
+<p>Operações Básicas</p>
+<p>2.1 - Adição</p>
+<p>2.2 - Subtração</p>
+<p>2.3 - Multiplicação de números complexos</p>
+<p>2.4 - Divisão de números Complexos</p>
+</li>
 </ol>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">exp1</span> <span class="o">=</span> <span class="n">z</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">4</span><span class="o">*</span><span class="n">z</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">exp1</span>
-</span></span></code></pre></div><p>$\displaystyle \frac{z^{2}}{4 z + 1}$</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">diff</span><span class="p">(</span><span class="n">exp1</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
-</span></span></code></pre></div><p>$\displaystyle - \frac{4 z^{2}}{\left(4 z + 1\right)^{2}} + \frac{2 z}{4 z + 1}$</p>
-<p>Para $z \neq -\frac{1}{4}$</p>
-<h2 id="6-mostre-que-fz--x--4iy-não-é-diferenciável-em-nenhum-ponto">6. Mostre que $f(z) = x + 4iy$ não é diferenciável em nenhum ponto;</h2>
-<h3 id="forma-1---teorema-de-cauchy-reimann">Forma 1 - Teorema de Cauchy-Reimann</h3>
-<p>u = x</p>
-<p>y = 4i</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">u</span> <span class="o">=</span> <span class="n">x</span>
-</span></span><span class="line"><span class="cl"><span class="n">v</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">y</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">diff</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">diff</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>False
-</code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">diff</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="n">diff</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>True
-</code></pre>
-<h3 id="forma-2---fazendo-delta-z--delta-x--i-delta-y">Forma 2 - Fazendo $\Delta z = \Delta x + i \Delta y$,</h3>
-<p>$f(z + \Delta z) - f(z) = x + \Delta x  + 4i(y+ \Delta y) - x - 4iy = \Delta x + 4i\Delta y $</p>
-<p>Portanto $lim_{\Delta z \rightarrow 0}\frac{f(z+\Delta z)-f(z)}{\Delta z} =  lim_{\Delta z \rightarrow 0}\frac{\Delta x + 4i\Delta y}{\Delta x + i\Delta y} $.</p>
-<p>Quando $\Delta z \rightarrow 0$ ao longo de uma linha paralela ao eixo $x$, então $\Delta y \rightarrow 0 $ e o limite tende a 1.</p>
-<p>Quando $\Delta z \rightarrow 0$ ao longo de uma linha paralela ao eixo $y$, então $\Delta x \rightarrow 0$ e o limite tende a 4.</p>
-<p>Portanto, $f(z)$ não é diferenciável em nenhum ponto z.</p>
-<h2 id="7---verifique-se-fz--z2z-é-analítica">7 - Verifique se $f(z) = z^2+z$ é analítica.</h2>
-<p>Uma função $f$ é analitica em um conjunto aberto $U \subset \mathbb{C}$ se f é diferenciavel em cada ponto $z \in U$.</p>
-<p>Exemplos:</p>
+<p>Código disponível aqui: <a href="https://github.com/lgrando1/Notas_Numeros_Complexos/" target="_blank" rel="noopener">https://github.com/lgrando1/Notas_Numeros_Complexos/</a></p>
+<h1 id="1-números-complexos">1. Números complexos</h1>
+<p>Elemento de um sistema numérico que contém os números reais e um elemento especifico denominado $i$, chamado de unidade imaginária, e satisfaz a equação $i^2 = -1$.</p>
+<h2 id="plano-complexo">Plano Complexo</h2>
+<p>Números complexos são expressões da forma $z = x + iy$ ou $z = x + jy$, onde:</p>
 <ul>
-<li>Funções polinomiais são analíticas em $\mathbb{C}$;</li>
-<li>Funções racionais $\frac{p(z)}{q(z)}$ são analíticas desde que $q(z) \neq 0$;</li>
-<li>$f(z) = \Re z$ não é analítica;</li>
-<li>$f(z) = \bar{z}$ não é analítica;</li>
+<li>$x$ é a parte real de $z$ ou $x = Re$ z;</li>
+<li>$y$ é a parte imaginária de $z$ ou $y = Im$ z.</li>
 </ul>
-<p>Testando as condições de Cauchy-Riemann</p>
-<p>Sendo $f=u+iv$ definida no domínio $D \in \mathbb{c}$. Então $f$ é analítica em D se e somente se $u(x,y)$ e $v(x,y)$ possuam a primeira derivada parcial que satisfação as equações de Cauchy-Riemann</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">eq3</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">I</span><span class="o">*</span><span class="n">y</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">I</span><span class="o">*</span><span class="n">y</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">eq3</span><span class="o">.</span><span class="n">expand</span><span class="p">()</span>
-</span></span></code></pre></div><p>$\displaystyle x^{2} + 2 i x y + x - y^{2} + i y$</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">u</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="n">x</span>
-</span></span><span class="line"><span class="cl"><span class="n">v</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">y</span> <span class="o">+</span> <span class="n">y</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">diff</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">diff</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>True
+<p>A representação cartesiana de um número complexo $z = 2 + j1$:</p>
+<img src="fig12.png">
+<p>O conjunto de números complexos é chamado de plano complexo cujo simbolo é $\mathbb{C}$ e pode ser identificada como $\mathbb{R}^2$.</p>
+<p>Os números reais são um conjunto do plano complexo onde a parte imaginaria é zero.</p>
+<p>Conforme a biblioteca utilizada no Python, pode-se representar o elemento $i$ como a letra $j$, no caso da biblioteca <a href="https://docs.python.org/3/library/cmath.html" target="_blank" rel="noopener">cmath</a> para representar a parte imaginaria de um número complexo Já a biblioteca <a href="https://www.sympy.org/en/index.html" target="_blank" rel="noopener">Sympy</a> utilizasse a Letra $I$.</p>
+<p>Então a o numero $z = 2+3i$ pode ser descrito no Python como:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Definindo o número:</span>
+</span></span><span class="line"><span class="cl"><span class="n">z</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">3</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Representação do número&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> 
+</span></span></code></pre></div><pre><code>Representação do número
+(2+3j)
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">diff</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="n">diff</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>True
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Classe de z&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">z</span><span class="p">))</span> 
+</span></span></code></pre></div><pre><code>Classe de z
+&lt;class 'complex'&gt;
 </code></pre>
-<h2 id="8---verifique-se-fz--2x2yiy2-x-é-analítica">8 - Verifique se $f(z) = 2x^2+y+i(y^2-x)$ é analítica</h2>
-<p>Sendo $u = 2x^2 + y$ e $v = y^2-x$</p>
-<p>Aplicando Cauchy-Reimann:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">u</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">y</span>
-</span></span><span class="line"><span class="cl"><span class="n">v</span> <span class="o">=</span> <span class="n">y</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">x</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">diff</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">diff</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>False
+<p>Um numero complexo pode ser representado por um ponto no plano complexo $\mathbb{C}$ e o numero $z = 2+3j$ pode ser representado no Python:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">complex</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+</span></span></code></pre></div><pre><code>(2+3j)
 </code></pre>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">diff</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="n">diff</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>True
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Parte real de z&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">real</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Parte real de z
+2.0
 </code></pre>
-<p>Para que as equações de Cauchy-Riemann sejam satisfeitas, é necessário que $y = 2x$ (que é uma linha). pois:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">diff</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
-</span></span></code></pre></div><p>$\displaystyle 4 x$</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">diff</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
-</span></span></code></pre></div><p>$\displaystyle 2 y$</p>
-<p>Entretanto, para qualquer $z$ nesta linha não haverá vizinhança ou disco aberto em torno de $z$ para o qual $f(z)$ seja diferenciável. Concluímos que $f(z)$ não é analítica em todo domínio.</p>
-<h2 id="9---verifique-se-uxy--x3---3xy2-5y-é-harmômica-em-todo-plano-complexo-ache-a-função-conjugada-harmônica-de-uxy-ou-seja-vxy">9 - Verifique se $u(x,y) = x^3 - 3xy^2-5y$ é harmômica em todo plano complexo. Ache a função conjugada harmônica de $u(x,y)$, ou seja, $v(x,y)$.</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><h2 id="10---quanto-vale-sin2i-na-forma-x--yi">10 - Quanto vale $sin(2+i)$ na forma $x + yi$?</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><h2 id="11---ache-quanto-vale-z-em-cosz--10">11 - Ache quanto vale $z$ em $cos(z) = 10$?</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><h2 id="12---ache-todos-os-valores-possíveis-do-arcsinsqrt5">12 - Ache todos os valores possíveis do $arcsin(\sqrt{5})$?</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><h2 id="13---ache-as-derivada-de-w--arcsinz-no-ponto-z--sqrt5">13 - Ache as derivada de $w = arcsin(z)$ no ponto $z = \sqrt{5}$</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><h2 id="14---ache-todos-os-valores-de-arccosh-1">14 - Ache todos os valores de $arc(cosh(-1))$?</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><h2 id="referências-bibliográficas">Referências Bibliográficas</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Parte complexa de z&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">imag</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Parte complexa de z
+3.0
+</code></pre>
+<h3 id="11---o-módulo-de-um-número-complexo">1.1 - O módulo de um número complexo</h3>
+<p>O módulo de um número complexo $z = x + iy$ é a distância entre o ponto $z$ e a origem, utilizando o Teorema de Pitágoras:</p>
+<p>$|z| = \sqrt{x^2 + y^2}$</p>
+<img src="fig13.png">
+<p>Em Python, pode obter este valor pela função abs(z):</p>
+<p>z = 1+4i</p>
+<p>w = 4+2i</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">z</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="mi">4</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl"><span class="n">w</span> <span class="o">=</span> <span class="mi">4</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;O módulo de z é: </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">z</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>O módulo de z é: 4.123105625617661
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;O módulo de w é: </span><span class="si">{</span><span class="nb">abs</span><span class="p">(</span><span class="n">w</span><span class="p">)</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>O módulo de w é: 4.47213595499958
+</code></pre>
+<h3 id="12---o-conjugado-de-um-número-complexo">1.2 - O Conjugado de um Número Complexo</h3>
+<p>O conjugado do número complexo $z = x + iy$ é $\overline{z} = x - iy$</p>
+<img src="fig113.png">
+<p>Propriedades do conjugado:</p>
+<p>$\overline{\overline{z}} = z$</p>
+<p>$\overline{z+w} = \bar{z}+\bar{w}$</p>
+<p>$\overline{z} = |\overline{z}|$</p>
+<p>$z\overline{z} = (x+iy)(x-iy) = x^2+y^2 = |z|²$</p>
+<p>$\frac{1}{z} = \frac{\overline{z}}{z\overline{z}}= \frac{\bar{z}}{|z|²}$</p>
+<p>$|z \cdot w| = |z|\cdot|w|$</p>
+<p>$\overline{(\frac{z}{w})} = \frac{\overline{z}}{\overline{w}}$, quando $w \neq 0$</p>
+<p>$|z| = 0$ se e somente se $z = 0$</p>
+<p>Para encontrar os valores Reais e imaginários de z,</p>
+<p>podemos fazer $z = \overline{z}$ ou $z = -\overline{z}$, resultando em:</p>
+<p>$Re$ z $= \frac{z + \overline{z}}{2}$</p>
+<p>$Im$ z $= \frac{z - \overline{z}}{2i}$</p>
+<p>Para obter o conjugado de um número complexo $z$ em Python:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">z</span> <span class="o">=</span> <span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">conjugate</span><span class="p">())</span>
+</span></span></code></pre></div><pre><code>(3-2j)
+</code></pre>
+<h3 id="algumas-desigualdades">Algumas desigualdades:</h3>
+<p>$-|z|\leq Re$ z $ \leq |z|$</p>
+<p>$-|z|\leq Im$ z $ \leq |z|$</p>
+<h4 id="desigualdade-triangular">Desigualdade triangular</h4>
+<p>$|z+w| \leq |z| + |w|$</p>
+<p>Generalizando:</p>
+<p>$|z_1+z_2 + &hellip; z_n| \leq |z_1| + |z_2|+ &hellip; + |z_n|$</p>
+<h4 id="desigualdade-triangular-inversa">Desigualdade triangular inversa</h4>
+<p>$|z-w| \geq |z| - |w|$</p>
+<h1 id="2-operações-básicas">2. Operações Básicas</h1>
+<h2 id="21---adição">2.1 - Adição</h2>
+<p>Se $z = x + iy$ e $w = u + iv$, podemos representar z + w como:</p>
+<p>$(x + iy) + (u + iv) = (x+u) + i(y+v)$, onde:</p>
+<ul>
+<li>Re$(z+w)$ = Re $z$ + Re $w$</li>
+<li>Im$(z+w)$ = Im $z$ + Im $w$</li>
+</ul>
+<img src="fig112.png">
+<h2 id="22---subtração">2.2 - Subtração</h2>
+<p>Se $z = x + iy$ e $w = u + iv$, podemos representar z - w como:</p>
+<p>$(x + iy) - (u + iv) = (x-u) + i(y-v)$, onde:</p>
+<ul>
+<li>Re $(z-w)$ = Re $z$ - Re $w$</li>
+<li>Im $(z-w)$ = Im $z$ - Im $w$</li>
+</ul>
+<p>Em Python para z = 1+4i e w = 4+2i</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">z</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="mi">4</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">w</span> <span class="o">=</span> <span class="mi">4</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;O valor de z+w é, </span><span class="si">{</span><span class="n">z</span><span class="o">+</span><span class="n">w</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&#34;O valor de z-w é, </span><span class="si">{</span><span class="n">z</span><span class="o">-</span><span class="n">w</span><span class="si">}</span><span class="s2">&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>O valor de z+w é, (5+6j)
+O valor de z-w é, (-3+2j)
+</code></pre>
+<h2 id="23---multiplicação-de-números-complexos">2.3 - Multiplicação de números complexos</h2>
+<p>$(x+iy) \cdot (u-iv) = (xu-yv)+i(xv+yu) \in \mathbb{C}$</p>
+<p>Propriedades:</p>
+<ul>
+<li>Associativas: $(z_1z_2)z_3 = z_1(z_2z_3)$;</li>
+<li>Comutativas: $z_1z_2 = z_2z_1$;</li>
+<li>Distributivas: $z_1(z_2+z_3) = z_1z_2+ z_1z_3)$.</li>
+</ul>
+<p>Exemplo</p>
+<p>a = 2+4j</p>
+<p>b = -7+5j</p>
+<p>$(2+4j) \cdot (-7+5j) = (2 \cdot -7 - 5 \cdot 4) + j(2 \cdot 5 + 4 \cdot -7)$</p>
+<p>$= -34-18j$</p>
+<p>Efetuando a multiplicação dos números a, b e c:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="o">+</span><span class="mi">4</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">7</span><span class="o">+</span><span class="mi">5</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl"><span class="n">c</span> <span class="o">=</span> <span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;a * b = &#34;</span><span class="p">,</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;a * c = &#34;</span><span class="p">,</span> <span class="n">a</span> <span class="o">*</span> <span class="n">c</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>a * b =  (-34-18j)
+a * c =  (-2+16j)
+</code></pre>
+<p>Verificando se as propriedades são verdadeiras</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Propriedades</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Associativa: (a*b)*c == a*(b*c)&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">((</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="n">c</span> <span class="o">==</span> <span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">*</span><span class="n">c</span><span class="p">))</span>
+</span></span></code></pre></div><pre><code>Associativa: (a*b)*c == a*(b*c)
+True
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Comutativa: a*b == b*a&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="n">b</span> <span class="o">==</span> <span class="n">b</span><span class="o">*</span><span class="n">a</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Comutativa: a*b == b*a
+True
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Distributiva: a*(b+c) == a*b + a*c&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">+</span><span class="n">c</span><span class="p">)</span> <span class="o">==</span> <span class="n">a</span><span class="o">*</span><span class="n">b</span> <span class="o">+</span> <span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Distributiva: a*(b+c) == a*b + a*c
+True
+</code></pre>
+<p>As Potências de $i$:</p>
+<p>$i^0 = 1$</p>
+<p>$i = 0 + 1i$</p>
+<p>$i^2 = (0 + 1i)(0 + 1i) = (0\cdot0 - 1\cdot1) + i(0\cdot1+1\cdot0) = -1$</p>
+<p>$i^3 = i^2 \cdot i = -1\cdot i = -i $</p>
+<p>$i^4 = i^2 \cdot i^2 = -1\cdot -1 = 1 $</p>
+<p>$i^5 = i^4 \cdot i = i $</p>
+<p>$i^{100} = (i^4)^{25} = (1)^{25} = 1 $</p>
+<h2 id="24---divisão-de-números-complexos">2.4 - Divisão de números Complexos</h2>
+<p>Considere os números complexos $z = x + iy$ e $w = u + iv$,</p>
+<p>Para efetuar a divisão $ \frac{z}{w} $, para $w \neq 0$,</p>
+<p>multiplica o numerador e o denominador pelo conjugado complexo do denominador.</p>
+<p>$\frac{z}{w} = \frac{x+iy}{u+iv} = \frac{(x+iy)(u-iv)}{(u+iv)(u-iv)} = \frac{(xu+yv)+i(-xv+yu)}{u^2+v^2 + i(-uv+vu)}$</p>
+<p>$\frac{z}{w}$ = $\frac{xu+yv}{u^2+v^2}+i \frac{yu-xv}{u^2+v^2 }$</p>
+<p>Desta forma:</p>
+<p>$\frac{1}{z} = \frac{1}{x+iy} = \frac{x-iy}{x^2+y^2}$, quando $z \neq 0$</p>
+<p>Para $a = 2+4j$ e $b = -7+5j$</p>
+<p>$\frac{a}{b} = \frac {2 \cdot -7 + 4 \cdot 5}{-7^2+5^2}+i \frac{4 \cdot -7-2 \cdot 5}{-7^2+5^2} = 0.08108-i0.5135$</p>
+<p>No Python:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="o">+</span><span class="mi">4</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="o">-</span><span class="mi">7</span><span class="o">+</span><span class="mi">5</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl"><span class="n">c</span> <span class="o">=</span> <span class="mi">3</span><span class="o">+</span><span class="mi">2</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;a / b = &#34;</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;a / c = &#34;</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="n">c</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>a / b =  (0.08108108108108109-0.5135135135135136j)
+a / c =  (1.0769230769230769+0.6153846153846155j)
+</code></pre>
+<h2 id="referências-bibliográficas">Referências Bibliográficas</h2>
+<p><strong>CMATH — MATHEMATICAL FUNCTIONS FOR COMPLEX NUMBERS.</strong> 2023. Python documentation. Disponível em: <a href="https://docs.python.org/3/library/cmath.html" target="_blank" rel="noopener">https://docs.python.org/3/library/cmath.html</a>. Acesso em: 19 ago. 2023.</p>
+<p>MEURER, Aaron; SMITH, Christopher P.; PAPROCKI, Mateusz; ČERTÍK, Ondřej; KIRPICHEV, Sergey B.; ROCKLIN, Matthew; KUMAR, AMiT; IVANOV, Sergiu; MOORE, Jason K.; SINGH, Sartaj; RATHNAYAKE, Thilina; VIG, Sean; GRANGER, Brian E.; MULLER, Richard P.; BONAZZI, Francesco; GUPTA, Harsh; VATS, Shivam; JOHANSSON, Fredrik; PEDREGOSA, Fabian; … SCOPATZ, Anthony. <strong>SymPy: symbolic computing in Python</strong>. PeerJ Computer Science, v. 3, p. e103, 2 jan. 2017. <a href="https://doi.org/10.7717/peerj-cs.103" target="_blank" rel="noopener">https://doi.org/10.7717/peerj-cs.103</a>.</p>
+<p>GEOGEBRA. 2023. <strong>GeoGebra</strong>. Disponível em: <a href="https://www.geogebra.org/" target="_blank" rel="noopener">https://www.geogebra.org/</a>. Acesso em: 19 ago. 2023.</p>
+<p>LUCIO S. BUSTAMANTE, F. <strong>Números complexos com Python e SymPy</strong>. Disponível em: <a href="https://cienciaprogramada.com.br/2022/03/numeros-complexos-python-sympy/" target="_blank" rel="noopener">https://cienciaprogramada.com.br/2022/03/numeros-complexos-python-sympy/</a>. Acesso em: 1 ago. 2023.</p>
 <p>PETRA, B.-T. <strong>Introdução à análise complexa</strong>. Disponível em: <a href="https://www.coursera.org/learn/complex-analysis" target="_blank" rel="noopener">https://www.coursera.org/learn/complex-analysis</a>. Acesso em: 8 Mai. 2023.</p>
-<p>URSINI, Edson L. <strong>Notas de Aulas TT413 - Métodos Matemáticos para Telecomunicacões.</strong> [S. l.: s. n.], 2023.</p>
+<p>URSINI, Edson L. <strong>Notas de Aulas TT413 - Métodos Matemáticos para Telecomunicacões.</strong> [S. l.: s. n.], 2023.‌</p>
 <p>
 
 
@@ -1182,7 +1081,7 @@ $v = 2xy$</p>
       <a href="https://notbyai.fyi/" target="_blank" rel="noopener">https://notbyai.fyi/</a>
     </figcaption></figure>
 </p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
+
     </div>
 
     
@@ -1200,8 +1099,6 @@ $v = 2xy$</p>
   <a class="badge badge-light" href="/tag/complexos/">complexos</a>
   
   <a class="badge badge-light" href="/tag/aprendizagem/">aprendizagem</a>
-  
-  <a class="badge badge-light" href="/tag/exercicios/">exercícios</a>
   
 </div>
 
@@ -1222,7 +1119,7 @@ $v = 2xy$</p>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplex1%2F&amp;text=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.&#43;3" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplex1%2F&amp;text=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.&#43;1" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1239,7 +1136,7 @@ $v = 2xy$</p>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplex1%2F&amp;t=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.&#43;3" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplex1%2F&amp;t=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.&#43;1" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1258,7 +1155,7 @@ $v = 2xy$</p>
         
       
       <li>
-        <a href="mailto:?subject=N%C3%BAmeros%20Complexos%20-%20Pt.%203&amp;body=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplex1%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+        <a href="mailto:?subject=N%C3%BAmeros%20Complexos%20-%20Pt.%201&amp;body=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplex1%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1275,7 +1172,7 @@ $v = 2xy$</p>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplex1%2F&amp;title=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.&#43;3" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplex1%2F&amp;title=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.&#43;1" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1292,7 +1189,7 @@ $v = 2xy$</p>
       
       
       <li>
-        <a href="whatsapp://send?text=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.&#43;3%20https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplex1%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+        <a href="whatsapp://send?text=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.&#43;1%20https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplex1%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1309,7 +1206,7 @@ $v = 2xy$</p>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplex1%2F&amp;title=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.&#43;3" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplex1%2F&amp;title=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.&#43;1" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
