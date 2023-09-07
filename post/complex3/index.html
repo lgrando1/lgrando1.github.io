@@ -820,7 +820,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    6 min read
+    7 min read
   </span>
   
 
@@ -1149,8 +1149,68 @@ $v = 2xy$</p>
 </span></span></code></pre></div><p>$\displaystyle 2 y$</p>
 <p>Entretanto, para qualquer $z$ nesta linha não haverá vizinhança ou disco aberto em torno de $z$ para o qual $f(z)$ seja diferenciável. Concluímos que $f(z)$ não é analítica em todo domínio.</p>
 <h2 id="9---verifique-se-uxy--x3---3xy2-5y-é-harmômica-em-todo-plano-complexo-ache-a-função-conjugada-harmônica-de-uxy-ou-seja-vxy">9 - Verifique se $u(x,y) = x^3 - 3xy^2-5y$ é harmômica em todo plano complexo. Ache a função conjugada harmônica de $u(x,y)$, ou seja, $v(x,y)$.</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><h2 id="10---quanto-vale-sin2i-na-forma-x--yi">10 - Quanto vale $sin(2+i)$ na forma $x + yi$?</h2>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><h2 id="11---ache-quanto-vale-z-em-cosz--10">11 - Ache quanto vale $z$ em $cos(z) = 10$?</h2>
+<p>Relembrando:
+Se $f(z) = u(x,y) + iv(x,y)$ é analítica em todo domínio D, então tanto $u$ quanto $v$ satisfazem a equação de Laplace:</p>
+<p>$\nabla ^ 2 u = u_{xx} + u_{yy} = 0$ e $\nabla ^ 2 v = v_{xx} + v_{yy} = 0$ em $D$ e têm derivadas segundas parciais contínuas em $D$.</p>
+<p>Para verificar se a função é harmônica:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">u</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="o">-</span><span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="mi">5</span><span class="o">*</span><span class="n">y</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#uxx+uyy = 0</span>
+</span></span><span class="line"><span class="cl"><span class="n">diff</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">diff</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle 0$</p>
+<p>Lembrando das condições de Cauchy-Reimann:</p>
+<p>$\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y}$</p>
+<p>$\frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x}$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">ux</span> <span class="o">=</span> <span class="n">diff</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">ux</span>
+</span></span></code></pre></div><p>$\displaystyle 3 x^{2} - 3 y^{2}$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">uy</span> <span class="o">=</span> <span class="n">diff</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">uy</span>
+</span></span></code></pre></div><p>$\displaystyle - 6 x y - 5$</p>
+<p>Desta forma:</p>
+<p>(1) $\frac{\partial v}{\partial y} = 3x^2-3y²$</p>
+<p>(2) $\frac{\partial v}{\partial x} = 6xy+5$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Para integrar:</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">integrate</span><span class="p">,</span> <span class="n">Function</span><span class="p">,</span> <span class="n">dsolve</span><span class="p">,</span> <span class="n">Eq</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">v1</span> <span class="o">=</span> <span class="n">integrate</span><span class="p">(</span><span class="n">ux</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">v1</span>
+</span></span></code></pre></div><p>$\displaystyle 3 x^{2} y - y^{3}$</p>
+<p>Observe que não aparece a constante de integração, que inclusive pode ser dependente de x. Esta constante pode ser representada como uma função h(x):</p>
+<p>$v(x,y) = 3x^2y-y^3+h(x)$ (3)</p>
+<p>Derivando em função de x e igualando a (2):</p>
+<p>$\frac{\partial v}{\partial x} = 6xy + h&rsquo;(x) = 6xy+5 \rightarrow h&rsquo;(x) = 5$</p>
+<p>Então:</p>
+<p>$\frac{\partial h}{\partial x} = 5 \rightarrow \int \partial h = 5\int \partial x \rightarrow h = 5x + C$</p>
+<p>Resultando em</p>
+<p>$v(x,y) = 3x^2y-y^3+5x + C$</p>
+<p>A função analítica é:</p>
+<p>$f(x,y) = (x^3 - 3xy^2-5y) + i(3x^2y-y^3+5x + C) $</p>
+<h2 id="10---quanto-vale-sin2i-na-forma-x--yi">10 - Quanto vale $sin(2+i)$ na forma $x + yi$?</h2>
+<p>Formas trigonométricas, relembrando:</p>
+<p>$cos (z) = \frac{e^{iz}+e^{-iz}}{2}$</p>
+<p>$sin (z) = \frac{e^{iz}-e^{-iz}}{2i}$</p>
+<p>Propriedades:</p>
+<ul>
+<li>
+<p>$cos (-z) = \frac{e^{-iz}+e^{iz}}{2} = cos (z)$</p>
+</li>
+<li>
+<p>$sin (-z) = \frac{e^{-iz}-e^{iz}}{2i} = -sin (z)$</p>
+</li>
+<li>
+<p>$cos(z+w) = cos (z) cos (w) - sin (z) sin (w) $</p>
+</li>
+<li>
+<p>$sin(z+w) = sin (z) cos (w) - cos (z) sin (w) $</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="n">I</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle \sin{\left(2 + i \right)}$</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">+</span><span class="n">I</span><span class="p">)</span><span class="o">.</span><span class="n">as_real_imag</span><span class="p">()</span>
+</span></span></code></pre></div><pre><code>(sin(2)*cosh(1), cos(2)*sinh(1))
+</code></pre>
+<h2 id="11---ache-quanto-vale-z-em-cosz--10">11 - Ache quanto vale $z$ em $cos(z) = 10$?</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><h2 id="12---ache-todos-os-valores-possíveis-do-arcsinsqrt5">12 - Ache todos os valores possíveis do $arcsin(\sqrt{5})$?</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><h2 id="13---ache-as-derivada-de-w--arcsinz-no-ponto-z--sqrt5">13 - Ache as derivada de $w = arcsin(z)$ no ponto $z = \sqrt{5}$</h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div><h2 id="14---ache-todos-os-valores-de-arccosh-1">14 - Ache todos os valores de $arc(cosh(-1))$?</h2>
