@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: September 8, 2023 --><html lang="en-us" >
+<!-- Last Published: September 9, 2023 --><html lang="en-us" >
 
 
 <head>
@@ -327,7 +327,7 @@
     />
   
   
-    <meta property="article:modified_time" content="2023-08-19T16:00:00-03:00">
+    <meta property="article:modified_time" content="2023-08-31T16:00:00-03:00">
   
 
 
@@ -358,7 +358,7 @@
   "headline": "Números Complexos - Pt. 1",
   
   "datePublished": "2023-08-07T00:00:00Z",
-  "dateModified": "2023-08-19T16:00:00-03:00",
+  "dateModified": "2023-08-31T16:00:00-03:00",
   
   "author": {
     "@type": "Person",
@@ -811,7 +811,7 @@
           Last updated on
       
     
-    Aug 19, 2023
+    Aug 31, 2023
   </span>
   
 
@@ -867,9 +867,9 @@
 </li>
 </ol>
 <p>Código disponível aqui: <a href="https://github.com/lgrando1/Notas_Numeros_Complexos/" target="_blank" rel="noopener">https://github.com/lgrando1/Notas_Numeros_Complexos/</a></p>
-<h1 id="1-números-complexos">1. Números complexos</h1>
+<h2 id="1-números-complexos">1. Números complexos</h2>
 <p>Elemento de um sistema numérico que contém os números reais e um elemento especifico denominado $i$, chamado de unidade imaginária, e satisfaz a equação $i^2 = -1$.</p>
-<h2 id="plano-complexo">Plano Complexo</h2>
+<h3 id="plano-complexo">Plano Complexo</h3>
 <p>Números complexos são expressões da forma $z = x + iy$ ou $z = x + jy$, onde:</p>
 <ul>
 <li>$x$ é a parte real de $z$ ou $x = Re$ z;</li>
@@ -945,17 +945,17 @@
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="o">.</span><span class="n">conjugate</span><span class="p">())</span>
 </span></span></code></pre></div><pre><code>(3-2j)
 </code></pre>
-<h3 id="algumas-desigualdades">Algumas desigualdades:</h3>
+<p><strong>Algumas desigualdades:</strong></p>
 <p>$-|z|\leq Re$ z $ \leq |z|$</p>
 <p>$-|z|\leq Im$ z $ \leq |z|$</p>
-<h4 id="desigualdade-triangular">Desigualdade triangular</h4>
-<p>$|z+w| \leq |z| + |w|$</p>
+<p><strong>Desigualdade triangular</strong>
+$|z+w| \leq |z| + |w|$</p>
 <p>Generalizando:</p>
 <p>$|z_1+z_2 + &hellip; z_n| \leq |z_1| + |z_2|+ &hellip; + |z_n|$</p>
-<h4 id="desigualdade-triangular-inversa">Desigualdade triangular inversa</h4>
-<p>$|z-w| \geq |z| - |w|$</p>
-<h1 id="2-operações-básicas">2. Operações Básicas</h1>
-<h2 id="21---adição">2.1 - Adição</h2>
+<p><strong>Desigualdade triangular inversa</strong>
+$|z-w| \geq |z| - |w|$</p>
+<h2 id="2-operações-básicas">2. Operações Básicas</h2>
+<h3 id="21---adição">2.1 - Adição</h3>
 <p>Se $z = x + iy$ e $w = u + iv$, podemos representar z + w como:</p>
 <p>$(x + iy) + (u + iv) = (x+u) + i(y+v)$, onde:</p>
 <ul>
@@ -963,7 +963,7 @@
 <li>Im$(z+w)$ = Im $z$ + Im $w$</li>
 </ul>
 <img src="fig112.png">
-<h2 id="22---subtração">2.2 - Subtração</h2>
+<h3 id="22---subtração">2.2 - Subtração</h3>
 <p>Se $z = x + iy$ e $w = u + iv$, podemos representar z - w como:</p>
 <p>$(x + iy) - (u + iv) = (x-u) + i(y-v)$, onde:</p>
 <ul>
@@ -980,7 +980,7 @@
 </span></span></code></pre></div><pre><code>O valor de z+w é, (5+6j)
 O valor de z-w é, (-3+2j)
 </code></pre>
-<h2 id="23---multiplicação-de-números-complexos">2.3 - Multiplicação de números complexos</h2>
+<h3 id="23---multiplicação-de-números-complexos">2.3 - Multiplicação de números complexos</h3>
 <p>$(x+iy) \cdot (u-iv) = (xu-yv)+i(xv+yu) \in \mathbb{C}$</p>
 <p>Propriedades:</p>
 <ul>
@@ -1029,7 +1029,7 @@ True
 <p>$i^4 = i^2 \cdot i^2 = -1\cdot -1 = 1 $</p>
 <p>$i^5 = i^4 \cdot i = i $</p>
 <p>$i^{100} = (i^4)^{25} = (1)^{25} = 1 $</p>
-<h2 id="24---divisão-de-números-complexos">2.4 - Divisão de números Complexos</h2>
+<h3 id="24---divisão-de-números-complexos">2.4 - Divisão de números Complexos</h3>
 <p>Considere os números complexos $z = x + iy$ e $w = u + iv$,</p>
 <p>Para efetuar a divisão $ \frac{z}{w} $, para $w \neq 0$,</p>
 <p>multiplica o numerador e o denominador pelo conjugado complexo do denominador.</p>
