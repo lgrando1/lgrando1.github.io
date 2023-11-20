@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Taylor | Leonardo Grando</title>
+    <link>https://lgrando1.github.io/tag/taylor/</link>
+      <atom:link href="https://lgrando1.github.io/tag/taylor/index.xml" rel="self" type="application/rss+xml" />
+    <description>Taylor</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 19 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://lgrando1.github.io/media/icon_hu4fc79c7a5689779429e28d3f510b9e42_81098_512x512_fill_lanczos_center_3.png</url>
+      <title>Taylor</title>
+      <link>https://lgrando1.github.io/tag/taylor/</link>
+    </image>
+    
+    <item>
+      <title>Números Complexos - Pt. 4</title>
+      <link>https://lgrando1.github.io/post/complex4/</link>
+      <pubDate>Sun, 19 Nov 2023 00:00:00 +0000</pubDate>
+      <guid>https://lgrando1.github.io/post/complex4/</guid>
+      <description>&lt;h1 id=&#34;desenvolvimentos-dos-componentes-da-série-de-taylor&#34;&gt;Desenvolvimentos dos componentes da Série de Taylor&lt;/h1&gt;
+&lt;p&gt;Para expandir computacionalmente é possivel utilizar a função sympy.series.&lt;/p&gt;
+&lt;p&gt;A documentação desta função do Sympy pode ser encontrada &lt;a href=&#34;https://docs.sympy.org/latest/modules/series/series.html#more-intuitive-series-expansion&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;O código fonte deste Jupyter Notebook pode ser encontrado &lt;a href=&#34;https://github.com/lgrando1/Notas_Numeros_Complexos/blob/main/Aula21_Novembro_taylor.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# importando as funções nescessarias para a expansão das funções:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;sympy&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Symbol&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;series&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;E&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ln&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;cosh&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sinh&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;Symbol&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s1&#34;&gt;&amp;#39;z&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;series-de-taylor&#34;&gt;Series de Taylor&lt;/h2&gt;
+&lt;p&gt;Utiliza-se a seguinte expressão para o desenvolvimento das expressões das séries de Taylor:&lt;/p&gt;
+&lt;p&gt;$f(z)=\sum_{k=0}^{\infty}(z-a)^k\frac{f^{k}(a)}{k!}$&lt;/p&gt;
+&lt;p&gt;Desenvolva as séries de Taylor para as funções a seguir nos pontos determinados:&lt;/p&gt;
+&lt;h3 id=&#34;a-fz--ez-para-a--0&#34;&gt;A) $f(z) = e^z$ para $a = 0$&lt;/h3&gt;
+&lt;p&gt;Calculando as derivadas:&lt;/p&gt;
+&lt;p&gt;$f^0(z)=e^z \Rightarrow f^0(0) = 1$&lt;/p&gt;
+&lt;p&gt;$f^1(z)=e^z \Rightarrow f^1(0) = 1$&lt;/p&gt;
+&lt;p&gt;$f^2(z)=e^z \Rightarrow f^2(0) = 1$&lt;/p&gt;
+&lt;p&gt;$f^3(z)=e^z \Rightarrow f^3(0) = 1$&lt;/p&gt;
+&lt;p&gt;$f^4(z)=e^z \Rightarrow f^4(0) = 1$&lt;/p&gt;
+&lt;p&gt;Para k = 0&lt;/p&gt;
+&lt;p&gt;$(z-0)^0 \frac{f^0(0)}{0!} = 1$&lt;/p&gt;
+&lt;p&gt;Para k = 1&lt;/p&gt;
+&lt;p&gt;$(z-0)^1 \frac{f^1(0)}{1!} = z$&lt;/p&gt;
+&lt;p&gt;Para k = 2&lt;/p&gt;
+&lt;p&gt;$(z-0)^2 \frac{f^2(0)}{2!} = \frac{z^2}{2!}$&lt;/p&gt;
+&lt;p&gt;Para k = 3&lt;/p&gt;
+&lt;p&gt;$(z-0)^3 \frac{f^3(0)}{3!} = \frac{z^3}{3!}$&lt;/p&gt;
+&lt;p&gt;Para k = 4&lt;/p&gt;
+&lt;p&gt;$(z-0)^4 \frac{f^4(0)}{4!} = \frac{z^4}{4!}$&lt;/p&gt;
+&lt;p&gt;Então:&lt;/p&gt;
+&lt;p&gt;$f(z) = 1 + z + \frac{z^2}{2!} + \frac{z^3}{3!} + \frac{z^4}{4!}&amp;hellip; $&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Computacionalmente:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;series&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;E&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;$\displaystyle 1 + z + \frac{z^{2}}{2} + \frac{z^{3}}{6} + \frac{z^{4}}{24} + \frac{z^{5}}{120} + O\left(z^{6}\right)$&lt;/p&gt;
+&lt;h3 id=&#34;b-fz--cosz-para-a--0&#34;&gt;B) $f(z) = \cos(z)$ para $a = 0$&lt;/h3&gt;
+&lt;p&gt;Calculando as derivadas:&lt;/p&gt;
+&lt;p&gt;$f^0(z)=\cos(z) \Rightarrow f^0(0) = 1$&lt;/p&gt;
+&lt;p&gt;$f^1(z)=-\sin(z) \Rightarrow f^1(0) = 0$&lt;/p&gt;
+&lt;p&gt;$f^2(z)=-\cos(z) \Rightarrow f^2(0) = -1$&lt;/p&gt;
+&lt;p&gt;$f^3(z)=\sin(z) \Rightarrow f^3(0) = 0$&lt;/p&gt;
+&lt;p&gt;$f^4(z)=\cos(z) \Rightarrow f^4(0) = 1$&lt;/p&gt;
+&lt;p&gt;Para k = 0&lt;/p&gt;
+&lt;p&gt;$(z-0)^0 \frac{f^0(0)}{0!} = 1$&lt;/p&gt;
+&lt;p&gt;Para k = 1&lt;/p&gt;
+&lt;p&gt;$(z-0)^1 \frac{f^1(0)}{1!} = 0$&lt;/p&gt;
+&lt;p&gt;Para k = 2&lt;/p&gt;
+&lt;p&gt;$(z-0)^2 \frac{f^2(0)}{2!} = -\frac{z^2}{2!}$&lt;/p&gt;
+&lt;p&gt;Para k = 3&lt;/p&gt;
+&lt;p&gt;$(z-0)^3 \frac{f^3(0)}{3!} = 0$&lt;/p&gt;
+&lt;p&gt;Para k = 4&lt;/p&gt;
+&lt;p&gt;$(z-0)^4 \frac{f^4(0)}{4!} = -\frac{z^4}{4!}$&lt;/p&gt;
+&lt;p&gt;Então:&lt;/p&gt;
+&lt;p&gt;$f(z) = 1 - \frac{z^2}{2!} + \frac{z^4}{4!} &amp;hellip; $&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Computacionalmente:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;series&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cos&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;$\displaystyle 1 - \frac{z^{2}}{2} + \frac{z^{4}}{24} + O\left(z^{6}\right)$&lt;/p&gt;
+&lt;h3 id=&#34;c-fz--sinz-para-a--0&#34;&gt;C) $f(z) = \sin(z)$ para $a = 0$&lt;/h3&gt;
+&lt;p&gt;Calculando as derivadas:&lt;/p&gt;
+&lt;p&gt;$f^0(z)=\sin(z) \Rightarrow f^0(0) = 0$&lt;/p&gt;
+&lt;p&gt;$f^1(z)=\cos(z) \Rightarrow f^1(0) = 1$&lt;/p&gt;
+&lt;p&gt;$f^2(z)=-\sin(z) \Rightarrow f^2(0) = 0$&lt;/p&gt;
+&lt;p&gt;$f^3(z)=-\cos(z) \Rightarrow f^3(0) = -1$&lt;/p&gt;
+&lt;p&gt;$f^4(z)=\sin(z) \Rightarrow f^4(0) = 0$&lt;/p&gt;
+&lt;p&gt;$f^5(z)=\cos(z) \Rightarrow f^5(0) = 1$&lt;/p&gt;
+&lt;p&gt;Para k = 0&lt;/p&gt;
+&lt;p&gt;$(z-0)^0 \frac{f^0(0)}{0!} = 0$&lt;/p&gt;
+&lt;p&gt;Para k = 1&lt;/p&gt;
+&lt;p&gt;$(z-0)^1 \frac{f^1(0)}{1!} = z$&lt;/p&gt;
+&lt;p&gt;Para k = 2&lt;/p&gt;
+&lt;p&gt;$(z-0)^2 \frac{f^2(0)}{2!} = 0$&lt;/p&gt;
+&lt;p&gt;Para k = 3&lt;/p&gt;
+&lt;p&gt;$(z-0)^3 \frac{f^3(0)}{3!} = -\frac{z^3}{3!}$&lt;/p&gt;
+&lt;p&gt;Para k = 4&lt;/p&gt;
+&lt;p&gt;$(z-0)^4 \frac{f^4(0)}{4!} = 0$&lt;/p&gt;
+&lt;p&gt;Para k = 5&lt;/p&gt;
+&lt;p&gt;$(z-0)^5 \frac{f^5(0)}{5!} = \frac{z^5}{5!}$&lt;/p&gt;
+&lt;p&gt;Então:&lt;/p&gt;
+&lt;p&gt;\box{$f(z) = z - \frac{z^3}{3!} + \frac{z^5}{5!} &amp;hellip; $&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Computacionalmente:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;series&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sin&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;$\displaystyle z - \frac{z^{3}}{6} + \frac{z^{5}}{120} + O\left(z^{6}\right)$&lt;/p&gt;
+&lt;h3 id=&#34;d-fz--frac1z-para-a--1&#34;&gt;D) $f(z) = \frac{1}{z}$ para $a = 1$&lt;/h3&gt;
+&lt;p&gt;Calculando as derivadas:&lt;/p&gt;
+&lt;p&gt;$f^0(z)=\frac{1}{z} \Rightarrow f^0(1) = 1$&lt;/p&gt;
+&lt;p&gt;$f^1(z)=-\frac{1}{z^2} \Rightarrow f^1(1) = -1$&lt;/p&gt;
+&lt;p&gt;$f^2(z)=\frac{2}{z^3} \Rightarrow f^2(1) = 2!$&lt;/p&gt;
+&lt;p&gt;$f^3(z)=-\frac{3!}{z^4} \Rightarrow f^3(1) = -3!$&lt;/p&gt;
+&lt;p&gt;$f^4(z)=\frac{4!}{z^5} \Rightarrow f^4(1) = 4!$&lt;/p&gt;
+&lt;p&gt;Para k = 0&lt;/p&gt;
+&lt;p&gt;$(z-1)^0 \frac{1}{0!} = 1$&lt;/p&gt;
+&lt;p&gt;Para k = 1&lt;/p&gt;
+&lt;p&gt;$(z-1)^1 \frac{-1}{1!} = -(z-1)$&lt;/p&gt;
+&lt;p&gt;Para k = 2&lt;/p&gt;
+&lt;p&gt;$(z-1)^2 \frac{2!}{2!} = (z-1)^2$&lt;/p&gt;
+&lt;p&gt;Para k = 3&lt;/p&gt;
+&lt;p&gt;$(z-1)^3 \frac{3!}{3!} = -(z-1)^3$&lt;/p&gt;
+&lt;p&gt;Para k = 4&lt;/p&gt;
+&lt;p&gt;$(z-1)^4 \frac{4!}{4!} = (z-1)^4$&lt;/p&gt;
+&lt;p&gt;Então:&lt;/p&gt;
+&lt;p&gt;$f(z) = 1 -(z-1) + (z-1)^2 - (z-1)^3 + (z-1)^4 &amp;hellip; $&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Computacionalmente:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;series&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;$\displaystyle 2 + \left(z - 1\right)^{2} - \left(z - 1\right)^{3} + \left(z - 1\right)^{4} - \left(z - 1\right)^{5} - z + O\left(\left(z - 1\right)^{6}; z\rightarrow 1\right)$&lt;/p&gt;
+&lt;h3 id=&#34;e-fz--lnz-para-a--1&#34;&gt;E) $f(z) = \ln(z)$ para $a = 1$&lt;/h3&gt;
+&lt;p&gt;Calculando as derivadas:&lt;/p&gt;
+&lt;p&gt;$f^0(z)= \ln(z) \Rightarrow f^0(1) = 0 $&lt;/p&gt;
+&lt;p&gt;$f^1(z)=\frac{1}{z} \Rightarrow f^1(1) = 1$&lt;/p&gt;
+&lt;p&gt;$f^2(z)=-\frac{1}{z^2} \Rightarrow f^2(1) = -1$&lt;/p&gt;
+&lt;p&gt;$f^3(z)=\frac{2}{z^3} \Rightarrow f^3(1) = 2!$&lt;/p&gt;
+&lt;p&gt;$f^4(z)=-\frac{3!}{z^4} \Rightarrow f^4(1) = -3!$&lt;/p&gt;
+&lt;p&gt;Para k = 0&lt;/p&gt;
+&lt;p&gt;$(z-1)^0 \frac{0}{0!} = 0$&lt;/p&gt;
+&lt;p&gt;Para k = 1&lt;/p&gt;
+&lt;p&gt;$(z-1)^1 \frac{1}{1!} = (z-1)$&lt;/p&gt;
+&lt;p&gt;Para k = 2&lt;/p&gt;
+&lt;p&gt;$(z-1)^2 \frac{-1}{2!} = -\frac{(z-1)^2}{2}$&lt;/p&gt;
+&lt;p&gt;Para k = 3&lt;/p&gt;
+&lt;p&gt;$(z-1)^3 \frac{2!}{3!} = \frac{(z-1)^3}{3}$&lt;/p&gt;
+&lt;p&gt;Para k = 4&lt;/p&gt;
+&lt;p&gt;$(z-1)^4 \frac{3!}{4!} = -\frac{(z-1)^4}{4}$&lt;/p&gt;
+&lt;p&gt;Então:&lt;/p&gt;
+&lt;p&gt;$f(z) = (z-1) -\frac{(z-1)^2}{2} + \frac{(z-1)^3}{3} -\frac{(z-1)^4}{4} &amp;hellip; $&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Computacionalmente:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;series&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;ln&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;$\displaystyle -1 - \frac{\left(z - 1\right)^{2}}{2} + \frac{\left(z - 1\right)^{3}}{3} - \frac{\left(z - 1\right)^{4}}{4} + \frac{\left(z - 1\right)^{5}}{5} + z + O\left(\left(z - 1\right)^{6}; z\rightarrow 1\right)$&lt;/p&gt;
+&lt;h3 id=&#34;f-fz--coshz-para-a--0&#34;&gt;F) $f(z) = \cosh(z)$ para $a = 0$&lt;/h3&gt;
+&lt;p&gt;Calculando as derivadas:&lt;/p&gt;
+&lt;p&gt;$f^0(z)= \cosh(z) \Rightarrow f^0(0) = 1 $&lt;/p&gt;
+&lt;p&gt;$f^1(z)= \sinh(z) \Rightarrow f^1(0) = 0$&lt;/p&gt;
+&lt;p&gt;$f^2(z)= \cosh(z) \Rightarrow f^0(0) = 1 $&lt;/p&gt;
+&lt;p&gt;$f^3(z)= \sinh(z) \Rightarrow f^1(0) = 0$&lt;/p&gt;
+&lt;p&gt;$f^4(z)= \cosh(z) \Rightarrow f^0(0) = 1 $&lt;/p&gt;
+&lt;p&gt;Para k = 0&lt;/p&gt;
+&lt;p&gt;$(z-0)^0 \frac{1}{0!} = 1$&lt;/p&gt;
+&lt;p&gt;Para k = 1&lt;/p&gt;
+&lt;p&gt;$(z-0)^1 \frac{0}{1!} = 0$&lt;/p&gt;
+&lt;p&gt;Para k = 2&lt;/p&gt;
+&lt;p&gt;$(z-0)^2 \frac{1}{2!} = \frac{z^2}{2}$&lt;/p&gt;
+&lt;p&gt;Para k = 3&lt;/p&gt;
+&lt;p&gt;$(z-0)^3 \frac{0}{3!} = 0$&lt;/p&gt;
+&lt;p&gt;Para k = 4&lt;/p&gt;
+&lt;p&gt;$(z-0)^4 \frac{1}{4!} = \frac{z^2}{4!}$&lt;/p&gt;
+&lt;p&gt;Então:&lt;/p&gt;
+&lt;p&gt;$f(z) = 1 + \frac{z^2}{2} + \frac{z^4}{4!} &amp;hellip; $&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Computacionalmente:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;series&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cosh&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;$\displaystyle 1 + \frac{z^{2}}{2} + \frac{z^{4}}{24} + O\left(z^{6}\right)$&lt;/p&gt;
+&lt;h3 id=&#34;g-fz--sinhz-para-a--0&#34;&gt;G) $f(z) = \sinh(z)$ para $a = 0$&lt;/h3&gt;
+&lt;p&gt;Calculando as derivadas:&lt;/p&gt;
+&lt;p&gt;$f^0(z)= \sinh(z) \Rightarrow f^1(0) = 0$&lt;/p&gt;
+&lt;p&gt;$f^1(z)= \cosh(z) \Rightarrow f^0(0) = 1 $&lt;/p&gt;
+&lt;p&gt;$f^2(z)= \sinh(z) \Rightarrow f^1(0) = 0$&lt;/p&gt;
+&lt;p&gt;$f^3(z)= \cosh(z) \Rightarrow f^0(0) = 1 $&lt;/p&gt;
+&lt;p&gt;$f^4(z)= \sinh(z) \Rightarrow f^0(0) = 0 $&lt;/p&gt;
+&lt;p&gt;$f^5(z)= \cosh(z) \Rightarrow f^0(0) = 1 $&lt;/p&gt;
+&lt;p&gt;Para k = 0&lt;/p&gt;
+&lt;p&gt;$(z-0)^0 \frac{0}{0!} = 0$&lt;/p&gt;
+&lt;p&gt;Para k = 1&lt;/p&gt;
+&lt;p&gt;$(z-0)^1 \frac{1}{1!} = z$&lt;/p&gt;
+&lt;p&gt;Para k = 2&lt;/p&gt;
+&lt;p&gt;$(z-0)^2 \frac{0}{2!} = 0$&lt;/p&gt;
+&lt;p&gt;Para k = 3&lt;/p&gt;
+&lt;p&gt;$(z-0)^3 \frac{1}{3!} = \frac{z^3}{3!}$&lt;/p&gt;
+&lt;p&gt;Para k = 4&lt;/p&gt;
+&lt;p&gt;$(z-0)^4 \frac{0}{4!} = 0$&lt;/p&gt;
+&lt;p&gt;Para k = 5&lt;/p&gt;
+&lt;p&gt;$(z-0)^5 \frac{1}{5!} = \frac{z^5}{5!}$&lt;/p&gt;
+&lt;p&gt;Então:&lt;/p&gt;
+&lt;p&gt;$f(z) = z + \frac{z^3}{3!} + \frac{z^5}{5!} &amp;hellip; $&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Computacionalmente:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;series&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;sinh&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;$\displaystyle z + \frac{z^{3}}{6} + \frac{z^{5}}{120} + O\left(z^{6}\right)$&lt;/p&gt;
+&lt;h3 id=&#34;h-fz--frac12zz3z4-para-a--0&#34;&gt;H) $f(z) = \frac{1+2z}{z^3+z^4}$, para $a = 0$&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;#Computacionalmente:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;series&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;((&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;1&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;2&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;*&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;/&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;3&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;+&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;**&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;4&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;z&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;$\displaystyle \frac{1}{z^{3}} + \frac{1}{z^{2}} - \frac{1}{z} + 1 - z + z^{2} - z^{3} + z^{4} - z^{5} + O\left(z^{6}\right)$&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  id=&#34;figure-httpsnotbyaifyi&#34;&gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Not-By-AI&#34;
+           src=&#34;https://lgrando1.github.io/post/complex4/notai.svg&#34;
+           loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;figcaption&gt;
+      &lt;a href=&#34;https://notbyai.fyi/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://notbyai.fyi/&lt;/a&gt;
+    &lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

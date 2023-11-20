@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: November 19, 2023 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto+Mono&family=Roboto:wght@400;700&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.ee81bf7a110c56bd976b7e46cebf897e.css" />
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Leonardo Grando" />
+
+
+
+
+
+  
+
+<meta name="description" content="Expansão tanto algebricamente, quanto utilizando biblioteca Sympy no Python" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://lgrando1.github.io/post/complex4/" />
+<link rel="canonical" href="https://lgrando1.github.io/post/complex4/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu4fc79c7a5689779429e28d3f510b9e42_81098_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu4fc79c7a5689779429e28d3f510b9e42_81098_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#707070" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+
+  <meta property="twitter:site" content="@lgrando123" />
+  <meta property="twitter:creator" content="@lgrando123" />
+<meta property="twitter:image" content="https://lgrando1.github.io/media/icon_hu4fc79c7a5689779429e28d3f510b9e42_81098_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="Leonardo Grando" />
+<meta property="og:url" content="https://lgrando1.github.io/post/complex4/" />
+<meta property="og:title" content="Números Complexos - Pt. 4 | Leonardo Grando" />
+<meta property="og:description" content="Expansão tanto algebricamente, quanto utilizando biblioteca Sympy no Python" /><meta property="og:image" content="https://lgrando1.github.io/media/icon_hu4fc79c7a5689779429e28d3f510b9e42_81098_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2023-11-19T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2023-09-09T16:00:00-03:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lgrando1.github.io/post/complex4/"
+  },
+  "headline": "Números Complexos - Pt. 4",
+  
+  "datePublished": "2023-11-19T00:00:00Z",
+  "dateModified": "2023-09-09T16:00:00-03:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Leonardo Grando"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Leonardo Grando",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lgrando1.github.io/media/icon_hu4fc79c7a5689779429e28d3f510b9e42_81098_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Expansão tanto algebricamente, quanto utilizando biblioteca Sympy no Python"
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Números Complexos - Pt. 4 | Leonardo Grando</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="d15fba87ee6a9c78cfe2f856904ce216" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.253edc45b3a8a047e59a8677cf8e2715.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Leonardo Grando</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Leonardo Grando</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#posts"><span>Posts</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/publication/"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/uploads/resumeEN.pdf"><span>CV</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://www.linkedin.com/in/lgrando123" data-toggle="tooltip" data-placement="bottom" title="Follow me on LinkedIn" target="_blank" rel="noopener" aria-label="Follow me on LinkedIn">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Números Complexos - Pt. 4</h1>
+
+  
+  <p class="page-subtitle">Expansão de algumas séries de Taylor</p>
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Sep 9, 2023
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="desenvolvimentos-dos-componentes-da-série-de-taylor">Desenvolvimentos dos componentes da Série de Taylor</h1>
+<p>Para expandir computacionalmente é possivel utilizar a função sympy.series.</p>
+<p>A documentação desta função do Sympy pode ser encontrada <a href="https://docs.sympy.org/latest/modules/series/series.html#more-intuitive-series-expansion" target="_blank" rel="noopener">aqui</a></p>
+<p>O código fonte deste Jupyter Notebook pode ser encontrado <a href="https://github.com/lgrando1/Notas_Numeros_Complexos/blob/main/Aula21_Novembro_taylor.ipynb" target="_blank" rel="noopener">aqui</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># importando as funções nescessarias para a expansão das funções:</span>
+</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="n">Symbol</span><span class="p">,</span> <span class="n">cos</span><span class="p">,</span> <span class="n">series</span><span class="p">,</span> <span class="n">E</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">ln</span><span class="p">,</span> <span class="n">cosh</span><span class="p">,</span> <span class="n">sinh</span>
+</span></span><span class="line"><span class="cl"><span class="n">z</span> <span class="o">=</span> <span class="n">Symbol</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><h2 id="series-de-taylor">Series de Taylor</h2>
+<p>Utiliza-se a seguinte expressão para o desenvolvimento das expressões das séries de Taylor:</p>
+<p>$f(z)=\sum_{k=0}^{\infty}(z-a)^k\frac{f^{k}(a)}{k!}$</p>
+<p>Desenvolva as séries de Taylor para as funções a seguir nos pontos determinados:</p>
+<h3 id="a-fz--ez-para-a--0">A) $f(z) = e^z$ para $a = 0$</h3>
+<p>Calculando as derivadas:</p>
+<p>$f^0(z)=e^z \Rightarrow f^0(0) = 1$</p>
+<p>$f^1(z)=e^z \Rightarrow f^1(0) = 1$</p>
+<p>$f^2(z)=e^z \Rightarrow f^2(0) = 1$</p>
+<p>$f^3(z)=e^z \Rightarrow f^3(0) = 1$</p>
+<p>$f^4(z)=e^z \Rightarrow f^4(0) = 1$</p>
+<p>Para k = 0</p>
+<p>$(z-0)^0 \frac{f^0(0)}{0!} = 1$</p>
+<p>Para k = 1</p>
+<p>$(z-0)^1 \frac{f^1(0)}{1!} = z$</p>
+<p>Para k = 2</p>
+<p>$(z-0)^2 \frac{f^2(0)}{2!} = \frac{z^2}{2!}$</p>
+<p>Para k = 3</p>
+<p>$(z-0)^3 \frac{f^3(0)}{3!} = \frac{z^3}{3!}$</p>
+<p>Para k = 4</p>
+<p>$(z-0)^4 \frac{f^4(0)}{4!} = \frac{z^4}{4!}$</p>
+<p>Então:</p>
+<p>$f(z) = 1 + z + \frac{z^2}{2!} + \frac{z^3}{3!} + \frac{z^4}{4!}&hellip; $</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Computacionalmente:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">series</span><span class="p">(</span><span class="n">E</span><span class="o">**</span><span class="p">(</span><span class="n">z</span><span class="p">),</span><span class="n">z</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle 1 + z + \frac{z^{2}}{2} + \frac{z^{3}}{6} + \frac{z^{4}}{24} + \frac{z^{5}}{120} + O\left(z^{6}\right)$</p>
+<h3 id="b-fz--cosz-para-a--0">B) $f(z) = \cos(z)$ para $a = 0$</h3>
+<p>Calculando as derivadas:</p>
+<p>$f^0(z)=\cos(z) \Rightarrow f^0(0) = 1$</p>
+<p>$f^1(z)=-\sin(z) \Rightarrow f^1(0) = 0$</p>
+<p>$f^2(z)=-\cos(z) \Rightarrow f^2(0) = -1$</p>
+<p>$f^3(z)=\sin(z) \Rightarrow f^3(0) = 0$</p>
+<p>$f^4(z)=\cos(z) \Rightarrow f^4(0) = 1$</p>
+<p>Para k = 0</p>
+<p>$(z-0)^0 \frac{f^0(0)}{0!} = 1$</p>
+<p>Para k = 1</p>
+<p>$(z-0)^1 \frac{f^1(0)}{1!} = 0$</p>
+<p>Para k = 2</p>
+<p>$(z-0)^2 \frac{f^2(0)}{2!} = -\frac{z^2}{2!}$</p>
+<p>Para k = 3</p>
+<p>$(z-0)^3 \frac{f^3(0)}{3!} = 0$</p>
+<p>Para k = 4</p>
+<p>$(z-0)^4 \frac{f^4(0)}{4!} = -\frac{z^4}{4!}$</p>
+<p>Então:</p>
+<p>$f(z) = 1 - \frac{z^2}{2!} + \frac{z^4}{4!} &hellip; $</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Computacionalmente:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">series</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">z</span><span class="p">),</span><span class="n">z</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle 1 - \frac{z^{2}}{2} + \frac{z^{4}}{24} + O\left(z^{6}\right)$</p>
+<h3 id="c-fz--sinz-para-a--0">C) $f(z) = \sin(z)$ para $a = 0$</h3>
+<p>Calculando as derivadas:</p>
+<p>$f^0(z)=\sin(z) \Rightarrow f^0(0) = 0$</p>
+<p>$f^1(z)=\cos(z) \Rightarrow f^1(0) = 1$</p>
+<p>$f^2(z)=-\sin(z) \Rightarrow f^2(0) = 0$</p>
+<p>$f^3(z)=-\cos(z) \Rightarrow f^3(0) = -1$</p>
+<p>$f^4(z)=\sin(z) \Rightarrow f^4(0) = 0$</p>
+<p>$f^5(z)=\cos(z) \Rightarrow f^5(0) = 1$</p>
+<p>Para k = 0</p>
+<p>$(z-0)^0 \frac{f^0(0)}{0!} = 0$</p>
+<p>Para k = 1</p>
+<p>$(z-0)^1 \frac{f^1(0)}{1!} = z$</p>
+<p>Para k = 2</p>
+<p>$(z-0)^2 \frac{f^2(0)}{2!} = 0$</p>
+<p>Para k = 3</p>
+<p>$(z-0)^3 \frac{f^3(0)}{3!} = -\frac{z^3}{3!}$</p>
+<p>Para k = 4</p>
+<p>$(z-0)^4 \frac{f^4(0)}{4!} = 0$</p>
+<p>Para k = 5</p>
+<p>$(z-0)^5 \frac{f^5(0)}{5!} = \frac{z^5}{5!}$</p>
+<p>Então:</p>
+<p>\box{$f(z) = z - \frac{z^3}{3!} + \frac{z^5}{5!} &hellip; $</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Computacionalmente:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">series</span><span class="p">(</span><span class="n">sin</span><span class="p">(</span><span class="n">z</span><span class="p">),</span><span class="n">z</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle z - \frac{z^{3}}{6} + \frac{z^{5}}{120} + O\left(z^{6}\right)$</p>
+<h3 id="d-fz--frac1z-para-a--1">D) $f(z) = \frac{1}{z}$ para $a = 1$</h3>
+<p>Calculando as derivadas:</p>
+<p>$f^0(z)=\frac{1}{z} \Rightarrow f^0(1) = 1$</p>
+<p>$f^1(z)=-\frac{1}{z^2} \Rightarrow f^1(1) = -1$</p>
+<p>$f^2(z)=\frac{2}{z^3} \Rightarrow f^2(1) = 2!$</p>
+<p>$f^3(z)=-\frac{3!}{z^4} \Rightarrow f^3(1) = -3!$</p>
+<p>$f^4(z)=\frac{4!}{z^5} \Rightarrow f^4(1) = 4!$</p>
+<p>Para k = 0</p>
+<p>$(z-1)^0 \frac{1}{0!} = 1$</p>
+<p>Para k = 1</p>
+<p>$(z-1)^1 \frac{-1}{1!} = -(z-1)$</p>
+<p>Para k = 2</p>
+<p>$(z-1)^2 \frac{2!}{2!} = (z-1)^2$</p>
+<p>Para k = 3</p>
+<p>$(z-1)^3 \frac{3!}{3!} = -(z-1)^3$</p>
+<p>Para k = 4</p>
+<p>$(z-1)^4 \frac{4!}{4!} = (z-1)^4$</p>
+<p>Então:</p>
+<p>$f(z) = 1 -(z-1) + (z-1)^2 - (z-1)^3 + (z-1)^4 &hellip; $</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Computacionalmente:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">series</span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="n">z</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle 2 + \left(z - 1\right)^{2} - \left(z - 1\right)^{3} + \left(z - 1\right)^{4} - \left(z - 1\right)^{5} - z + O\left(\left(z - 1\right)^{6}; z\rightarrow 1\right)$</p>
+<h3 id="e-fz--lnz-para-a--1">E) $f(z) = \ln(z)$ para $a = 1$</h3>
+<p>Calculando as derivadas:</p>
+<p>$f^0(z)= \ln(z) \Rightarrow f^0(1) = 0 $</p>
+<p>$f^1(z)=\frac{1}{z} \Rightarrow f^1(1) = 1$</p>
+<p>$f^2(z)=-\frac{1}{z^2} \Rightarrow f^2(1) = -1$</p>
+<p>$f^3(z)=\frac{2}{z^3} \Rightarrow f^3(1) = 2!$</p>
+<p>$f^4(z)=-\frac{3!}{z^4} \Rightarrow f^4(1) = -3!$</p>
+<p>Para k = 0</p>
+<p>$(z-1)^0 \frac{0}{0!} = 0$</p>
+<p>Para k = 1</p>
+<p>$(z-1)^1 \frac{1}{1!} = (z-1)$</p>
+<p>Para k = 2</p>
+<p>$(z-1)^2 \frac{-1}{2!} = -\frac{(z-1)^2}{2}$</p>
+<p>Para k = 3</p>
+<p>$(z-1)^3 \frac{2!}{3!} = \frac{(z-1)^3}{3}$</p>
+<p>Para k = 4</p>
+<p>$(z-1)^4 \frac{3!}{4!} = -\frac{(z-1)^4}{4}$</p>
+<p>Então:</p>
+<p>$f(z) = (z-1) -\frac{(z-1)^2}{2} + \frac{(z-1)^3}{3} -\frac{(z-1)^4}{4} &hellip; $</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Computacionalmente:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">series</span><span class="p">(</span><span class="n">ln</span><span class="p">(</span><span class="n">z</span><span class="p">),</span><span class="n">z</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle -1 - \frac{\left(z - 1\right)^{2}}{2} + \frac{\left(z - 1\right)^{3}}{3} - \frac{\left(z - 1\right)^{4}}{4} + \frac{\left(z - 1\right)^{5}}{5} + z + O\left(\left(z - 1\right)^{6}; z\rightarrow 1\right)$</p>
+<h3 id="f-fz--coshz-para-a--0">F) $f(z) = \cosh(z)$ para $a = 0$</h3>
+<p>Calculando as derivadas:</p>
+<p>$f^0(z)= \cosh(z) \Rightarrow f^0(0) = 1 $</p>
+<p>$f^1(z)= \sinh(z) \Rightarrow f^1(0) = 0$</p>
+<p>$f^2(z)= \cosh(z) \Rightarrow f^0(0) = 1 $</p>
+<p>$f^3(z)= \sinh(z) \Rightarrow f^1(0) = 0$</p>
+<p>$f^4(z)= \cosh(z) \Rightarrow f^0(0) = 1 $</p>
+<p>Para k = 0</p>
+<p>$(z-0)^0 \frac{1}{0!} = 1$</p>
+<p>Para k = 1</p>
+<p>$(z-0)^1 \frac{0}{1!} = 0$</p>
+<p>Para k = 2</p>
+<p>$(z-0)^2 \frac{1}{2!} = \frac{z^2}{2}$</p>
+<p>Para k = 3</p>
+<p>$(z-0)^3 \frac{0}{3!} = 0$</p>
+<p>Para k = 4</p>
+<p>$(z-0)^4 \frac{1}{4!} = \frac{z^2}{4!}$</p>
+<p>Então:</p>
+<p>$f(z) = 1 + \frac{z^2}{2} + \frac{z^4}{4!} &hellip; $</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Computacionalmente:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">series</span><span class="p">(</span><span class="n">cosh</span><span class="p">(</span><span class="n">z</span><span class="p">),</span><span class="n">z</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle 1 + \frac{z^{2}}{2} + \frac{z^{4}}{24} + O\left(z^{6}\right)$</p>
+<h3 id="g-fz--sinhz-para-a--0">G) $f(z) = \sinh(z)$ para $a = 0$</h3>
+<p>Calculando as derivadas:</p>
+<p>$f^0(z)= \sinh(z) \Rightarrow f^1(0) = 0$</p>
+<p>$f^1(z)= \cosh(z) \Rightarrow f^0(0) = 1 $</p>
+<p>$f^2(z)= \sinh(z) \Rightarrow f^1(0) = 0$</p>
+<p>$f^3(z)= \cosh(z) \Rightarrow f^0(0) = 1 $</p>
+<p>$f^4(z)= \sinh(z) \Rightarrow f^0(0) = 0 $</p>
+<p>$f^5(z)= \cosh(z) \Rightarrow f^0(0) = 1 $</p>
+<p>Para k = 0</p>
+<p>$(z-0)^0 \frac{0}{0!} = 0$</p>
+<p>Para k = 1</p>
+<p>$(z-0)^1 \frac{1}{1!} = z$</p>
+<p>Para k = 2</p>
+<p>$(z-0)^2 \frac{0}{2!} = 0$</p>
+<p>Para k = 3</p>
+<p>$(z-0)^3 \frac{1}{3!} = \frac{z^3}{3!}$</p>
+<p>Para k = 4</p>
+<p>$(z-0)^4 \frac{0}{4!} = 0$</p>
+<p>Para k = 5</p>
+<p>$(z-0)^5 \frac{1}{5!} = \frac{z^5}{5!}$</p>
+<p>Então:</p>
+<p>$f(z) = z + \frac{z^3}{3!} + \frac{z^5}{5!} &hellip; $</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Computacionalmente:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">series</span><span class="p">(</span><span class="n">sinh</span><span class="p">(</span><span class="n">z</span><span class="p">),</span><span class="n">z</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle z + \frac{z^{3}}{6} + \frac{z^{5}}{120} + O\left(z^{6}\right)$</p>
+<h3 id="h-fz--frac12zz3z4-para-a--0">H) $f(z) = \frac{1+2z}{z^3+z^4}$, para $a = 0$</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1">#Computacionalmente:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">series</span><span class="p">((</span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="o">*</span><span class="n">z</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">z</span><span class="o">**</span><span class="mi">3</span><span class="o">+</span><span class="n">z</span><span class="o">**</span><span class="mi">4</span><span class="p">),</span><span class="n">z</span><span class="p">)</span>
+</span></span></code></pre></div><p>$\displaystyle \frac{1}{z^{3}} + \frac{1}{z^{2}} - \frac{1}{z} + 1 - z + z^{2} - z^{3} + z^{4} - z^{5} + O\left(z^{6}\right)$</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  id="figure-httpsnotbyaifyi">
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Not-By-AI"
+           src="/post/complex4/notai.svg"
+           loading="lazy" data-zoomable /></div>
+  </div><figcaption>
+      <a href="https://notbyai.fyi/" target="_blank" rel="noopener">https://notbyai.fyi/</a>
+    </figcaption></figure>
+</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/matematica/">Matemática</a>
+  
+  <a class="badge badge-light" href="/tag/numeros/">números</a>
+  
+  <a class="badge badge-light" href="/tag/complexos/">complexos</a>
+  
+  <a class="badge badge-light" href="/tag/aprendizagem/">aprendizagem</a>
+  
+  <a class="badge badge-light" href="/tag/taylor/">Taylor</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplex4%2F&amp;text=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.&#43;4" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplex4%2F&amp;t=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.&#43;4" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=N%C3%BAmeros%20Complexos%20-%20Pt.%204&amp;body=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplex4%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplex4%2F&amp;title=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.&#43;4" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.&#43;4%20https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplex4%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcomplex4%2F&amp;title=N%C3%BAmeros&#43;Complexos&#43;-&#43;Pt.&#43;4" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://lgrando1.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_huabdf8665519e8f27eb224dd7e579c7a5_20461_270x270_fill_q75_lanczos_center.jpg" alt="Leonardo Grando"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://lgrando1.github.io/">Leonardo Grando</a></h5>
+      <h6 class="card-subtitle">Technology Ph.D. Candidate</h6>
+      <p class="card-text">My research interests include Agent-Based Simulation, Artificial Intelligence, Machine Learning.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/lgrando1" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/lgrando123" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.researchgate.net/profile/Leonardo-Grando" target="_blank" rel="noopener">
+        <i class="ai ai-researchgate"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://orcid.org/0000-0002-0448-209X" target="_blank" rel="noopener">
+        <i class="ai ai-orcid"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    © 2023 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.d26509351aa0ff874abbee824e982e9b.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.e8ee06ba8371980ffde659871dd593b0.js"></script>
+
+
+
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
