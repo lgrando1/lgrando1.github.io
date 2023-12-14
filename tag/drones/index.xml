@@ -5,12 +5,20 @@
     <link>https://lgrando1.github.io/tag/drones/</link>
       <atom:link href="https://lgrando1.github.io/tag/drones/index.xml" rel="self" type="application/rss+xml" />
     <description>Drones</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 04 Nov 2020 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 12 Dec 2023 13:30:00 +0000</lastBuildDate>
     <image>
       <url>https://lgrando1.github.io/media/icon_hu4fc79c7a5689779429e28d3f510b9e42_81098_512x512_fill_lanczos_center_3.png</url>
       <title>Drones</title>
       <link>https://lgrando1.github.io/tag/drones/</link>
     </image>
+    
+    <item>
+      <title>WSC 2023</title>
+      <link>https://lgrando1.github.io/talk/wsc-2023/</link>
+      <pubDate>Tue, 12 Dec 2023 13:30:00 +0000</pubDate>
+      <guid>https://lgrando1.github.io/talk/wsc-2023/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Drones Swarm Recharging: Modeling Using Agent-Based Simulation</title>

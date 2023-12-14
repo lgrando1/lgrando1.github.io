@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Farm | Leonardo Grando</title>
+    <link>https://lgrando1.github.io/tag/farm/</link>
+      <atom:link href="https://lgrando1.github.io/tag/farm/index.xml" rel="self" type="application/rss+xml" />
+    <description>Farm</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 12 Dec 2023 13:30:00 +0000</lastBuildDate>
+    <image>
+      <url>https://lgrando1.github.io/media/icon_hu4fc79c7a5689779429e28d3f510b9e42_81098_512x512_fill_lanczos_center_3.png</url>
+      <title>Farm</title>
+      <link>https://lgrando1.github.io/tag/farm/</link>
+    </image>
+    
+    <item>
+      <title>WSC 2023</title>
+      <link>https://lgrando1.github.io/talk/wsc-2023/</link>
+      <pubDate>Tue, 12 Dec 2023 13:30:00 +0000</pubDate>
+      <guid>https://lgrando1.github.io/talk/wsc-2023/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
