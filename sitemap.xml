@@ -2,6 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://lgrando1.github.io/tag/ideas/</loc>
+    <lastmod>2024-02-26T12:09:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/post/ideas/</loc>
+    <lastmod>2024-02-26T12:09:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/</loc>
+    <lastmod>2024-02-26T12:09:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/post/</loc>
+    <lastmod>2024-02-26T12:09:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tags/</loc>
+    <lastmod>2024-02-26T12:09:20-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://lgrando1.github.io/tag/agent-based/</loc>
     <lastmod>2023-12-12T13:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -14,10 +34,6 @@
     <lastmod>2023-12-12T13:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://lgrando1.github.io/</loc>
-    <lastmod>2023-12-12T13:30:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://lgrando1.github.io/tag/presentation/</loc>
     <lastmod>2023-12-12T13:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -27,10 +43,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://lgrando1.github.io/tag/simulation/</loc>
-    <lastmod>2023-12-12T13:30:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://lgrando1.github.io/tags/</loc>
     <lastmod>2023-12-12T13:30:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -87,10 +99,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://lgrando1.github.io/post/complex4/</loc>
-    <lastmod>2023-11-19T16:00:00-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://lgrando1.github.io/post/</loc>
     <lastmod>2023-11-19T16:00:00-03:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
