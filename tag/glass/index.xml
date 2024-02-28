@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Glass | Leonardo Grando</title>
+    <link>https://lgrando1.github.io/tag/glass/</link>
+      <atom:link href="https://lgrando1.github.io/tag/glass/index.xml" rel="self" type="application/rss+xml" />
+    <description>Glass</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 04 Dec 2009 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://lgrando1.github.io/media/icon_hu833f70911ce8d7c0b3dbb80c9eadb7d3_197124_512x512_fill_lanczos_center_3.png</url>
+      <title>Glass</title>
+      <link>https://lgrando1.github.io/tag/glass/</link>
+    </image>
+    
+    <item>
+      <title>Desenvolvimento de um Programa em Java para Cálculo da Cinética de Sinterização de Vidros.</title>
+      <link>https://lgrando1.github.io/publication/grando-2009/</link>
+      <pubDate>Fri, 04 Dec 2009 00:00:00 +0000</pubDate>
+      <guid>https://lgrando1.github.io/publication/grando-2009/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
