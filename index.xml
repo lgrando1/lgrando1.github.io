@@ -211,7 +211,7 @@ Test set accuracy: 94.84000205993652
 Shape of preds: (10000, 10)
 Valores previstos: [7 2 1 ... 4 5 6]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;h3 id=&#34;visualizar-os-16-primeiros-valores-da-base-de-teste-e-uma-comparação-entre-a-resposta-conhecida-e-a-predição-deste-modelo&#34;&gt;Visualizar os 16 primeiros valores da base de teste e uma comparação entre a resposta conhecida e a predição deste modelo.&lt;/h3&gt;
+&lt;h3 id=&#34;visualizar-os-36-primeiros-valores-da-base-de-teste-e-u-comparar-entre-a-resposta-conhecida-e-a-predição-feita-pelo-modelo&#34;&gt;Visualizar os 36 primeiros valores da base de teste e u comparar entre a resposta conhecida e a predição feita pelo modelo.&lt;/h3&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;plt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;figure&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;figsize&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;&lt;span class=&#34;mi&#34;&gt;16&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;start_index&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;
