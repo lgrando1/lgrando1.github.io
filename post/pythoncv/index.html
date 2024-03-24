@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- This site was created with Wowchemy. https://www.wowchemy.com -->
-<!-- Last Published: March 23, 2024 --><html lang="en-us" >
+<!-- Last Published: March 24, 2024 --><html lang="en-us" >
 
 
 <head>
@@ -275,7 +275,7 @@
 
   
 
-<meta name="description" content="Classificação básica de imagem utilizando rede neurais e Python" />
+<meta name="description" content="Classificação imagens utilizando rede neurais e Python" />
 
 
 
@@ -314,8 +314,8 @@
 <meta property="twitter:image" content="https://lgrando1.github.io/media/icon_hu833f70911ce8d7c0b3dbb80c9eadb7d3_197124_512x512_fill_lanczos_center_3.png" />
 <meta property="og:site_name" content="Leonardo Grando" />
 <meta property="og:url" content="https://lgrando1.github.io/post/pythoncv/" />
-<meta property="og:title" content="Classificação básica de imagens com o TensorFlow | Leonardo Grando" />
-<meta property="og:description" content="Classificação básica de imagem utilizando rede neurais e Python" /><meta property="og:image" content="https://lgrando1.github.io/media/icon_hu833f70911ce8d7c0b3dbb80c9eadb7d3_197124_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+<meta property="og:title" content="Classificação de imagens escrita à mão com o TensorFlow. | Leonardo Grando" />
+<meta property="og:description" content="Classificação imagens utilizando rede neurais e Python" /><meta property="og:image" content="https://lgrando1.github.io/media/icon_hu833f70911ce8d7c0b3dbb80c9eadb7d3_197124_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
 
   
     <meta
@@ -352,7 +352,7 @@
     "@type": "WebPage",
     "@id": "https://lgrando1.github.io/post/pythoncv/"
   },
-  "headline": "Classificação básica de imagens com o TensorFlow",
+  "headline": "Classificação de imagens escrita à mão com o TensorFlow.",
   
   "datePublished": "2024-03-23T00:00:00Z",
   "dateModified": "2024-03-23T16:00:00-03:00",
@@ -370,7 +370,7 @@
       "url": "https://lgrando1.github.io/media/icon_hu833f70911ce8d7c0b3dbb80c9eadb7d3_197124_192x192_fill_lanczos_center_3.png"
     }
   },
-  "description": "Classificação básica de imagem utilizando rede neurais e Python"
+  "description": "Classificação imagens utilizando rede neurais e Python"
 }
 </script>
 
@@ -392,7 +392,7 @@
 
 
   
-  <title>Classificação básica de imagens com o TensorFlow | Leonardo Grando</title>
+  <title>Classificação de imagens escrita à mão com o TensorFlow. | Leonardo Grando</title>
 
   
   
@@ -801,10 +801,10 @@
   
   
 <div class="article-container pt-3">
-  <h1>Classificação básica de imagens com o TensorFlow</h1>
+  <h1>Classificação de imagens escrita à mão com o TensorFlow.</h1>
 
   
-  <p class="page-subtitle">Notas de aula do Projeto Guiado Basic Image Classification with TensorFlow</p>
+  <p class="page-subtitle">Classificação de imagens utilizando rede neurais no Python com a biblioteca Tensorflow</p>
   
 
   
@@ -833,7 +833,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    5 min read
+    6 min read
   </span>
   
 
@@ -861,42 +861,49 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>Neste post segue anotações sobre o projeto guiado <a href="https://www.coursera.org/projects/tensorflow-beginner-basic-image-classification" target="_blank" rel="noopener">Basic Image Classification with TensorFlow</a> do Coursera. O meu certificado pode ser visualizado <a href="https://www.coursera.org/account/accomplishments/verify/GD75SVXW9Q4U" target="_blank" rel="noopener">aqui</a>.</p>
+      <p>Neste post é apresentado uma rotina de aprendizado de máquina supervisionado utilizando a biblioteca TensorFlow para realizar o reconhecimento e classificação de imagens da base de dados <a href="https://en.wikipedia.org/wiki/MNIST_database" target="_blank" rel="noopener">MNIST</a>. Esta base de dados consiste em imagens de numeros escritos a mão e seus respectivos rótulos. A idéia deste post é treinar um modelo de rede neural que reconheça os padrões destas imagens e as classifiquem com o respectivo número.</p>
 <p>O conteúdo desta atividade de classificação é composto de:</p>
 <ol>
 <li>Importar as bibliotecas;</li>
 <li>Importar o conjunto de dados e dividi-los entre base treino e de teste;</li>
 <li>Aplicar o processo de Hot Encoding nas classes de respostas;</li>
-<li>Pre-processamento;</li>
-<li>Criar o modelo de rede neural denso;</li>
-<li>Treinar o modelo;</li>
-<li>Realizar predição e visualizar alguns resultados.</li>
+<li>Pré-processamento dos dados para que possam ser uitilizados no treinamento da rede;</li>
+<li>Criação do modelo de rede neural;</li>
+<li>Treinamento do modelo com os dados de treinamento;</li>
+<li>Realizar a predição e comparação com os dados de teste.</li>
 </ol>
-<h2 id="1-importar-bibliotecas-necessárias-incluindo-o-tensorflowhttpswwwtensorfloworghlpt-br">1. Importar bibliotecas necessárias, incluindo o <a href="https://www.tensorflow.org/?hl=pt-br" target="_blank" rel="noopener">TensorFlow</a></h2>
+<h2 id="1-importação-das-bibliotecas-necessárias-incluindo-o-tensorflowhttpswwwtensorfloworghlpt-br">1. Importação das bibliotecas necessárias, incluindo o <a href="https://www.tensorflow.org/?hl=pt-br" target="_blank" rel="noopener">TensorFlow</a></h2>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">tensorflow</span> <span class="k">as</span> <span class="nn">tf</span>
 </span></span><span class="line"><span class="cl"><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">tf</span><span class="o">.</span><span class="n">compat</span><span class="o">.</span><span class="n">v1</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">set_verbosity</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">compat</span><span class="o">.</span><span class="n">v1</span><span class="o">.</span><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Using TensorFlow version&#39;</span><span class="p">,</span> <span class="n">tf</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#para o hot-encoding</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#Processo de hot-encoding</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">tensorflow.keras.utils</span> <span class="kn">import</span> <span class="n">to_categorical</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">#para criar as camadas do modelo de rede neural</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">tensorflow.keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">tensorflow.keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">#para plotar as imagens</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#para visualizar as imagens</span>
 </span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 </span></span><span class="line"><span class="cl"><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
-</span></span></code></pre></div><pre><code>Using TensorFlow version 2.13.1
+</span></span></code></pre></div><pre><code>2024-03-24 10:02:13.310353: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2024-03-24 10:02:13.370354: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2024-03-24 10:02:13.371713: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-24 10:02:14.341836: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+
+
+Using TensorFlow version 2.13.1
 </code></pre>
-<h2 id="2-importar-o-conjunto-de-dados-e-dividir-entre-base-treino-e-de-teste">2: Importar o conjunto de dados e dividir entre base treino e de teste</h2>
-<p>Importar o conjunto <a href="https://en.wikipedia.org/wiki/MNIST_database" target="_blank" rel="noopener">MNIST</a></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># https://www.tensorflow.org/datasets/catalog/mnist?hl=pt-br</span>
-</span></span><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">tensorflow.keras.datasets</span> <span class="kn">import</span> <span class="n">mnist</span>
+<h2 id="2-importar-a-base-de-dados-e-dividi-la-em-bases-treino-e-de-teste">2: Importar a base de dados e dividi-la em bases treino e de teste</h2>
+<p>A própria biblioteca <a href="https://www.tensorflow.org/datasets/catalog/mnist?hl=pt-br" target="_blank" rel="noopener">Tensorflow</a> já disponibiliza esta base.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="kn">from</span> <span class="nn">tensorflow.keras.datasets</span> <span class="kn">import</span> <span class="n">mnist</span>
 </span></span><span class="line"><span class="cl"><span class="p">(</span><span class="n">x_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">),(</span><span class="n">x_test</span><span class="p">,</span> <span class="n">y_test</span><span class="p">)</span> <span class="o">=</span> <span class="n">mnist</span><span class="o">.</span><span class="n">load_data</span><span class="p">()</span>
 </span></span></code></pre></div><h3 id="dimensões-dos-arrays-importados">Dimensões dos arrays importados</h3>
+<p>A base de dados MNIST é composta por 70000 imagens em escala de cinza de dimensões de 28 por 28 e seus respectivos rótulos. Neste trabalho esta base foi dividida com 60000 instancias de treino e 10000 de teste para poder verificar a performance do treinamento. Cada valor dos pixels representam um valor integral (entre 0 a 255) na escala de cinza.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;x_train shape&#34;</span><span class="p">,</span> <span class="n">x_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;y_train shape&#34;</span><span class="p">,</span> <span class="n">y_train</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;x_test shape&#34;</span><span class="p">,</span> <span class="n">x_test</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
@@ -906,8 +913,8 @@ y_train shape (60000,)
 x_test shape (10000, 28, 28)
 y_test shape (10000,)
 </code></pre>
-<h3 id="plotar-uma-imagem-presente-no-array">Plotar uma imagem presente no array</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Apresentando a imagem presente na posição 0</span>
+<h3 id="visualizando-uma-imagem-presente-na-base-de-treino">Visualizando uma imagem presente na base de treino</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Apresentando uma imagem da base de treino.</span>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">x_train</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&#34;binary&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span></span></code></pre></div><p>
@@ -931,17 +938,20 @@ y_test shape (10000,)
     <div class="w-100" ><img src="./index_9_0.png" alt="png" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
-<h3 id="mostrar-o-rótulo-de-treino-da-figura-acima-e-todos-os-valores-destes-rótulos">Mostrar o rótulo de treino da figura acima e todos os valores destes rótulos:</h3>
+<h3 id="para-ver-o-seu-rótulo-de-treino">Para ver o seu rótulo de treino:</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># O valor da classe na posição 1</span>
-</span></span><span class="line"><span class="cl"><span class="n">y_train</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-</span></span></code></pre></div><pre><code>0
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">y_train</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1">#valor 5</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">y_train</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1">#valor 0</span>
+</span></span></code></pre></div><pre><code>5
+0
 </code></pre>
+<h3 id="para-ver-todos-os-rótulos-presentes-na-base-de-treino">Para ver todos os rótulos presentes na base de treino:</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Os valores presentes na classe de treino</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">y_train</span><span class="p">))</span>
 </span></span></code></pre></div><pre><code>{0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
 </code></pre>
-<h2 id="3---aplicar-o-processo-de-hot-encoding-nas-classes-de-respostas">3 - Aplicar o processo de Hot Encoding nas classes de respostas</h2>
-<p>Para que as classes de respostas possam passar pelo processo de treinamento e de testes, é necessario aplicar o processo de pré-processamento de hot encoding nas classes de respostas.</p>
+<h2 id="3---processo-de-hot-encoding-nas-classes">3 - Processo de hot encoding nas classes.</h2>
+<p>Para que as classes de respostas possam passar pelo processo de treinamento e de testes, é necessario aplicar o processo de pré-processamento de hot encoding (criação de variaveis dummies) nas classes de respostas.</p>
 <h3 id="codificando-os-rótulos">Codificando os rótulos</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">y_train_encoded</span> <span class="o">=</span> <span class="n">to_categorical</span><span class="p">(</span><span class="n">y_train</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">y_test_encoded</span> <span class="o">=</span> <span class="n">to_categorical</span><span class="p">(</span><span class="n">y_test</span><span class="p">)</span>
@@ -951,9 +961,11 @@ y_test shape (10000,)
 </span></span></code></pre></div><pre><code>y_train_encoded shape (60000, 10)
 y_test_encoded shape (10000, 10)
 </code></pre>
-<h3 id="apresentando-um-rótulo-codificado">Apresentando um rótulo codificado.</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">y_train_encoded</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="c1">#valor 0</span>
-</span></span></code></pre></div><pre><code>array([1., 0., 0., 0., 0., 0., 0., 0., 0., 0.], dtype=float32)
+<h3 id="visualizando-um-rótulo-codificado">Visualizando um rótulo codificado.</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">y_train_encoded</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1">#valor 5</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">y_train_encoded</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="c1">#valor 0</span>
+</span></span></code></pre></div><pre><code>[0. 0. 0. 0. 0. 1. 0. 0. 0. 0.]
+[1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
 </code></pre>
 <h2 id="4-pré-processamento">4 Pré-processamento.</h2>
 <h3 id="transformar-a-matriz-de-2-dimensões-28x28-pixels-com-valores-de-0-a-255-em-um-uníco-vetor-de-dimensão-784">Transformar a matriz de 2 dimensões (28x28 pixels com valores de 0 a 255) em um uníco vetor de dimensão 784.</h3>
@@ -965,11 +977,7 @@ y_test_encoded shape (10000, 10)
 </span></span></code></pre></div><pre><code>x_train_reshaped_shape (60000, 784)
 x_test_reshaped_shape (10000, 784)
 </code></pre>
-<h3 id="apresentar-os-valores-dos-pixeis">Apresentar os valores dos Pixeis:</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;valores encontrados na imagem:&#34;</span><span class="p">,</span> <span class="nb">set</span><span class="p">(</span><span class="n">x_train_reshaped</span><span class="p">[</span><span class="mi">1</span><span class="p">]))</span>
-</span></span></code></pre></div><pre><code>valores encontrados na imagem: {0, 6, 7, 10, 12, 19, 21, 25, 28, 29, 37, 38, 47, 48, 50, 51, 54, 56, 57, 60, 63, 71, 75, 76, 79, 84, 85, 86, 96, 112, 114, 121, 122, 128, 130, 131, 135, 141, 145, 146, 148, 159, 162, 163, 165, 167, 168, 173, 178, 179, 186, 189, 190, 195, 196, 198, 199, 202, 208, 215, 223, 224, 225, 227, 228, 229, 230, 233, 237, 238, 239, 240, 243, 246, 249, 252, 253, 255}
-</code></pre>
-<h3 id="normalização-estes-dados">Normalização estes dados</h3>
+<h3 id="normalização-dos-a">Normalização dos a</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">x_mean</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">x_train_reshaped</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">x_std</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">x_train_reshaped</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
@@ -977,14 +985,18 @@ x_test_reshaped_shape (10000, 784)
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">x_train_norm</span> <span class="o">=</span> <span class="p">(</span><span class="n">x_train_reshaped</span><span class="o">-</span><span class="n">x_mean</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">x_std</span> <span class="o">+</span> <span class="n">epsilon</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">x_test_norm</span> <span class="o">=</span> <span class="p">(</span><span class="n">x_test_reshaped</span><span class="o">-</span><span class="n">x_mean</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">x_std</span> <span class="o">+</span> <span class="n">epsilon</span><span class="p">)</span>
-</span></span></code></pre></div><h2 id="5-criando-o-modelo-de-rede-neural-densa">5: Criando o modelo de rede neural densa.</h2>
-<h3 id="modelo-será-composto-de-uma-camada-de-entrada-uma-camada-interna-oculta-e-uma-camada-de-saída-clique-aquihttpswwwdeeplearningbookcombrfuncao-de-ativacao-conhecer-mais-sobre-os-tipos-de-funções-de-ativação">Modelo será composto de uma camada de entrada, uma camada interna oculta e uma camada de saída. Clique <a href="https://www.deeplearningbook.com.br/funcao-de-ativacao/" target="_blank" rel="noopener">aqui</a> conhecer mais sobre os tipos de funções de ativação.</h3>
+</span></span></code></pre></div><h2 id="5-criando-o-modelo-de-rede-neural">5: Criando o modelo de rede neural.</h2>
+<h3 id="modelo-será-composto-de-uma-camada-de-entrada-uma-camada-interna-oculta-e-uma-camada-de-saída">Modelo será composto de uma camada de entrada, uma camada interna oculta e uma camada de saída.</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">([</span>
 </span></span><span class="line"><span class="cl">    <span class="n">Dense</span><span class="p">(</span><span class="mi">56</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">&#34;relu&#34;</span><span class="p">,</span><span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="mi">784</span><span class="p">,)),</span>
 </span></span><span class="line"><span class="cl">    <span class="n">Dense</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">&#34;relu&#34;</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">    <span class="n">Dense</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s2">&#34;softmax&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">])</span>
-</span></span></code></pre></div><h3 id="compilando-o-modelo">Compilando o modelo</h3>
+</span></span></code></pre></div><pre><code>2024-03-24 10:02:16.922990: I tensorflow/compiler/xla/stream_executor/cuda/cuda_gpu_executor.cc:995] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-03-24 10:02:16.923710: W tensorflow/core/common_runtime/gpu/gpu_device.cc:1960] Cannot dlopen some GPU libraries. Please make sure the missing libraries mentioned above are installed properly if you would like to use GPU. Follow the guide at https://www.tensorflow.org/install/gpu for how to download and setup the required libraries for your platform.
+Skipping registering GPU devices...
+</code></pre>
+<h3 id="compilando-o-modelo">Compilando o modelo</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">    <span class="n">optimizer</span><span class="o">=</span><span class="s2">&#34;sgd&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="n">loss</span> <span class="o">=</span> <span class="s2">&#34;categorical_crossentropy&#34;</span><span class="p">,</span>
@@ -992,15 +1004,15 @@ x_test_reshaped_shape (10000, 784)
 </span></span><span class="line"><span class="cl"><span class="p">)</span>
 </span></span><span class="line"><span class="cl"> 
 </span></span><span class="line"><span class="cl"><span class="n">model</span><span class="o">.</span><span class="n">summary</span><span class="p">()</span> 
-</span></span></code></pre></div><pre><code>Model: &quot;sequential_1&quot;
+</span></span></code></pre></div><pre><code>Model: &quot;sequential&quot;
 _________________________________________________________________
  Layer (type)                Output Shape              Param #   
 =================================================================
- dense_3 (Dense)             (None, 56)                43960     
+ dense (Dense)               (None, 56)                43960     
                                                                  
- dense_4 (Dense)             (None, 128)               7296      
+ dense_1 (Dense)             (None, 128)               7296      
                                                                  
- dense_5 (Dense)             (None, 10)                1290      
+ dense_2 (Dense)             (None, 10)                1290      
                                                                  
 =================================================================
 Total params: 52546 (205.26 KB)
@@ -1009,66 +1021,59 @@ Non-trainable params: 0 (0.00 Byte)
 _________________________________________________________________
 </code></pre>
 <h2 id="6---treinando-o-modelo">6 - Treinando o modelo</h2>
-<h3 id="treinar-o-modelo-com-o-base-de-dados-de-treino-normalizado-e-com-o-a-base-de-classe-de-treino-codificado">Treinar o modelo com o base de dados de treino normalizado e com o a base de classe de treino codificado.</h3>
+<h3 id="treinar-o-modelo-com-o-base-de-dados-de-treino-normalizado-e-com-o-a-base-de-classe-de-treino-codificado-o-valor-de-epoch-é-a-quantidade-de-vezes-que-os-dados-passam-pela-rede">Treinar o modelo com o base de dados de treino normalizado e com o a base de classe de treino codificado. O valor de epoch é a quantidade de vezes que os dados passam pela rede.</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train_norm</span><span class="p">,</span> <span class="n">y_train_encoded</span><span class="p">,</span> <span class="n">epochs</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </span></span></code></pre></div><pre><code>Epoch 1/2
 
 
-2024-03-23 17:31:18.570533: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 188160000 exceeds 10% of free system memory.
+2024-03-24 10:02:17.328579: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 188160000 exceeds 10% of free system memory.
 
 
-1875/1875 [==============================] - 3s 1ms/step - loss: 0.4094 - accuracy: 0.8795
+1875/1875 [==============================] - 3s 2ms/step - loss: 0.4276 - accuracy: 0.8749
 Epoch 2/2
-1875/1875 [==============================] - 3s 1ms/step - loss: 0.2068 - accuracy: 0.9399
+1875/1875 [==============================] - 3s 1ms/step - loss: 0.2094 - accuracy: 0.9380
 
 
 
 
 
-&lt;keras.src.callbacks.History at 0x7f50ced658e0&gt;
+&lt;keras.src.callbacks.History at 0x7fa8104c2400&gt;
 </code></pre>
-<h3 id="avaliar-a-performance-do-modelo-na-base-de-teste">Avaliar a performance do modelo na base de teste.</h3>
+<h3 id="avaliando-a-performance-do-modelo-na-base-de-teste">Avaliando a performance do modelo na base de teste.</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">loss</span><span class="p">,</span> <span class="n">accuracy</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">x_test_norm</span><span class="p">,</span> <span class="n">y_test_encoded</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Test set accuracy:&#34;</span><span class="p">,</span> <span class="n">accuracy</span> <span class="o">*</span> <span class="mi">100</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code>  1/313 [..............................] - ETA: 48s - loss: 0.1313 - accuracy: 0.9688
-
-2024-03-23 17:31:25.460105: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 31360000 exceeds 10% of free system memory.
-
-
-313/313 [==============================] - 1s 1ms/step - loss: 0.1747 - accuracy: 0.9492
-Test set accuracy: 94.91999745368958
+</span></span></code></pre></div><pre><code>313/313 [==============================] - 1s 1ms/step - loss: 0.1733 - accuracy: 0.9484
+Test set accuracy: 94.84000205993652
 </code></pre>
 <h2 id="7---predição">7 - Predição</h2>
 <h3 id="realizar-a-predição-na-base-de-teste-normalizada">Realizar a predição na base de teste normalizada</h3>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">predit</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test_norm</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Shape of preds:&#34;</span><span class="p">,</span> <span class="n">predit</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-</span></span></code></pre></div><pre><code> 49/313 [===&gt;..........................] - ETA: 0s 
-
-2024-03-23 17:31:28.008523: W tensorflow/tsl/framework/cpu_allocator_impl.cc:83] Allocation of 31360000 exceeds 10% of free system memory.
-
-
-313/313 [==============================] - 0s 951us/step
+</span></span><span class="line"><span class="cl"><span class="c1">#Para visualizar as previsões:</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Valores previstos:&#34;</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">predit</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">))</span>
+</span></span></code></pre></div><pre><code>313/313 [==============================] - 0s 1ms/step
 Shape of preds: (10000, 10)
+Valores previstos: [7 2 1 ... 4 5 6]
 </code></pre>
 <h3 id="visualizar-os-16-primeiros-valores-da-base-de-teste-e-uma-comparação-entre-a-resposta-conhecida-e-a-predição-deste-modelo">Visualizar os 16 primeiros valores da base de teste e uma comparação entre a resposta conhecida e a predição deste modelo.</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">12</span><span class="p">))</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span><span class="mi">16</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">start_index</span> <span class="o">=</span> <span class="mi">0</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">16</span><span class="p">):</span>
-</span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">36</span><span class="p">):</span>
+</span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([])</span>
 </span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([])</span>
-</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([])</span>
+</span></span><span class="line"><span class="cl">        
 </span></span><span class="line"><span class="cl">    <span class="n">pred</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">predit</span><span class="p">[</span><span class="n">start_index</span> <span class="o">+</span> <span class="n">i</span><span class="p">])</span>
-</span></span><span class="line"><span class="cl">    <span class="n">value_test</span> <span class="o">=</span> <span class="n">y_test</span><span class="p">[</span><span class="n">start_index</span> <span class="o">+</span> <span class="n">i</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="n">valor_teste</span> <span class="o">=</span> <span class="n">y_test</span><span class="p">[</span><span class="n">start_index</span> <span class="o">+</span> <span class="n">i</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl">    
 </span></span><span class="line"><span class="cl">    <span class="n">col</span> <span class="o">=</span> <span class="s2">&#34;g&#34;</span>
-</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">pred</span> <span class="o">!=</span> <span class="n">value_test</span><span class="p">:</span>
-</span></span><span class="line"><span class="cl">        <span class="n">col</span> <span class="o">=</span> <span class="s2">&#34;r&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span> <span class="n">pred</span> <span class="o">!=</span> <span class="n">valor_teste</span><span class="p">:</span>
+</span></span><span class="line"><span class="cl">        <span class="n">col</span> <span class="o">=</span> <span class="s2">&#34;b&#34;</span>
 </span></span><span class="line"><span class="cl">    
-</span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&#34;i = </span><span class="si">{}</span><span class="s2">, predito=</span><span class="si">{}</span><span class="s2">,rótulo=</span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">start_index</span><span class="o">+</span><span class="n">i</span><span class="p">,</span> <span class="n">pred</span><span class="p">,</span> <span class="n">value_test</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="n">col</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&#34;i = </span><span class="si">{}</span><span class="s2">, predito=</span><span class="si">{}</span><span class="s2">, rótulo=</span><span class="si">{}</span><span class="s2">&#34;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">start_index</span><span class="o">+</span><span class="n">i</span><span class="p">,</span> <span class="n">pred</span><span class="p">,</span> <span class="n">valor_teste</span><span class="p">),</span> <span class="n">color</span> <span class="o">=</span> <span class="n">col</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">x_test</span><span class="p">[</span><span class="n">start_index</span><span class="o">+</span><span class="n">i</span><span class="p">],</span> <span class="n">cmap</span> <span class="o">=</span> <span class="s2">&#34;binary&#34;</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </span></span></code></pre></div><p>
@@ -1089,15 +1094,15 @@ Shape of preds: (10000, 10)
 
 <figure  >
   <div class="d-flex justify-content-center">
-    <div class="w-100" ><img src="./index_36_0.png" alt="png" loading="lazy" data-zoomable /></div>
+    <div class="w-100" ><img src="./index_35_0.png" alt="png" loading="lazy" data-zoomable /></div>
   </div></figure>
 </p>
-<p>Observa-se que nos 16 primeiros valores, apenas a imagem de indíce 8 foi predita de forma incorreta.</p>
+<p>Nas primeiras 36 imagens, as imagens de indíce 8 e 33 foram preditas de forma incorreta por o modelo implementado.</p>
 <h2 id="conclusão">Conclusão:</h2>
-<p>Este post apresenta um fluxo de trabalho para tarefas de classificação de imagens utilizando o TensorFlow em uma base de dados conhecida.</p>
-<p>É realizado um pré-processamento dos dados para que os mesmos possam ser aplicado no treinamento da rede neural.</p>
-<p>Existem varias formas de melhorar estes resultados, como alterando a estrutura da rede neural densa, alterando a quantidade de treinamento, realizando o hypertunning dos paramêtros.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"></code></pre></div>
+<p>Este post apresentou um fluxo de trabalho para tarefas de classificação de imagens utilizando o TensorFlow, treinando-o para reconhecer os padrões dos dados presentes nesta base de dados.</p>
+<p>Foi realizado um pré-processamento dos dados para que os mesmos possam ser aplicado no treinamento da rede neural, criou-se o modelo, treinou o mesmo e verificou a performance deste treino comparando os valores preditos com os valores préviamente rotulados.</p>
+<p>Alterações em alguns hiperparâmetros como por exemplo o tipo de otimizador, na geometria da rede, na quantidade de epochs podem ser utilizados para melhorar os resultados presentes neste post.</p>
+
     </div>
 
     
@@ -1118,6 +1123,8 @@ Shape of preds: (10000, 10)
   
   <a class="badge badge-light" href="/tag/classificacao/">classificação</a>
   
+  <a class="badge badge-light" href="/tag/python/">Python</a>
+  
 </div>
 
 
@@ -1137,7 +1144,7 @@ Shape of preds: (10000, 10)
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fpythoncv%2F&amp;text=Classifica%C3%A7%C3%A3o&#43;b%C3%A1sica&#43;de&#43;imagens&#43;com&#43;o&#43;TensorFlow" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fpythoncv%2F&amp;text=Classifica%C3%A7%C3%A3o&#43;de&#43;imagens&#43;escrita&#43;%C3%A0&#43;m%C3%A3o&#43;com&#43;o&#43;TensorFlow." target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -1154,7 +1161,7 @@ Shape of preds: (10000, 10)
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fpythoncv%2F&amp;t=Classifica%C3%A7%C3%A3o&#43;b%C3%A1sica&#43;de&#43;imagens&#43;com&#43;o&#43;TensorFlow" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fpythoncv%2F&amp;t=Classifica%C3%A7%C3%A3o&#43;de&#43;imagens&#43;escrita&#43;%C3%A0&#43;m%C3%A3o&#43;com&#43;o&#43;TensorFlow." target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -1173,7 +1180,7 @@ Shape of preds: (10000, 10)
         
       
       <li>
-        <a href="mailto:?subject=Classifica%C3%A7%C3%A3o%20b%C3%A1sica%20de%20imagens%20com%20o%20TensorFlow&amp;body=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fpythoncv%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+        <a href="mailto:?subject=Classifica%C3%A7%C3%A3o%20de%20imagens%20escrita%20%C3%A0%20m%C3%A3o%20com%20o%20TensorFlow.&amp;body=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fpythoncv%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -1190,7 +1197,7 @@ Shape of preds: (10000, 10)
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fpythoncv%2F&amp;title=Classifica%C3%A7%C3%A3o&#43;b%C3%A1sica&#43;de&#43;imagens&#43;com&#43;o&#43;TensorFlow" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fpythoncv%2F&amp;title=Classifica%C3%A7%C3%A3o&#43;de&#43;imagens&#43;escrita&#43;%C3%A0&#43;m%C3%A3o&#43;com&#43;o&#43;TensorFlow." target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1207,7 +1214,7 @@ Shape of preds: (10000, 10)
       
       
       <li>
-        <a href="whatsapp://send?text=Classifica%C3%A7%C3%A3o&#43;b%C3%A1sica&#43;de&#43;imagens&#43;com&#43;o&#43;TensorFlow%20https%3A%2F%2Flgrando1.github.io%2Fpost%2Fpythoncv%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+        <a href="whatsapp://send?text=Classifica%C3%A7%C3%A3o&#43;de&#43;imagens&#43;escrita&#43;%C3%A0&#43;m%C3%A3o&#43;com&#43;o&#43;TensorFlow.%20https%3A%2F%2Flgrando1.github.io%2Fpost%2Fpythoncv%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1224,7 +1231,7 @@ Shape of preds: (10000, 10)
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fpythoncv%2F&amp;title=Classifica%C3%A7%C3%A3o&#43;b%C3%A1sica&#43;de&#43;imagens&#43;com&#43;o&#43;TensorFlow" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fpythoncv%2F&amp;title=Classifica%C3%A7%C3%A3o&#43;de&#43;imagens&#43;escrita&#43;%C3%A0&#43;m%C3%A3o&#43;com&#43;o&#43;TensorFlow." target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
