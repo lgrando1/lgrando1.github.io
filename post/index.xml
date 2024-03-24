@@ -5,12 +5,83 @@
     <link>https://lgrando1.github.io/post/</link>
       <atom:link href="https://lgrando1.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 23 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 24 Mar 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://lgrando1.github.io/media/icon_hu833f70911ce8d7c0b3dbb80c9eadb7d3_197124_512x512_fill_lanczos_center_3.png</url>
       <title>Posts</title>
       <link>https://lgrando1.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Utilizando o Hugging Faces para testar modelos de aprendizado de máquina.</title>
+      <link>https://lgrando1.github.io/post/hface/</link>
+      <pubDate>Sun, 24 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://lgrando1.github.io/post/hface/</guid>
+      <description>&lt;p&gt;A plataforma &lt;a href=&#34;https://huggingface.co/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;HuggingFace&lt;/strong&gt;&lt;/a&gt; é uma portal onde a comunidade de aprendizado de máquina colabora com modelos, conjunto de dados e aplicações.&lt;/p&gt;
+&lt;p&gt;Ao acessar o site e clicar no link &lt;a href=&#34;https://huggingface.co/models&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Models&lt;/a&gt; é possível buscar por variados modelos voltados para várias tarefas de aprendizado de máquina visão computacional, processamento natural de linguagem, áudio, dados tabulares, aprendizado por reforço e outros tipos.&lt;/p&gt;
+&lt;p&gt;Neste post apresentaremos uma introdução de como utilizar estas bibliotecas em sua máquina (ou no Google Colab). Como exemplo é demostrado a realização de duas tarefas: o preenchimento de mascaras de texto (completar um espaço de um texto) e o resumo de um texto.&lt;/p&gt;
+&lt;p&gt;São dois modelos/exemplos simples, mas o objetivo é realmente despertar a curiosidade em conhecer mais sobre esta plataforma.&lt;/p&gt;
+&lt;p&gt;Algumas considerações:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Ao baixar o modelo em sua maquina, alguns modelos são grandes, como o segundo modelo deste tutorial que possui mais do que 1,5 GB;&lt;/li&gt;
+&lt;li&gt;Se atente ao modelo que você vai testar, pois já foram encontrados &lt;a href=&#34;https://www.bleepingcomputer.com/news/security/malicious-ai-models-on-hugging-face-backdoor-users-machines/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;problemas de segurança&lt;/a&gt;;&lt;/li&gt;
+&lt;li&gt;Se atente também nas licenças de conteúdo dos modelos e também possíveis dependências. Se atente a documentação presente em cada página dos modelos;&lt;/li&gt;
+&lt;li&gt;Alguns modelos de aprendizados de máquinas exigem bastante recursos computacionais, ao escrever este post, várias vezes o Jupyter acabou resetando. Apenas para comparativo, este computador é um Core i5 de nona geração (Intel i5 - 9300H) e 8 gigas de RAM. Infelizmente ainda não consegui ativar a GPU para tarefas de Machine Learning no Linux. No colab é possível ativar o &lt;a href=&#34;https://colab.research.google.com/notebooks/gpu.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;suporte ao GPU&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Alertas feitos, vamos aos modelos:&lt;/p&gt;
+&lt;p&gt;Primeiro é necessário a biblioteca &lt;a href=&#34;https://huggingface.co/docs/transformers&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Transformers&lt;/a&gt; para poder baixar e treinais os modelos pré treinados.&lt;/p&gt;
+&lt;p&gt;No momento da escrita deste post já existem 564499 modelos.&lt;/p&gt;
+&lt;p&gt;Aqui esta presente a &lt;a href=&#34;https://huggingface.co/docs/transformers/en/installation&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentação&lt;/a&gt; de como instalar esta biblioteca.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;transformers&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kn&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nn&#34;&gt;transformers&lt;/span&gt; &lt;span class=&#34;kn&#34;&gt;import&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;2024-03-24 17:14:46.430478: I tensorflow/tsl/cuda/cudart_stub.cc:28] Could not find cuda drivers on your machine, GPU will not be used.
+2024-03-24 17:14:46.508220: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-03-24 17:14:47.715428: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;tarefa-1---preenchimento-de-mascaras&#34;&gt;Tarefa 1 - preenchimento de mascaras&lt;/h2&gt;
+&lt;p&gt;Para realizar a tarefa de &lt;strong&gt;preenchimento de mascaras&lt;/strong&gt;, utilizaremos o modelo &lt;a href=&#34;https://huggingface.co/neuralmind/bert-base-portuguese-cased&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;BERTimbau Base (aka &amp;ldquo;bert-base-portuguese-cased&amp;rdquo;&lt;/a&gt; [1]&lt;/p&gt;
+&lt;p&gt;Iremos utilizar neste caso a versão base.&lt;/p&gt;
+&lt;p&gt;A tarefa realizada será &amp;ldquo;fill-mask&amp;rdquo; e iremos pedir que ele devolva 5 respostas para a frase &amp;ldquo;Batatinha quando nasce, esparrama pelo [MASK]&amp;rdquo; onde [MASK] é o texto que será preenchido pelo token.&lt;/p&gt;
+&lt;p&gt;[1] SOUZA, Fábio e NOGUEIRA, Rodrigo e LOTUFO, &lt;strong&gt;Roberto. BERTimbau: pretrained BERT models for Brazilian Portuguese.&lt;/strong&gt; 2020, [S.l: s.n.], 2020.&lt;/p&gt;
+&lt;p&gt;A primeira linha do código abaixo indicar a tarefa a ser executada e o modelo a ser utilizado e a segunda linha aplica o modelo para o texto escolhido.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;mascarar&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;fill-mask&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;neuralmind/bert-base-portuguese-cased&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;texto&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;mascarar&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;Batatinha quando nasce, esparrama pelo [MASK]&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;Some weights of the model checkpoint at neuralmind/bert-base-portuguese-cased were not used when initializing BertForMaskedLM: [&#39;bert.pooler.dense.bias&#39;, &#39;bert.pooler.dense.weight&#39;, &#39;cls.seq_relationship.bias&#39;, &#39;cls.seq_relationship.weight&#39;]
+- This IS expected if you are initializing BertForMaskedLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertForMaskedLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;x&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;in&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;range&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nb&#34;&gt;len&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;texto&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)):&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;texto&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;x&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;])&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;{&#39;score&#39;: 0.3925571143627167, &#39;token&#39;: 8105, &#39;token_str&#39;: &#39;chão&#39;, &#39;sequence&#39;: &#39;Batatinha quando nasce, esparrama pelo chão&#39;}
+{&#39;score&#39;: 0.10256581008434296, &#39;token&#39;: 1831, &#39;token_str&#39;: &#39;corpo&#39;, &#39;sequence&#39;: &#39;Batatinha quando nasce, esparrama pelo corpo&#39;}
+{&#39;score&#39;: 0.05736977979540825, &#39;token&#39;: 1147, &#39;token_str&#39;: &#39;mundo&#39;, &#39;sequence&#39;: &#39;Batatinha quando nasce, esparrama pelo mundo&#39;}
+{&#39;score&#39;: 0.047487251460552216, &#39;token&#39;: 388, &#39;token_str&#39;: &#39;ar&#39;, &#39;sequence&#39;: &#39;Batatinha quando nasce, esparrama pelo ar&#39;}
+{&#39;score&#39;: 0.023149045184254646, &#39;token&#39;: 9169, &#39;token_str&#39;: &#39;rosto&#39;, &#39;sequence&#39;: &#39;Batatinha quando nasce, esparrama pelo rosto&#39;}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Observe nas resposta acima que o maior &amp;ldquo;score&amp;rdquo; foi para a frase que contém o token &amp;ldquo;chão&amp;rdquo;.&lt;/p&gt;
+&lt;h2 id=&#34;tarefa-2---resumo-de-textos&#34;&gt;Tarefa 2 - Resumo de textos&lt;/h2&gt;
+&lt;p&gt;Para realizar o processo de &lt;strong&gt;resumo de texto&lt;/strong&gt; (&amp;ldquo;summarization&amp;rdquo;), iremos utilizar como exemplo o modelo &lt;a href=&#34;https://huggingface.co/facebook/bart-large-cnn&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;facebook/bart-large-cnn&lt;/a&gt; [2]&lt;/p&gt;
+&lt;p&gt;Utilizaremos o próprio texto presente na página do modelo para demostração.&lt;/p&gt;
+&lt;p&gt;[2] LEWIS, Mike e colab. &lt;strong&gt;BART: Denoising sequence-to-sequence pre-training for natural language generation, translation, and comprehension.&lt;/strong&gt; CoRR, v. abs/1910.13461, 2019. Disponível em: &lt;a href=&#34;http://arxiv.org/abs/1910.13461&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;http://arxiv.org/abs/1910.13461&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;resumir&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;pipeline&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;summarization&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;model&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;facebook/bart-large-cnn&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;texto&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&amp;#34;The tower is 324 metres (1,063 ft) tall, about the same height as an 81-storey 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;building, and the tallest structure in Paris. Its base is square, measuring 125 metres 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;(410 ft) on each side. During its construction, the Eiffel Tower surpassed the Washington 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;Monument to become the tallest man-made structure in the world, a title it held for 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;41 years until the Chrysler Building in New York City was finished in 1930. 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;It was the first structure to reach a height of 300 metres. Due to the addition of a 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;broadcasting aerial at the top of the tower in 1957, it is now taller than the Chrysler 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;Building by 5.2 metres (17 ft). Excluding transmitters, the Eiffel Tower is the 
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s2&#34;&gt;second tallest free-standing structure in France after the Millau Viaduct.&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;resumo&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;resumir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;texto&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;max_length&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;40&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;min_length&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;10&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;do_sample&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;kc&#34;&gt;False&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;print&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;resumo&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;[{&#39;summary_text&#39;: &#39;The tower is 324 metres (1,063 ft) tall, about the same height as an 81-storey building. Its base is square, measuring 125 metres (410 ft&#39;}]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;conclusão&#34;&gt;Conclusão&lt;/h2&gt;
+&lt;p&gt;Este post apresentou como testar modelos de aprendizado de máquinas utilizando a biblioteca Transformers do Hugging Face.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Classificação de imagens com o TensorFlow.</title>
