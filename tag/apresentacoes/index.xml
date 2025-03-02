@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apresentações | Leonardo Grando</title>
+    <link>https://lgrando1.github.io/tag/apresentacoes/</link>
+      <atom:link href="https://lgrando1.github.io/tag/apresentacoes/index.xml" rel="self" type="application/rss+xml" />
+    <description>Apresentações</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 02 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://lgrando1.github.io/media/icon_hu833f70911ce8d7c0b3dbb80c9eadb7d3_197124_512x512_fill_lanczos_center_3.png</url>
+      <title>Apresentações</title>
+      <link>https://lgrando1.github.io/tag/apresentacoes/</link>
+    </image>
+    
+    <item>
+      <title>Como Criar Apresentações Profissionais com Pandoc e Beamer</title>
+      <link>https://lgrando1.github.io/post/pandoc-beamer-apresentacoes-profissionais/</link>
+      <pubDate>Sun, 02 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>https://lgrando1.github.io/post/pandoc-beamer-apresentacoes-profissionais/</guid>
+      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;O &lt;strong&gt;Pandoc&lt;/strong&gt; é uma ferramenta poderosa para converter documentos entre diversos formatos. Neste tutorial, você aprenderá a criar apresentações profissionais em &lt;strong&gt;Beamer&lt;/strong&gt;, um estilo de slides baseado em &lt;strong&gt;LaTeX&lt;/strong&gt;, utilizando &lt;strong&gt;Markdown&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;1-como-instalar-o-pandoc-e-o-latex&#34;&gt;1. Como Instalar o Pandoc e o LaTeX&lt;/h2&gt;
+&lt;p&gt;Antes de criar apresentações Beamer, precisamos instalar o Pandoc e um compilador LaTeX.&lt;/p&gt;
+&lt;p&gt;Siga as instruções abaixo conforme seu sistema operacional &lt;a href=&#34;https://pandoc.org/installing.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2-criando-um-arquivo-markdown-para-sua-apresentação&#34;&gt;2. Criando um Arquivo Markdown para sua Apresentação&lt;/h2&gt;
+&lt;p&gt;Com o Pandoc instalado, podemos criar nosso primeiro arquivo &lt;strong&gt;Markdown&lt;/strong&gt; para a apresentação Beamer. Crie um arquivo chamado &lt;code&gt;apresentacao.md&lt;/code&gt; e adicione o seguinte conteúdo:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;title: &amp;#34;Minha Apresentação&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;author: &amp;#34;Leonardo Grando&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;date: &amp;#34;\today&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;theme: &amp;#34;Madrid&amp;#34;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;---
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;# Exemplos de elementos  
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Item 1  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; Item 2  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; **Negrito**, &lt;span class=&#34;ge&#34;&gt;*Itálico*&lt;/span&gt;  
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;k&#34;&gt;-&lt;/span&gt; [&lt;span class=&#34;nt&#34;&gt;Hyperlinks, clique aqui&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;https://lgrando1.github.io&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;#
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;- Tabelas
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| Camada | Função | Analogia |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;|--------|--------|----------|
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| 7 - Aplicação | Interface com o usuário | Você escolhe a pizza no cardápio |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| 6 - Apresentação | Traduz os dados | O garçom traduz o pedido para o chef |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| 5 - Sessão | Estabelece conexão | O garçom organiza sua reserva &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;br&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; e pede sua comida |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| 4 - Transporte | Garante a entrega | A cozinha prepara os pratos corretamente |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| 3 - Rede | Define a rota | O entregador escolhe o caminho |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| 2 - Enlace de Dados | Organiza pacotes | O porteiro recebe e direciona |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;| 1 - Física | Transmite os bits | O motoboy entrega a pizza |
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;# Conclusão  
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Obrigado pela atenção!
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;3-convertendo-o-markdown-para-pdf-com-beamer&#34;&gt;3. Convertendo o Markdown para PDF com Beamer&lt;/h2&gt;
+&lt;p&gt;Agora podemos converter nosso arquivo &lt;strong&gt;Markdown&lt;/strong&gt; para um slide em &lt;strong&gt;PDF&lt;/strong&gt; utilizando o Pandoc. Execute o seguinte comando no terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pandoc apresentacao.md -t beamer -o apresentacao.pdf
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Esse comando gera um arquivo &lt;code&gt;apresentacao.pdf&lt;/code&gt; pronto para ser apresentado.&lt;/p&gt;
+&lt;h2 id=&#34;4-adicionando-imagens-à-apresentação&#34;&gt;4. Adicionando Imagens à Apresentação&lt;/h2&gt;
+&lt;p&gt;Podemos adicionar imagens às apresentações Beamer criando uma pasta para armazená-las e referenciando-as no Markdown.&lt;/p&gt;
+&lt;h3 id=&#34;criando-uma-pasta-de-imagens&#34;&gt;Criando uma Pasta de Imagens&lt;/h3&gt;
+&lt;p&gt;No terminal, crie uma pasta chamada &lt;code&gt;imagens&lt;/code&gt; dentro do diretório da apresentação:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;mkdir imagens
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Agora, adicione suas imagens à pasta &lt;code&gt;imagens/&lt;/code&gt;. Por exemplo, digamos que temos uma imagem chamada &lt;code&gt;grafico.png&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;inserindo-uma-imagem-no-markdown&#34;&gt;Inserindo uma Imagem no Markdown&lt;/h3&gt;
+&lt;p&gt;Para adicionar uma imagem ao slide, use a seguinte sintaxe no arquivo &lt;code&gt;apresentacao.md&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-markdown&#34; data-lang=&#34;markdown&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;# Slide com Imagem  
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;gh&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Aqui está um gráfico importante:
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;![&lt;span class=&#34;nt&#34;&gt;Descrição da Imagem&lt;/span&gt;](&lt;span class=&#34;na&#34;&gt;imagens/grafico.png&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;A versão final desta apresentação pode ser obtida &lt;a href=&#34;https://github.com/lgrando1/apresentacaobeamer&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;aqui&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Quando converter para Beamer (Passo 3), a imagem será adicionada ao slide.&lt;/p&gt;
+&lt;h2 id=&#34;5-visualizando-e-personalizando-os-slides&#34;&gt;5. Visualizando e Personalizando os Slides&lt;/h2&gt;
+&lt;p&gt;Abra o arquivo &lt;code&gt;apresentacao.pdf&lt;/code&gt; e confira o resultado! Caso queira personalizar ainda mais, explore diferentes &lt;strong&gt;temas&lt;/strong&gt; e &lt;strong&gt;opções avançadas&lt;/strong&gt; do Beamer.&lt;/p&gt;
+&lt;h3 id=&#34;preview-da-apresentação&#34;&gt;Preview da Apresentação&lt;/h3&gt;
+&lt;iframe src=&#34;apresentacao.pdf&#34; width=&#34;100%&#34; height=&#34;500px&#34;&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;conclusão&#34;&gt;Conclusão&lt;/h2&gt;
+&lt;p&gt;Criar apresentações profissionais com &lt;strong&gt;Pandoc e Beamer&lt;/strong&gt; é simples e eficiente. Com poucos comandos, é possível transformar um arquivo &lt;strong&gt;Markdown&lt;/strong&gt; em um &lt;strong&gt;slide PDF altamente personalizável&lt;/strong&gt;. Além disso, adicionar imagens torna os slides mais visuais e informativos.&lt;/p&gt;
+&lt;p&gt;🔹 &lt;strong&gt;Dica&lt;/strong&gt;: Para mais informações e opções avançadas, consulte a &lt;a href=&#34;https://pandoc.org/MANUAL.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentação oficial do Pandoc&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
