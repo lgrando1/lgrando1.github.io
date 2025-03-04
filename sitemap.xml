@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://lgrando1.github.io/tag/algoritmos/</loc>
+    <lastmod>2025-03-04T16:00:00-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tag/basico/</loc>
+    <lastmod>2025-03-04T16:00:00-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/</loc>
+    <lastmod>2025-03-04T16:00:00-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tag/logica/</loc>
+    <lastmod>2025-03-04T16:00:00-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/post/logic1/</loc>
+    <lastmod>2025-03-04T16:00:00-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/post/</loc>
+    <lastmod>2025-03-04T16:00:00-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tag/programacao/</loc>
+    <lastmod>2025-03-04T16:00:00-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tag/python/</loc>
+    <lastmod>2025-03-04T16:00:00-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tags/</loc>
+    <lastmod>2025-03-04T16:00:00-03:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://lgrando1.github.io/tag/apresentacoes/</loc>
     <lastmod>2025-03-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -22,10 +58,6 @@
     <lastmod>2025-03-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://lgrando1.github.io/</loc>
-    <lastmod>2025-03-02T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://lgrando1.github.io/tag/markdown/</loc>
     <lastmod>2025-03-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -34,15 +66,7 @@
     <lastmod>2025-03-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://lgrando1.github.io/post/</loc>
-    <lastmod>2025-03-02T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://lgrando1.github.io/tag/slides/</loc>
-    <lastmod>2025-03-02T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://lgrando1.github.io/tags/</loc>
     <lastmod>2025-03-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -356,10 +380,6 @@
   </url><url>
     <loc>https://lgrando1.github.io/tag/ml/</loc>
     <lastmod>2024-07-01T21:39:08-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://lgrando1.github.io/tag/python/</loc>
-    <lastmod>2024-03-24T16:00:00-03:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://lgrando1.github.io/post/hface/</loc>

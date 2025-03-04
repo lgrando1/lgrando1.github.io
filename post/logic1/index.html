@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: March 4, 2025 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.a24614a2daa4e9affe56d1fa11ff10cd.css" />
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Leonardo Grando" />
+
+
+
+
+
+  
+
+<meta name="description" content="Tópico: operações mátemáticas, strings e váriaveis" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://lgrando1.github.io/post/logic1/" />
+<link rel="canonical" href="https://lgrando1.github.io/post/logic1/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu833f70911ce8d7c0b3dbb80c9eadb7d3_197124_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu833f70911ce8d7c0b3dbb80c9eadb7d3_197124_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#3f51b5" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://lgrando1.github.io/media/icon_hu833f70911ce8d7c0b3dbb80c9eadb7d3_197124_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="Leonardo Grando" />
+<meta property="og:url" content="https://lgrando1.github.io/post/logic1/" />
+<meta property="og:title" content="Lógica e Programação - Python Pt. 1 | Leonardo Grando" />
+<meta property="og:description" content="Tópico: operações mátemáticas, strings e váriaveis" /><meta property="og:image" content="https://lgrando1.github.io/media/icon_hu833f70911ce8d7c0b3dbb80c9eadb7d3_197124_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2025-03-04T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2025-03-04T16:00:00-03:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lgrando1.github.io/post/logic1/"
+  },
+  "headline": "Lógica e Programação - Python Pt. 1",
+  
+  "datePublished": "2025-03-04T00:00:00Z",
+  "dateModified": "2025-03-04T16:00:00-03:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Leonardo Grando"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Leonardo Grando",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lgrando1.github.io/media/icon_hu833f70911ce8d7c0b3dbb80c9eadb7d3_197124_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Tópico: operações mátemáticas, strings e váriaveis"
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Lógica e Programação - Python Pt. 1 | Leonardo Grando</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="432e1b61300d7c949aa9c7481b6aac85" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.b7b2a24793f0ee9715c77789955c2f76.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Leonardo Grando</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Leonardo Grando</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#posts"><span>Posts</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/event"><span>Talks</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/publication/"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/cv/index.html"><span>CV</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://www.linkedin.com/in/lgrando123" data-toggle="tooltip" data-placement="bottom" title="Follow me on LinkedIn" target="_blank" rel="noopener" aria-label="Follow me on LinkedIn">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Lógica e Programação - Python Pt. 1</h1>
+
+  
+  <p class="page-subtitle">Operações Básicas Python</p>
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Mar 4, 2025
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="operações-básicas-com-python">Operações básicas com Python</h1>
+<h2 id="operações-matemáticas">Operações matemáticas</h2>
+<p>Soma (+)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="mi">10</span><span class="o">+</span><span class="mi">2</span>
+</span></span></code></pre></div><pre><code>12
+</code></pre>
+<p>Subtração (-)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="mi">10</span><span class="o">-</span><span class="mi">2</span>
+</span></span></code></pre></div><pre><code>8
+</code></pre>
+<p>Multiplicação (*)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="mi">10</span><span class="o">*</span><span class="mi">2</span>
+</span></span></code></pre></div><pre><code>20
+</code></pre>
+<p>Divisão (/)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="mi">10</span><span class="o">/</span><span class="mi">2</span>
+</span></span></code></pre></div><pre><code>5.0
+</code></pre>
+<p>Divisão inteira (//)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="mi">13</span><span class="o">//</span><span class="mi">2</span>
+</span></span></code></pre></div><pre><code>6
+</code></pre>
+<p>Módulo (%)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="mi">13</span><span class="o">%</span><span class="mi">2</span>
+</span></span></code></pre></div><pre><code>1
+</code></pre>
+<p>Exponenciação (**)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="mi">13</span><span class="o">**</span><span class="mi">2</span>
+</span></span></code></pre></div><pre><code>169
+</code></pre>
+<p>A precedência dos operadores matemáticos no Python é similar à matemática:</p>
+<p>1 - operador **</p>
+<p>2 - operadores *, /, // e % da esquerda para a direita</p>
+<p>3 - operadores + e - da esquerda para a direita</p>
+<p>Pode-se utilizar parênteses para proceder a precedência normal</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="p">(</span><span class="mi">5</span> <span class="o">-</span> <span class="mi">3</span><span class="p">)</span> <span class="o">*</span> <span class="p">((</span><span class="mi">9</span><span class="o">-</span><span class="mi">3</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span><span class="o">-</span><span class="mi">8</span><span class="p">)</span><span class="o">**</span><span class="mi">3</span>
+</span></span></code></pre></div><pre><code>-549.25
+</code></pre>
+<h3 id="exercícios">Exercícios</h3>
+<p>Encontre o erro:</p>
+<p>a)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="mi">5</span> <span class="o">-</span> <span class="mi">3</span> <span class="o">-</span> <span class="o">*</span> <span class="mi">4</span>
+</span></span></code></pre></div><pre><code>  Cell In[41], line 1
+    5 - 3 - * 4
+            ^
+SyntaxError: invalid syntax
+</code></pre>
+<p>b)</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="mi">4</span>  <span class="o">-</span>
+</span></span></code></pre></div><pre><code>  Cell In[42], line 1
+    4  -
+        ^
+SyntaxError: invalid syntax
+</code></pre>
+<h2 id="tipos-de-dados">Tipos de dados</h2>
+<ul>
+<li>float: números de pontos flutuantes</li>
+<li>int: números inteiros</li>
+<li>str: string (valores textuais). Necessario inserir o texto entre aspas simples ou dupla</li>
+</ul>
+<p>Float</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">type</span><span class="p">(</span><span class="mf">3.14</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>float
+</code></pre>
+<p>Inteiros</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">type</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>int
+</code></pre>
+<p>String, com aspas duplas</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">type</span><span class="p">(</span><span class="s2">&#34;Léo&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>str
+</code></pre>
+<p>String, com aspas simples</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;Léo&#39;</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>str
+</code></pre>
+<p>Possível erro de EOL, ao esquecer a aspa final:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="s1">&#39;Léo</span>
+</span></span></code></pre></div><pre><code>  Cell In[47], line 1
+    'Léo
+    ^
+SyntaxError: unterminated string literal (detected at line 1)
+</code></pre>
+<h2 id="concatenação-e-repetição-de-string">Concatenação e repetição de string</h2>
+<p>Concatenação:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="s2">&#34;Prof&#34;</span> <span class="o">+</span> <span class="s2">&#34;Léo&#34;</span>
+</span></span></code></pre></div><pre><code>'ProfLéo'
+</code></pre>
+<p>Não é possível concatenar string com valores numéricos</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="c1"># Possível erro:</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;minha idade é &#34;</span> <span class="o">+</span> <span class="mi">40</span>
+</span></span></code></pre></div><pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+Cell In[49], line 2
+      1 # Possível erro:
+----&gt; 2 &quot;minha idade é &quot; + 40
+
+
+TypeError: can only concatenate str (not &quot;int&quot;) to str
+</code></pre>
+<p>Nescessário converter para string:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="s2">&#34;minha idade é &#34;</span> <span class="o">+</span> <span class="s2">&#34;40&#34;</span>
+</span></span></code></pre></div><pre><code>'minha idade é 40'
+</code></pre>
+<p>Não é possível multiplicar strings:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="s2">&#34;Prof&#34;</span> <span class="o">*</span> <span class="s2">&#34;Léo&#34;</span>
+</span></span></code></pre></div><pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+Cell In[51], line 1
+----&gt; 1 &quot;Prof&quot; * &quot;Léo&quot;
+
+
+TypeError: can't multiply sequence by non-int of type 'str'
+</code></pre>
+<p>Mas é possível repetir os strings ao multiplicar por um valor inteiro:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="s2">&#34;Prof Léo &#34;</span> <span class="o">*</span> <span class="mi">5</span>
+</span></span></code></pre></div><pre><code>'Prof Léo Prof Léo Prof Léo Prof Léo Prof Léo '
+</code></pre>
+<p>No caso de um valor float ocorrerá um erro:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="s2">&#34;Prof Léo&#34;</span> <span class="o">*</span> <span class="mf">5.0</span>
+</span></span></code></pre></div><pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+Cell In[53], line 1
+----&gt; 1 &quot;Prof Léo&quot; * 5.0
+
+
+TypeError: can't multiply sequence by non-int of type 'float'
+</code></pre>
+<h2 id="atribuição-de-varíaveis">Atribuição de Varíaveis</h2>
+<p>O sinal de &ldquo;=&rdquo; é chamado de instrução de atribuição. Uma variável é como uma gaveta na memória do computador, onde podemos armazenar um único valor.</p>
+<p>Regras para os nomes de variáveis:</p>
+<ol>
+<li>Nome pode ser constituido somente de uma palavra</li>
+<li>Somente letras, números e o caractere underscore (_) podem ser utilizados</li>
+<li>O nome não pode começar com um número</li>
+<li>A distinção entre letras maiusculas e minúsculas (case sensitive)</li>
+</ol>
+<p>Sempre utilize o bom senso e a consístencia para escolher os nomes das varíaveis.</p>
+<p>Exemplos de atribuições de variáveis:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">a</span> <span class="o">=</span> <span class="mi">12</span>
+</span></span><span class="line"><span class="cl"><span class="n">b</span> <span class="o">=</span> <span class="mi">13</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+</span></span></code></pre></div><pre><code>25
+</code></pre>
+<p>Mais exemplos:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">colher</span> <span class="o">=</span> <span class="s2">&#34;açucar na &#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">jarra</span> <span class="o">=</span> <span class="s2">&#34;água&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">colher</span> <span class="o">+</span> <span class="n">jarra</span>
+</span></span></code></pre></div><pre><code>'açucar na água'
+</code></pre>
+<p>A variável assume o valor atribuido:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">colher</span>
+</span></span></code></pre></div><pre><code>'açucar na '
+</code></pre>
+<p>Muito cuidado, pois o <a href="https://www.dio.me/articles/linguagens-tipadas-e-nao-tipadas-qual-e-a-melhor-para-o-seu-projeto" target="_blank" rel="noopener">Python não é tipado</a>, ou seja, as variáveis aceitam qualquer tipo de dados, o que pode dificultar a manutenção de códigos extensos:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">colher</span> <span class="o">=</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="n">colher</span>
+</span></span></code></pre></div><pre><code>2
+</code></pre>
+<p>Um exemplo de erro devido a operação não suportadas por tipos de dados:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">colher</span> <span class="o">+</span> <span class="n">jarra</span>
+</span></span></code></pre></div><pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+Cell In[58], line 1
+----&gt; 1 colher + jarra
+
+
+TypeError: unsupported operand type(s) for +: 'int' and 'str'
+</code></pre>
+<h2 id="algumas-funções-úteis">Algumas funções úteis:</h2>
+<ol>
+<li>len(str) -&gt; indica a quantidade de caracteres de um string</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">nome</span> <span class="o">=</span> <span class="s2">&#34;Leonardo Grando&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">len</span><span class="p">(</span><span class="n">nome</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>15
+</code></pre>
+<ol start="2">
+<li>print() - Função que exibe na tela os valores solicitados:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Léo&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Roda &#34;</span> <span class="o">*</span> <span class="mi">10</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;O valor de a é&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>12
+Léo
+25
+Roda Roda Roda Roda Roda Roda Roda Roda Roda Roda 
+O valor de a é 12
+</code></pre>
+<ol start="3">
+<li>input() -&gt; coleta o dados inserido pelo usuário e é avaliado como uma string</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;Qual é o seu nome?&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">nome</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="nb">print</span><span class="p">(</span><span class="s2">&#34;O seu nome é&#34;</span><span class="p">,</span> <span class="n">nome</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Qual é o seu nome?
+O seu nome é Leonardo
+</code></pre>
+<ol start="4">
+<li>Funções para converter tipos de dados:</li>
+</ol>
+<ul>
+<li>str() - converte para valores na forma de str</li>
+<li>int() - converte str ou float para valores inteiros</li>
+<li>float() - converte str ou int para valores flutuantes</li>
+</ul>
+<p>str()</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>'12'
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">str</span><span class="p">(</span><span class="mf">2.24</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>'2.24'
+</code></pre>
+<p>int()</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">int</span><span class="p">(</span><span class="mf">2.37</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>2
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">int</span><span class="p">(</span><span class="s2">&#34;leo&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>---------------------------------------------------------------------------
+
+ValueError                                Traceback (most recent call last)
+
+Cell In[71], line 1
+----&gt; 1 int(&quot;leo&quot;)
+
+
+ValueError: invalid literal for int() with base 10: 'leo'
+</code></pre>
+<p>float()</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">float</span><span class="p">(</span><span class="s2">&#34;leo&#34;</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>---------------------------------------------------------------------------
+
+ValueError                                Traceback (most recent call last)
+
+Cell In[73], line 1
+----&gt; 1 float(&quot;leo&quot;)
+
+
+ValueError: could not convert string to float: 'leo'
+</code></pre>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="nb">float</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>5.0
+</code></pre>
+<ol start="5">
+<li>Para obter ajuda sobre alguma função:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="line"><span class="cl"><span class="n">help</span><span class="p">(</span><span class="nb">print</span><span class="p">)</span>
+</span></span></code></pre></div><pre><code>Help on built-in function print in module builtins:
+
+print(*args, sep=' ', end='\n', file=None, flush=False)
+    Prints the values to a stream, or to sys.stdout by default.
+
+    sep
+      string inserted between values, default a space.
+    end
+      string appended after the last value, default a newline.
+    file
+      a file-like object (stream); defaults to the current sys.stdout.
+    flush
+      whether to forcibly flush the stream.
+</code></pre>
+<h2 id="desafios">Desafios:</h2>
+<ol>
+<li>Crie um programa que solicite o nome e a idade de uma pessoa e exiba essas informações em uma sentença.</li>
+<li>Dê exemplos de nomes válidos e inválidos para variáveis de um programa Python.</li>
+<li>Crie um programa que peça ao usuário dois números e exiba a soma dos valores no seguinte formato:
+&ldquo;A soma de X e Y é Z&rdquo;, onde X e Y são os números fornecidos e Z é o resultado da soma.</li>
+</ol>
+<h2 id="algumas-referências-recomendadas">Algumas referências recomendadas:</h2>
+<p><strong>Automate the Boring Stuff with Python.</strong> Disponível em: <a href="https://automatetheboringstuff.com/" target="_blank" rel="noopener">https://automatetheboringstuff.com/</a>. Acesso em: 4 mar. 2025.</p>
+<p><strong>PEP 8 – Style Guide for Python Code | peps.python.org. Python Enhancement Proposals (PEPs).</strong> Disponível em: <a href="https://peps.python.org/pep-0008/" target="_blank" rel="noopener">https://peps.python.org/pep-0008/</a>. Acesso em: 4 mar. 2025.</p>
+<p><strong>PY4E - Python for Everybody.</strong> Disponível em: <a href="https://www.py4e.com/" target="_blank" rel="noopener">https://www.py4e.com/</a>. Acesso em: 4 mar. 2025.</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/python/">Python</a>
+  
+  <a class="badge badge-light" href="/tag/basico/">básico</a>
+  
+  <a class="badge badge-light" href="/tag/logica/">lógica</a>
+  
+  <a class="badge badge-light" href="/tag/programacao/">programação</a>
+  
+  <a class="badge badge-light" href="/tag/algoritmos/">Algoritmos</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Flogic1%2F&amp;text=L%C3%B3gica&#43;e&#43;Programa%C3%A7%C3%A3o&#43;-&#43;Python&#43;Pt.&#43;1" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Flgrando1.github.io%2Fpost%2Flogic1%2F&amp;t=L%C3%B3gica&#43;e&#43;Programa%C3%A7%C3%A3o&#43;-&#43;Python&#43;Pt.&#43;1" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=L%C3%B3gica%20e%20Programa%C3%A7%C3%A3o%20-%20Python%20Pt.%201&amp;body=https%3A%2F%2Flgrando1.github.io%2Fpost%2Flogic1%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Flogic1%2F&amp;title=L%C3%B3gica&#43;e&#43;Programa%C3%A7%C3%A3o&#43;-&#43;Python&#43;Pt.&#43;1" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=L%C3%B3gica&#43;e&#43;Programa%C3%A7%C3%A3o&#43;-&#43;Python&#43;Pt.&#43;1%20https%3A%2F%2Flgrando1.github.io%2Fpost%2Flogic1%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Flogic1%2F&amp;title=L%C3%B3gica&#43;e&#43;Programa%C3%A7%C3%A3o&#43;-&#43;Python&#43;Pt.&#43;1" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://lgrando1.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu2eff65d577e70f5774d3fc177b8295d0_20417_270x270_fill_q75_lanczos_center.jpg" alt="Leonardo Grando"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://lgrando1.github.io/">Leonardo Grando</a></h5>
+      <h6 class="card-subtitle">Technology Ph.D. Candidate</h6>
+      <p class="card-text">My research interests include Agent-Based Simulation, Artificial Intelligence, Machine Learning.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/lgrando1" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/lgrando123" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=cXC9OsoAAAAJ&amp;hl" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.researchgate.net/profile/Leonardo-Grando" target="_blank" rel="noopener">
+        <i class="ai ai-researchgate"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://orcid.org/0000-0002-0448-209X" target="_blank" rel="noopener">
+        <i class="ai ai-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://lgrando1.github.io/index.xml" target="_blank" rel="noopener">
+        <i class="fas fa-rss"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    © 2025 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.d26509351aa0ff874abbee824e982e9b.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.e8ee06ba8371980ffde659871dd593b0.js"></script>
+
+
+
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
