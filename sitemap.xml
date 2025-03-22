@@ -2,6 +2,50 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://lgrando1.github.io/publication-type/3/</loc>
+    <lastmod>2025-03-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/publication/grando2025a/</loc>
+    <lastmod>2025-03-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tag/battery/</loc>
+    <lastmod>2025-03-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tag/disaster.-iot/</loc>
+    <lastmod>2025-03-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tag/drones/</loc>
+    <lastmod>2025-03-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tag/energy-management/</loc>
+    <lastmod>2025-03-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/</loc>
+    <lastmod>2025-03-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tag/precision-agriculture/</loc>
+    <lastmod>2025-03-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/publication_types/</loc>
+    <lastmod>2025-03-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/publication/</loc>
+    <lastmod>2025-03-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://lgrando1.github.io/tags/</loc>
+    <lastmod>2025-03-08T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://lgrando1.github.io/tag/algoritmos/</loc>
     <lastmod>2025-03-04T16:00:00-03:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -15,10 +59,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://lgrando1.github.io/tag/introducao-ao-python/</loc>
-    <lastmod>2025-03-04T16:00:00-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://lgrando1.github.io/</loc>
     <lastmod>2025-03-04T16:00:00-03:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -51,10 +91,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://lgrando1.github.io/tag/strings/</loc>
-    <lastmod>2025-03-04T16:00:00-03:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://lgrando1.github.io/tags/</loc>
     <lastmod>2025-03-04T16:00:00-03:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -139,34 +175,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://lgrando1.github.io/publication-type/2/</loc>
-    <lastmod>2025-01-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://lgrando1.github.io/tag/battery/</loc>
-    <lastmod>2025-01-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://lgrando1.github.io/tag/disaster.-iot/</loc>
-    <lastmod>2025-01-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://lgrando1.github.io/tag/drones/</loc>
-    <lastmod>2025-01-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://lgrando1.github.io/tag/energy-management/</loc>
-    <lastmod>2025-01-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://lgrando1.github.io/tag/precision-agriculture/</loc>
-    <lastmod>2025-01-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://lgrando1.github.io/publication_types/</loc>
-    <lastmod>2025-01-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://lgrando1.github.io/publication/</loc>
     <lastmod>2025-01-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
