@@ -63,7 +63,7 @@
 &lt;/p&gt;
 &lt;h2 id=&#34;2-incluir-extensões-adicionais&#34;&gt;2. Incluir extensões adicionais.&lt;/h2&gt;
 &lt;p&gt;No meu caso, não foi necessário incluir extensões adicionais, então pulei este passo.&lt;/p&gt;
-&lt;h2 id=&#34;3-criar-um-arquivo-docker-dockerfile&#34;&gt;3 Criar um arquivo Docker (Dockerfile)&lt;/h2&gt;
+&lt;h2 id=&#34;3-criar-um-arquivo-docker-dockerfile&#34;&gt;3. Criar um arquivo Docker (Dockerfile)&lt;/h2&gt;
 &lt;p&gt;Tive que realizar algumas alterações em relação ao código proposto no artigo original.&lt;/p&gt;
 &lt;p&gt;Em vez de usar o OpenJDK na versão 8, utilizei a versão 11.&lt;/p&gt;
 &lt;p&gt;Com a versão 8, o modelo não iniciava. Acredito que isso se deva à mudança na &lt;a href=&#34;https://ccl.northwestern.edu/netlogo/docs/versions.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;versão 6.3.0 do NetLogo&lt;/a&gt;&lt;/p&gt;
