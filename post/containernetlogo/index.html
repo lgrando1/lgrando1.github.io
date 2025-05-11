@@ -1,0 +1,1839 @@
+<!DOCTYPE html>
+<!-- This site was created with Wowchemy. https://www.wowchemy.com -->
+<!-- Last Published: May 10, 2025 --><html lang="en-us" >
+
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  
+  
+  
+    <meta name="generator" content="Wowchemy 5.7.0 for Hugo" />
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+
+  
+  
+  
+    
+      
+      <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Lora:wght@400;700&family=Roboto:wght@400;700&display=swap&display=swap" media="print" onload="this.media='all'">
+    
+  
+
+  
+  
+
+  
+  
+    
+    <script src="/js/mathjax-config.js"></script>
+  
+
+  
+
+  <link rel="stylesheet" href="/css/vendor-bundle.min.16f785cdb553c8c4431db6775122af35.css" media="print" onload="this.media='all'">
+
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.2/css/academicons.min.css" integrity="sha512-KlJCpRsLf+KKu2VQa5vmRuClRFjxc5lXO03ixZt82HZUk41+1I0bD8KBSA0fY290ayMfWYI9udIqeOWSu1/uZg==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
+
+    
+    
+    
+    
+      
+      
+    
+    
+    
+
+    
+    
+    
+
+    
+
+    
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+      
+      
+
+      
+      
+
+      
+    
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.a24614a2daa4e9affe56d1fa11ff10cd.css" />
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/libs/chroma/github-light.min.css" title="hl-light" media="print" onload="this.media='all'" >
+    <link rel="stylesheet" href="/css/libs/chroma/dracula.min.css" title="hl-dark" media="print" onload="this.media='all'" disabled>
+  
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+
+
+
+
+
+  <meta name="author" content="Leonardo Grando" />
+
+
+
+
+
+  
+
+<meta name="description" content="Criando um container para facilitar o processo de replicação do seu experimento" />
+
+
+
+<link rel="alternate" hreflang="en-us" href="https://lgrando1.github.io/post/containernetlogo/" />
+<link rel="canonical" href="https://lgrando1.github.io/post/containernetlogo/" />
+
+
+
+  <link rel="manifest" href="/manifest.webmanifest" />
+
+
+
+<link rel="icon" type="image/png" href="/media/icon_hu833f70911ce8d7c0b3dbb80c9eadb7d3_197124_32x32_fill_lanczos_center_3.png" />
+<link rel="apple-touch-icon" type="image/png" href="/media/icon_hu833f70911ce8d7c0b3dbb80c9eadb7d3_197124_180x180_fill_lanczos_center_3.png" />
+
+<meta name="theme-color" content="#3f51b5" />
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+<meta property="twitter:card" content="summary" />
+<meta property="twitter:image" content="https://lgrando1.github.io/media/icon_hu833f70911ce8d7c0b3dbb80c9eadb7d3_197124_512x512_fill_lanczos_center_3.png" />
+<meta property="og:site_name" content="Leonardo Grando" />
+<meta property="og:url" content="https://lgrando1.github.io/post/containernetlogo/" />
+<meta property="og:title" content="Criando um container Docker para seu modelo de simulação do Netlogo | Leonardo Grando" />
+<meta property="og:description" content="Criando um container para facilitar o processo de replicação do seu experimento" /><meta property="og:image" content="https://lgrando1.github.io/media/icon_hu833f70911ce8d7c0b3dbb80c9eadb7d3_197124_512x512_fill_lanczos_center_3.png" /><meta property="og:locale" content="en-us" />
+
+  
+    <meta
+      property="article:published_time"
+      content="2025-05-10T00:00:00&#43;00:00"
+    />
+  
+  
+    <meta property="article:modified_time" content="2025-05-10T00:00:00&#43;00:00">
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://lgrando1.github.io/post/containernetlogo/"
+  },
+  "headline": "Criando um container Docker para seu modelo de simulação do Netlogo",
+  
+  "datePublished": "2025-05-10T00:00:00Z",
+  "dateModified": "2025-05-10T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Leonardo Grando"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Leonardo Grando",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://lgrando1.github.io/media/icon_hu833f70911ce8d7c0b3dbb80c9eadb7d3_197124_192x192_fill_lanczos_center_3.png"
+    }
+  },
+  "description": "Criando um container para facilitar o processo de replicação do seu experimento"
+}
+</script>
+
+  
+
+  
+
+
+
+
+  
+  
+  
+
+  
+  
+
+  
+
+
+  
+  <title>Criando um container Docker para seu modelo de simulação do Netlogo | Leonardo Grando</title>
+
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class="page-wrapper   " data-wc-page-id="40eff330203ba11230f483f3e08e83ad" >
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <script src="/js/wowchemy-init.min.b7b2a24793f0ee9715c77789955c2f76.js"></script>
+
+  
+
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+
+  <div class="page-header header--fixed">
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+    <div class="container-xl">
+
+      
+      <div class="d-none d-lg-inline-flex">
+        <a class="navbar-brand" href="/">Leonardo Grando</a>
+      </div>
+      
+
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+      <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+      
+      <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+        <a class="navbar-brand" href="/">Leonardo Grando</a>
+      </div>
+      
+
+      
+      
+      <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+        
+        <ul class="navbar-nav d-md-inline-flex">
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#about"><span>Home</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#posts"><span>Posts</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/event"><span>Talks</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/publication/"><span>Publications</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+              
+              
+              
+                
+              
+              
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/#contact"><span>Contact</span></a>
+          </li>
+
+          
+          
+
+          
+
+          
+          
+          
+            
+          
+
+          
+
+          
+          
+          
+          
+
+          
+            
+              
+              
+            
+            
+          
+
+          <li class="nav-item">
+            <a class="nav-link " href="/cv/index.html"><span>CV</span></a>
+          </li>
+
+          
+          
+
+        
+
+          
+        </ul>
+      </div>
+
+      <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+
+        
+        
+          
+            
+            <li class="nav-item d-none d-lg-inline-flex">
+              <a class="nav-link" href="https://www.linkedin.com/in/lgrando123" data-toggle="tooltip" data-placement="bottom" title="Follow me on LinkedIn" target="_blank" rel="noopener" aria-label="Follow me on LinkedIn">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </li>
+          
+        
+
+        
+        
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        
+        
+        <li class="nav-item dropdown theme-dropdown">
+          <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-label="Display preferences">
+            <i class="fas fa-moon" aria-hidden="true"></i>
+          </a>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item js-set-theme-light">
+              <span>Light</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-dark">
+              <span>Dark</span>
+            </a>
+            <a href="#" class="dropdown-item js-set-theme-auto">
+              <span>Automatic</span>
+            </a>
+          </div>
+        </li>
+        
+
+        
+        
+
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+
+  </div>
+
+  <div class="page-body">
+    
+    
+    
+
+    <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Criando um container Docker para seu modelo de simulação do Netlogo</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    May 10, 2025
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/tutoriais/">Tutoriais</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h2 id="introdução">Introdução</h2>
+<p>Fazer ciência é garantir que o seu modelo de simulação possa ser replicado por outros pesquisadores.</p>
+<p>Criando um container, é possível facilitar a publicação dos seus resultados, pois outros pesquisadores poderão ter acesso aos seus experimentos.</p>
+<p>Uma das formas de garantir a replicabilidade do seu modelo de simulação baseado em agentes com o NetLogo é criar um container para ele, conforme descrito <a href="https://forum.comses.net/t/containerizing-a-netlogo-model-gui-version/8236" target="_blank" rel="noopener">neste artigo</a></p>
+<p>No entanto, esse artigo já possui cinco anos e não aborda como realizar o processo no Linux, então resolvi testar.</p>
+<p>Neste post, refaço o passo a passo do tutorial original e relato as alterações que realizei.</p>
+<h2 id="0-pré-requisitos">0. Pré-requisitos</h2>
+<p>Você precisa ter o Docker instalado no seu computador.</p>
+<p>No meu caso eu uso o Pop!_OS (LTS 22.04), que é derivado do Ubuntu e usei <a href="https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository" target="_blank" rel="noopener">este tutorial</a>.</p>
+<p>Também foi necessário realizar os <a href="https://docs.docker.com/engine/install/linux-postinstall/" target="_blank" rel="noopener">procedimento de pós instalação</a> e reiniciar a máquina.</p>
+<p>Com a máquina reiniciada, pude começar a replicar o tutorial</p>
+<h2 id="1-determinar-o-local-do-arquivo">1. Determinar o local do arquivo.</h2>
+<p>Para fins de teste, utilizei o arquivo que empreguei nas simulações do meu doutorado, disponível <a href="https://doi.org/10.25824/redu/QGAUPI" target="_blank" rel="noopener">aqui:</a></p>
+<p>Criei uma pasta chamada <code>Drone_Docker</code> nos meus documentos, com as subpastas <code>results</code> e <code>src</code>.</p>
+<p>Renomeei o arquivo do NetLogo para <code>DronesThesis.nlogo</code> e criei um arquivo Dockerfile.</p>
+<p>Neste momento a pasta <code>TestResults</code> não existia, ela será gerada posteriormente.</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Estrutura de arquivos" srcset="
+               /post/containernetlogo/img/001_hu901c349c19539d41f0c8e6d06ca4233f_25295_d9593f5acfe69e5af19e2c3c2fe50302.webp 400w,
+               /post/containernetlogo/img/001_hu901c349c19539d41f0c8e6d06ca4233f_25295_17094bc7a2b5d3ec3d1bf0abb4fbf7a9.webp 760w,
+               /post/containernetlogo/img/001_hu901c349c19539d41f0c8e6d06ca4233f_25295_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/containernetlogo/img/001_hu901c349c19539d41f0c8e6d06ca4233f_25295_d9593f5acfe69e5af19e2c3c2fe50302.webp"
+               width="698"
+               height="255"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="2-incluir-extensões-adicionais">2. Incluir extensões adicionais.</h2>
+<p>No meu caso, não foi necessário incluir extensões adicionais, então pulei este passo.</p>
+<h1 id="3-criar-um-arquivo-docker-dockerfile">3 Criar um arquivo Docker (Dockerfile)</h1>
+<p>Tive que realizar algumas alterações em relação ao código proposto no artigo original.</p>
+<p>Em vez de usar o OpenJDK na versão 8, utilizei a versão 11.</p>
+<p>Com a versão 8, o modelo não iniciava. Acredito que isso se deva à mudança na <a href="https://ccl.northwestern.edu/netlogo/docs/versions.html" target="_blank" rel="noopener">versão 6.3.0 do NetLogo</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">FROM openjdk:11-jdk
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ARG MODEL_NAME
+</span></span><span class="line"><span class="cl">ARG NETLOGO_VERSION
+</span></span><span class="line"><span class="cl">ARG <span class="nv">NETLOGO_NAME</span><span class="o">=</span>NetLogo-<span class="nv">$NETLOGO_VERSION</span>
+</span></span><span class="line"><span class="cl">ARG <span class="nv">NETLOGO_URL</span><span class="o">=</span>https://ccl.northwestern.edu/netlogo/<span class="nv">$NETLOGO_VERSION</span>/<span class="nv">$NETLOGO_NAME</span>-64.tgz
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ENV <span class="nv">LC_ALL</span><span class="o">=</span>C.UTF-8 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="nv">LANG</span><span class="o">=</span>C.UTF-8 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="nv">DISPLAY</span><span class="o">=</span>:14
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">RUN mkdir /home/netlogo <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span> <span class="o">&amp;&amp;</span> wget <span class="nv">$NETLOGO_URL</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span> <span class="o">&amp;&amp;</span> tar xzf <span class="nv">$NETLOGO_NAME</span>-64.tgz -C /home/netlogo --strip-components<span class="o">=</span><span class="m">1</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span> <span class="o">&amp;&amp;</span> rm <span class="nv">$NETLOGO_NAME</span>-64.tgz <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span> <span class="o">&amp;&amp;</span> cp /home/netlogo/netlogo-headless.sh /home/netlogo/netlogo-headw.sh <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span> <span class="o">&amp;&amp;</span> sed -i -e <span class="s1">&#39;s/org.nlogo.headless.Main/org.nlogo.app.App/g&#39;</span> /home/netlogo/netlogo-headw.sh <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span> <span class="o">&amp;&amp;</span> apt-get update <span class="o">&amp;&amp;</span> apt-get install -y libxrender1 libxtst6
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">COPY . /home/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">RUN mv /home/src/<span class="nv">$MODEL_NAME</span> /home/src/NLModel.nlogo
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">CMD <span class="o">[</span><span class="s2">&#34;/home/netlogo/netlogo-headw.sh&#34;</span>, <span class="s2">&#34;/home/src/NLModel.nlogo&#34;</span><span class="o">]</span>
+</span></span></code></pre></div><h2 id="4-criar-uma-imagem-docker">4. Criar uma imagem Docker</h2>
+<p>Agora é o momento de criar a imagem Docker, editei a linha:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker build --build-arg <span class="nv">MODEL_NAME</span><span class="o">=</span>yourfile --build-arg <span class="nv">NETLOGO_VERSION</span><span class="o">=</span>yourversion -t imagename .
+</span></span></code></pre></div><p>para o meu caso:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker build --build-arg <span class="nv">MODEL_NAME</span><span class="o">=</span>DroneThesis.nlogo --build-arg <span class="nv">NETLOGO_VERSION</span><span class="o">=</span>6.4.0 -t dronethesis5.
+</span></span></code></pre></div><p>O nome da imagem ficou <code>dronethesis5</code> (sim, foi a minha quinta tentativa de criar uma imagem funcional).</p>
+<p>Se tudo der certo, a imagem será criada. Caso contrário, talvez este <a href="https://forum.comses.net/t/containerizing-a-netlogo-model-gui-version/8236#heading--trblshoot" target="_blank" rel="noopener">FAQ da postagem original possa ajudar:</a>:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Criando a imagem" srcset="
+               /post/containernetlogo/img/002_hu01aeb97ba3558f91b5f6272baae0eb3c_185700_6155cb21e432d73e146d2c9142e34e4e.webp 400w,
+               /post/containernetlogo/img/002_hu01aeb97ba3558f91b5f6272baae0eb3c_185700_e622194987ecf860e18928e1d84fd347.webp 760w,
+               /post/containernetlogo/img/002_hu01aeb97ba3558f91b5f6272baae0eb3c_185700_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/containernetlogo/img/002_hu01aeb97ba3558f91b5f6272baae0eb3c_185700_6155cb21e432d73e146d2c9142e34e4e.webp"
+               width="760"
+               height="279"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>Observe que uma imagem Docker foi gerada:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Criando a imagem" srcset="
+               /post/containernetlogo/img/003_hu603d9af1701116e386e3aa3b78474695_56115_c6b0589aa3914d2b58015fbfed08ff7e.webp 400w,
+               /post/containernetlogo/img/003_hu603d9af1701116e386e3aa3b78474695_56115_bad128fe7d8dc389e8aae8b3105ec191.webp 760w,
+               /post/containernetlogo/img/003_hu603d9af1701116e386e3aa3b78474695_56115_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/containernetlogo/img/003_hu603d9af1701116e386e3aa3b78474695_56115_c6b0589aa3914d2b58015fbfed08ff7e.webp"
+               width="760"
+               height="180"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="4-rodar-o-container">4. Rodar o container</h2>
+<p>Como no tutorial original, é necessário rodar outra imagem chamada <a href="https://hub.docker.com/r/jare/x11-bridge" target="_blank" rel="noopener">docker-x11-bridge</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -d --name x11-bridge -e <span class="nv">MODE</span><span class="o">=</span><span class="s2">&#34;tcp&#34;</span> -e <span class="nv">XPRA_HTML</span><span class="o">=</span><span class="s2">&#34;yes&#34;</span> -e <span class="nv">DISPLAY</span><span class="o">=</span>:14 -e <span class="nv">XPRA_PASSWORD</span><span class="o">=</span><span class="m">111</span> -p 10000:10000 jare/x11-bridge
+</span></span></code></pre></div><p>E agora sim, executar a imagem contendo o modelo de simulação:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -d --name netlogo --volumes-from x11-bridge -v path/to/your/results/folder:/home/results imagename
+</span></span></code></pre></div><p>No meu caso:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -d --name netlogo --volumes-from x11-bridge -v /home/leonardogrando/Documentos/Drones_Docker/results/TestResults:/home/results dronethesis5
+</span></span></code></pre></div><p>O nome do container ficou como <code>netlogo</code>, a pasta de resultados ficou <code>/home/leonardogrando/Documentos/Drones_Docker/results/TestResults</code> e a imagem utilizada foi <code>dronethesis5</code> .</p>
+<p>Agora, para acessar o modelo, basta abrir no navegador:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">http://localhost:10000/index.html?encoding<span class="o">=</span>rgb32<span class="p">&amp;</span><span class="nv">password</span><span class="o">=</span><span class="m">111</span>
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Rodando o container" srcset="
+               /post/containernetlogo/img/004_huc3baa0f846a9f835ab646789fc8698ba_356941_b337c8c504b769f80781ad330c40bcb9.webp 400w,
+               /post/containernetlogo/img/004_huc3baa0f846a9f835ab646789fc8698ba_356941_43b5151abe4f00ed9a5d002859bf61a8.webp 760w,
+               /post/containernetlogo/img/004_huc3baa0f846a9f835ab646789fc8698ba_356941_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/containernetlogo/img/004_huc3baa0f846a9f835ab646789fc8698ba_356941_b337c8c504b769f80781ad330c40bcb9.webp"
+               width="760"
+               height="429"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h2 id="5-realizando-os-experimentos">5. Realizando os experimentos</h2>
+<p>Agora você pode acessar o BehaviorSpace para realizar o delineamento do experimento:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Experimento 1" srcset="
+               /post/containernetlogo/img/005_hu74016db3897c53d0179d3ca82439bce4_101463_fc69b3ef0627a09cbf9a046d733ec1cd.webp 400w,
+               /post/containernetlogo/img/005_hu74016db3897c53d0179d3ca82439bce4_101463_7f0140ed5b0071c5d0fb216f89fa5cf6.webp 760w,
+               /post/containernetlogo/img/005_hu74016db3897c53d0179d3ca82439bce4_101463_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/containernetlogo/img/005_hu74016db3897c53d0179d3ca82439bce4_101463_fc69b3ef0627a09cbf9a046d733ec1cd.webp"
+               width="546"
+               height="760"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>Ao clicar em <code>Run</code>:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Experimento 2" srcset="
+               /post/containernetlogo/img/007_hu5cc835b77db7971670ecc066b00b3144_42861_77f617c8dbd3c4e01148d10830afb332.webp 400w,
+               /post/containernetlogo/img/007_hu5cc835b77db7971670ecc066b00b3144_42861_c3225d1abf4d4d8042885916d08b62c1.webp 760w,
+               /post/containernetlogo/img/007_hu5cc835b77db7971670ecc066b00b3144_42861_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/containernetlogo/img/007_hu5cc835b77db7971670ecc066b00b3144_42861_77f617c8dbd3c4e01148d10830afb332.webp"
+               width="379"
+               height="302"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>Você podera alterar o local onde o BehaviorSpace irá salvar as planilhas com os resultados (pasta <code>results</code>):</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Experimento 3" srcset="
+               /post/containernetlogo/img/008_hu36f9d2e168a23d9a8cccaf7e9d3d4f07_42677_09b0ca2d46a89c4bd59b5d9a77820d20.webp 400w,
+               /post/containernetlogo/img/008_hu36f9d2e168a23d9a8cccaf7e9d3d4f07_42677_4b5a6c886b2a607a72304531d5e49eb5.webp 760w,
+               /post/containernetlogo/img/008_hu36f9d2e168a23d9a8cccaf7e9d3d4f07_42677_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/containernetlogo/img/008_hu36f9d2e168a23d9a8cccaf7e9d3d4f07_42677_09b0ca2d46a89c4bd59b5d9a77820d20.webp"
+               width="760"
+               height="285"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>Assim você poderá acessar os resultados fora do container e realizar a mineração de dados:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Experimento 3" srcset="
+               /post/containernetlogo/img/008_hu36f9d2e168a23d9a8cccaf7e9d3d4f07_42677_09b0ca2d46a89c4bd59b5d9a77820d20.webp 400w,
+               /post/containernetlogo/img/008_hu36f9d2e168a23d9a8cccaf7e9d3d4f07_42677_4b5a6c886b2a607a72304531d5e49eb5.webp 760w,
+               /post/containernetlogo/img/008_hu36f9d2e168a23d9a8cccaf7e9d3d4f07_42677_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/containernetlogo/img/008_hu36f9d2e168a23d9a8cccaf7e9d3d4f07_42677_09b0ca2d46a89c4bd59b5d9a77820d20.webp"
+               width="760"
+               height="285"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<h1 id="6-parando-os-containers">6. Parando os containers</h1>
+<p>Para parar os containers, utilize os comandos:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker stop netlogo
+</span></span><span class="line"><span class="cl">docker stop x11-bridge
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Experimento 3" srcset="
+               /post/containernetlogo/img/010_hu215af2b69929e852c87df8d375558d2f_152564_a6644cde62b897dbfb47a0c9d440ced0.webp 400w,
+               /post/containernetlogo/img/010_hu215af2b69929e852c87df8d375558d2f_152564_3aa30972a75fb4ebe23048b578f0947c.webp 760w,
+               /post/containernetlogo/img/010_hu215af2b69929e852c87df8d375558d2f_152564_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/containernetlogo/img/010_hu215af2b69929e852c87df8d375558d2f_152564_a6644cde62b897dbfb47a0c9d440ced0.webp"
+               width="760"
+               height="251"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>E os resultados continuarão na pasta <code>results</code></p>
+<h2 id="7-compartilhando-sua-imagem-no-hub-docker">7. Compartilhando sua imagem no Hub Docker.</h2>
+<p>Primeiro você precisara ter um login no site Docker.com e terá que logar na sua conta com o comando:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker login
+</span></span></code></pre></div><p>Depois você terá que criar uma imagem com o seu usuário docker, no meu caso: <code>leogrand1</code>, não esqueça de substituir com o seu usuário Docker:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker build --build-arg <span class="nv">MODEL_NAME</span><span class="o">=</span>DroneThesis.nlogo --build-arg <span class="nv">NETLOGO_VERSION</span><span class="o">=</span>6.4.0 -t leogrand1/codigodrones:1.0 .
+</span></span></code></pre></div><p>Agora você podera avaliar suas imagens com o comando</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker images
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Experimento 3" srcset="
+               /post/containernetlogo/img/011_hu76b28bd546279348541c9ae3236eb625_58152_9dc54b25678db0918416b8d9d5a8605a.webp 400w,
+               /post/containernetlogo/img/011_hu76b28bd546279348541c9ae3236eb625_58152_f764041e71cef8c2804bac5309aa793f.webp 760w,
+               /post/containernetlogo/img/011_hu76b28bd546279348541c9ae3236eb625_58152_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/containernetlogo/img/011_hu76b28bd546279348541c9ae3236eb625_58152_9dc54b25678db0918416b8d9d5a8605a.webp"
+               width="760"
+               height="151"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>E por fim subir a versão desejada (não esqueça de substituir com o seu usuário Docker):</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker image push leogrand1/codigodrones:1.0
+</span></span></code></pre></div><p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Experimento 3" srcset="
+               /post/containernetlogo/img/012_hu30df92b83e8a3bab356d6efbc619fc0e_87250_a3419fdc3d18fb6088446a0264e5b480.webp 400w,
+               /post/containernetlogo/img/012_hu30df92b83e8a3bab356d6efbc619fc0e_87250_dfea3c7920449ab4ab56b81eacbb9bf6.webp 760w,
+               /post/containernetlogo/img/012_hu30df92b83e8a3bab356d6efbc619fc0e_87250_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/containernetlogo/img/012_hu30df92b83e8a3bab356d6efbc619fc0e_87250_a3419fdc3d18fb6088446a0264e5b480.webp"
+               width="760"
+               height="186"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>Agora você pode acessar esta imagem na sua conta do Docker Hub:</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img alt="Experimento 3" srcset="
+               /post/containernetlogo/img/013_hu8b5bbd144a564df7d33eeba48ea81239_121715_22ba84bc91d63ff8c2ab59377512d68a.webp 400w,
+               /post/containernetlogo/img/013_hu8b5bbd144a564df7d33eeba48ea81239_121715_cb7773a4cd2d6b9701ba6e76726355b9.webp 760w,
+               /post/containernetlogo/img/013_hu8b5bbd144a564df7d33eeba48ea81239_121715_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+               src="/post/containernetlogo/img/013_hu8b5bbd144a564df7d33eeba48ea81239_121715_22ba84bc91d63ff8c2ab59377512d68a.webp"
+               width="760"
+               height="258"
+               loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>Este container pode ser <a href="https://hub.docker.com/r/leogrand1/codigodrones" target="_blank" rel="noopener">obtido aqui</a></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker pull leogrand1/codigodrones
+</span></span></code></pre></div><p>Para conhecer mais sobre este procedimento de push de imagens docker, <a href="https://training.play-with-docker.com/beginner-linux/" target="_blank" rel="noopener">recomendo este tutorial.</a></p>
+<h2 id="7-conclusão">7. Conclusão</h2>
+<p>Este post não substitui o <a href="https://forum.comses.net/t/containerizing-a-netlogo-model-gui-version/8236/1" target="_blank" rel="noopener">post original</a>, sendo que o objetivo aqui é auxiliar pesquisadores que falam português e utilizam Linux.</p>
+<h2 id="referencias">Referencias</h2>
+<p>GRANDO, Leonardo; URSINI, Edson Luiz. Study for optimization of battery consumption for unmanned aerial vehicles. Disponível em: <a href="https://redu.unicamp.br/citation?persistentId=doi:10.25824/redu/QGAUPI" target="_blank" rel="noopener">https://redu.unicamp.br/citation?persistentId=doi:10.25824/redu/QGAUPI</a>. Acesso em: 10 maio 2025.</p>
+<p><strong>Containerizing a NetLogo model - GUI version.</strong> CoMSES Net Discourse Forums. Disponível em: <a href="https://forum.comses.net/t/containerizing-a-netlogo-model-gui-version/8236/1" target="_blank" rel="noopener">https://forum.comses.net/t/containerizing-a-netlogo-model-gui-version/8236/1</a>. Acesso em: 10 maio 2025.</p>
+<p><strong>Install.</strong> Docker Documentation. Disponível em: <a href="https://docs.docker.com/engine/install/" target="_blank" rel="noopener">https://docs.docker.com/engine/install/</a>. Acesso em: 10 maio 2025.</p>
+<p><strong>jare/x11-bridge.</strong> Disponível em: <a href="https://hub.docker.com/r/jare/x11-bridge" target="_blank" rel="noopener">https://hub.docker.com/r/jare/x11-bridge</a>. Acesso em: 10 maio 2025.</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/docker/">Docker</a>
+  
+  <a class="badge badge-light" href="/tag/netlogo/">Netlogo</a>
+  
+  <a class="badge badge-light" href="/tag/simulation/">Simulation</a>
+  
+  <a class="badge badge-light" href="/tag/agent-based/">Agent-Based</a>
+  
+</div>
+
+
+
+<div class="share-box">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcontainernetlogo%2F&amp;text=Criando&#43;um&#43;container&#43;Docker&#43;para&#43;seu&#43;modelo&#43;de&#43;simula%C3%A7%C3%A3o&#43;do&#43;Netlogo" target="_blank" rel="noopener" class="share-btn-twitter" aria-label="twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcontainernetlogo%2F&amp;t=Criando&#43;um&#43;container&#43;Docker&#43;para&#43;seu&#43;modelo&#43;de&#43;simula%C3%A7%C3%A3o&#43;do&#43;Netlogo" target="_blank" rel="noopener" class="share-btn-facebook" aria-label="facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a href="mailto:?subject=Criando%20um%20container%20Docker%20para%20seu%20modelo%20de%20simula%C3%A7%C3%A3o%20do%20Netlogo&amp;body=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcontainernetlogo%2F" target="_blank" rel="noopener" class="share-btn-email" aria-label="envelope">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcontainernetlogo%2F&amp;title=Criando&#43;um&#43;container&#43;Docker&#43;para&#43;seu&#43;modelo&#43;de&#43;simula%C3%A7%C3%A3o&#43;do&#43;Netlogo" target="_blank" rel="noopener" class="share-btn-linkedin" aria-label="linkedin-in">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Criando&#43;um&#43;container&#43;Docker&#43;para&#43;seu&#43;modelo&#43;de&#43;simula%C3%A7%C3%A3o&#43;do&#43;Netlogo%20https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcontainernetlogo%2F" target="_blank" rel="noopener" class="share-btn-whatsapp" aria-label="whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Flgrando1.github.io%2Fpost%2Fcontainernetlogo%2F&amp;title=Criando&#43;um&#43;container&#43;Docker&#43;para&#43;seu&#43;modelo&#43;de&#43;simula%C3%A7%C3%A3o&#43;do&#43;Netlogo" target="_blank" rel="noopener" class="share-btn-weibo" aria-label="weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <a href="https://lgrando1.github.io/"><img class="avatar mr-3 avatar-circle" src="/authors/admin/avatar_hu2eff65d577e70f5774d3fc177b8295d0_20417_270x270_fill_q75_lanczos_center.jpg" alt="Leonardo Grando"></a>
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="https://lgrando1.github.io/">Leonardo Grando</a></h5>
+      <h6 class="card-subtitle">Assistant Professor</h6>
+      <p class="card-text">My research interests include Agent-Based Simulation, Artificial Intelligence, Machine Learning.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/lgrando1" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/lgrando123" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=cXC9OsoAAAAJ&amp;hl" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.researchgate.net/profile/Leonardo-Grando" target="_blank" rel="noopener">
+        <i class="ai ai-researchgate"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://orcid.org/0000-0002-0448-209X" target="_blank" rel="noopener">
+        <i class="ai ai-orcid"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://lgrando1.github.io/index.xml" target="_blank" rel="noopener">
+        <i class="fas fa-rss"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+</article>
+  </div>
+
+  <div class="page-footer">
+    
+    
+    <div class="container">
+      <footer class="site-footer">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by copyright-license-text">
+    © 2025 Me. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p class="powered-by">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://wowchemy.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Wowchemy</a> — the free, <a href="https://github.com/wowchemy/wowchemy-hugo-themes" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+</footer>
+
+    </div>
+    
+  </div>
+
+  
+
+
+<script src="/js/vendor-bundle.min.d26509351aa0ff874abbee824e982e9b.js"></script>
+
+
+
+
+  
+
+  
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script id="search-hit-fuse-template" type="text/x-template">
+    <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+    </div>
+  </script>
+  
+    <script src="https://cdn.jsdelivr.net/gh/krisk/Fuse@v3.2.1/dist/fuse.min.js" integrity="sha512-o38bmzBGX+hD3JHWUFCDA09btWaqrNmoJ3RXLlrysA7PP01Kgs4UlE4MhelE1v5dJR3+cxlR4qQlotsW7jKsnw==" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/julmot/mark.js@8.11.1/dist/jquery.mark.min.js" integrity="sha512-mhbv5DqBMgrWL+32MmsDOt/OAvqr/cHimk6B8y/bx/xS88MVkYGPiVv2ixKVrkywF2qHplNRUvFsAHUdxZ3Krg==" crossorigin="anonymous"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+<script id="page-data" type="application/json">{"use_headroom":true}</script>
+
+
+
+  <script src="/js/wowchemy-headroom.db4755770454eb63685f8de785c0a172.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+<script src="/en/js/wowchemy.min.e8ee06ba8371980ffde659871dd593b0.js"></script>
+
+
+
+
+
+
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        
+        <pre><code></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <script src="/js/wowchemy-publication.68f8d7090562ca65fc6d3cb3f8f2d2cb.js" type="module"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

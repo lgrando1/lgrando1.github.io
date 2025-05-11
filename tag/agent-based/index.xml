@@ -5,12 +5,451 @@
     <link>https://lgrando1.github.io/tag/agent-based/</link>
       <atom:link href="https://lgrando1.github.io/tag/agent-based/index.xml" rel="self" type="application/rss+xml" />
     <description>Agent-Based</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 18 Dec 2024 13:30:00 +0000</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 10 May 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://lgrando1.github.io/media/icon_hu833f70911ce8d7c0b3dbb80c9eadb7d3_197124_512x512_fill_lanczos_center_3.png</url>
       <title>Agent-Based</title>
       <link>https://lgrando1.github.io/tag/agent-based/</link>
     </image>
+    
+    <item>
+      <title>Criando um container Docker para seu modelo de simulação do Netlogo</title>
+      <link>https://lgrando1.github.io/post/containernetlogo/</link>
+      <pubDate>Sat, 10 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://lgrando1.github.io/post/containernetlogo/</guid>
+      <description>&lt;h2 id=&#34;introdução&#34;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Fazer ciência é garantir que o seu modelo de simulação possa ser replicado por outros pesquisadores.&lt;/p&gt;
+&lt;p&gt;Criando um container, é possível facilitar a publicação dos seus resultados, pois outros pesquisadores poderão ter acesso aos seus experimentos.&lt;/p&gt;
+&lt;p&gt;Uma das formas de garantir a replicabilidade do seu modelo de simulação baseado em agentes com o NetLogo é criar um container para ele, conforme descrito &lt;a href=&#34;https://forum.comses.net/t/containerizing-a-netlogo-model-gui-version/8236&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;neste artigo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;No entanto, esse artigo já possui cinco anos e não aborda como realizar o processo no Linux, então resolvi testar.&lt;/p&gt;
+&lt;p&gt;Neste post, refaço o passo a passo do tutorial original e relato as alterações que realizei.&lt;/p&gt;
+&lt;h2 id=&#34;0-pré-requisitos&#34;&gt;0. Pré-requisitos&lt;/h2&gt;
+&lt;p&gt;Você precisa ter o Docker instalado no seu computador.&lt;/p&gt;
+&lt;p&gt;No meu caso eu uso o Pop!_OS (LTS 22.04), que é derivado do Ubuntu e usei &lt;a href=&#34;https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;este tutorial&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Também foi necessário realizar os &lt;a href=&#34;https://docs.docker.com/engine/install/linux-postinstall/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;procedimento de pós instalação&lt;/a&gt; e reiniciar a máquina.&lt;/p&gt;
+&lt;p&gt;Com a máquina reiniciada, pude começar a replicar o tutorial&lt;/p&gt;
+&lt;h2 id=&#34;1-determinar-o-local-do-arquivo&#34;&gt;1. Determinar o local do arquivo.&lt;/h2&gt;
+&lt;p&gt;Para fins de teste, utilizei o arquivo que empreguei nas simulações do meu doutorado, disponível &lt;a href=&#34;https://doi.org/10.25824/redu/QGAUPI&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;aqui:&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Criei uma pasta chamada &lt;code&gt;Drone_Docker&lt;/code&gt; nos meus documentos, com as subpastas &lt;code&gt;results&lt;/code&gt; e &lt;code&gt;src&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Renomeei o arquivo do NetLogo para &lt;code&gt;DronesThesis.nlogo&lt;/code&gt; e criei um arquivo Dockerfile.&lt;/p&gt;
+&lt;p&gt;Neste momento a pasta &lt;code&gt;TestResults&lt;/code&gt; não existia, ela será gerada posteriormente.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Estrutura de arquivos&#34; srcset=&#34;
+               /post/containernetlogo/img/001_hu901c349c19539d41f0c8e6d06ca4233f_25295_d9593f5acfe69e5af19e2c3c2fe50302.webp 400w,
+               /post/containernetlogo/img/001_hu901c349c19539d41f0c8e6d06ca4233f_25295_17094bc7a2b5d3ec3d1bf0abb4fbf7a9.webp 760w,
+               /post/containernetlogo/img/001_hu901c349c19539d41f0c8e6d06ca4233f_25295_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://lgrando1.github.io/post/containernetlogo/img/001_hu901c349c19539d41f0c8e6d06ca4233f_25295_d9593f5acfe69e5af19e2c3c2fe50302.webp&#34;
+               width=&#34;698&#34;
+               height=&#34;255&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;2-incluir-extensões-adicionais&#34;&gt;2. Incluir extensões adicionais.&lt;/h2&gt;
+&lt;p&gt;No meu caso, não foi necessário incluir extensões adicionais, então pulei este passo.&lt;/p&gt;
+&lt;h1 id=&#34;3-criar-um-arquivo-docker-dockerfile&#34;&gt;3 Criar um arquivo Docker (Dockerfile)&lt;/h1&gt;
+&lt;p&gt;Tive que realizar algumas alterações em relação ao código proposto no artigo original.&lt;/p&gt;
+&lt;p&gt;Em vez de usar o OpenJDK na versão 8, utilizei a versão 11.&lt;/p&gt;
+&lt;p&gt;Com a versão 8, o modelo não iniciava. Acredito que isso se deva à mudança na &lt;a href=&#34;https://ccl.northwestern.edu/netlogo/docs/versions.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;versão 6.3.0 do NetLogo&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;FROM openjdk:11-jdk
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ARG MODEL_NAME
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ARG NETLOGO_VERSION
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ARG &lt;span class=&#34;nv&#34;&gt;NETLOGO_NAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;NetLogo-&lt;span class=&#34;nv&#34;&gt;$NETLOGO_VERSION&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ARG &lt;span class=&#34;nv&#34;&gt;NETLOGO_URL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;https://ccl.northwestern.edu/netlogo/&lt;span class=&#34;nv&#34;&gt;$NETLOGO_VERSION&lt;/span&gt;/&lt;span class=&#34;nv&#34;&gt;$NETLOGO_NAME&lt;/span&gt;-64.tgz
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;ENV &lt;span class=&#34;nv&#34;&gt;LC_ALL&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;C.UTF-8 &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;LANG&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;C.UTF-8 &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    &lt;span class=&#34;nv&#34;&gt;DISPLAY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;:14
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RUN mkdir /home/netlogo &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; wget &lt;span class=&#34;nv&#34;&gt;$NETLOGO_URL&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; tar xzf &lt;span class=&#34;nv&#34;&gt;$NETLOGO_NAME&lt;/span&gt;-64.tgz -C /home/netlogo --strip-components&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; rm &lt;span class=&#34;nv&#34;&gt;$NETLOGO_NAME&lt;/span&gt;-64.tgz &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cp /home/netlogo/netlogo-headless.sh /home/netlogo/netlogo-headw.sh &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; sed -i -e &lt;span class=&#34;s1&#34;&gt;&amp;#39;s/org.nlogo.headless.Main/org.nlogo.app.App/g&amp;#39;&lt;/span&gt; /home/netlogo/netlogo-headw.sh &lt;span class=&#34;se&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; apt-get update &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; apt-get install -y libxrender1 libxtst6
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;COPY . /home/
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;RUN mv /home/src/&lt;span class=&#34;nv&#34;&gt;$MODEL_NAME&lt;/span&gt; /home/src/NLModel.nlogo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;CMD &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/netlogo/netlogo-headw.sh&amp;#34;&lt;/span&gt;, &lt;span class=&#34;s2&#34;&gt;&amp;#34;/home/src/NLModel.nlogo&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;4-criar-uma-imagem-docker&#34;&gt;4. Criar uma imagem Docker&lt;/h2&gt;
+&lt;p&gt;Agora é o momento de criar a imagem Docker, editei a linha:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker build --build-arg &lt;span class=&#34;nv&#34;&gt;MODEL_NAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;yourfile --build-arg &lt;span class=&#34;nv&#34;&gt;NETLOGO_VERSION&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;yourversion -t imagename .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;para o meu caso:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker build --build-arg &lt;span class=&#34;nv&#34;&gt;MODEL_NAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;DroneThesis.nlogo --build-arg &lt;span class=&#34;nv&#34;&gt;NETLOGO_VERSION&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;6.4.0 -t dronethesis5.
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;O nome da imagem ficou &lt;code&gt;dronethesis5&lt;/code&gt; (sim, foi a minha quinta tentativa de criar uma imagem funcional).&lt;/p&gt;
+&lt;p&gt;Se tudo der certo, a imagem será criada. Caso contrário, talvez este &lt;a href=&#34;https://forum.comses.net/t/containerizing-a-netlogo-model-gui-version/8236#heading--trblshoot&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FAQ da postagem original possa ajudar:&lt;/a&gt;:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Criando a imagem&#34; srcset=&#34;
+               /post/containernetlogo/img/002_hu01aeb97ba3558f91b5f6272baae0eb3c_185700_6155cb21e432d73e146d2c9142e34e4e.webp 400w,
+               /post/containernetlogo/img/002_hu01aeb97ba3558f91b5f6272baae0eb3c_185700_e622194987ecf860e18928e1d84fd347.webp 760w,
+               /post/containernetlogo/img/002_hu01aeb97ba3558f91b5f6272baae0eb3c_185700_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://lgrando1.github.io/post/containernetlogo/img/002_hu01aeb97ba3558f91b5f6272baae0eb3c_185700_6155cb21e432d73e146d2c9142e34e4e.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;279&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Observe que uma imagem Docker foi gerada:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Criando a imagem&#34; srcset=&#34;
+               /post/containernetlogo/img/003_hu603d9af1701116e386e3aa3b78474695_56115_c6b0589aa3914d2b58015fbfed08ff7e.webp 400w,
+               /post/containernetlogo/img/003_hu603d9af1701116e386e3aa3b78474695_56115_bad128fe7d8dc389e8aae8b3105ec191.webp 760w,
+               /post/containernetlogo/img/003_hu603d9af1701116e386e3aa3b78474695_56115_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://lgrando1.github.io/post/containernetlogo/img/003_hu603d9af1701116e386e3aa3b78474695_56115_c6b0589aa3914d2b58015fbfed08ff7e.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;180&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;4-rodar-o-container&#34;&gt;4. Rodar o container&lt;/h2&gt;
+&lt;p&gt;Como no tutorial original, é necessário rodar outra imagem chamada &lt;a href=&#34;https://hub.docker.com/r/jare/x11-bridge&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;docker-x11-bridge&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d --name x11-bridge -e &lt;span class=&#34;nv&#34;&gt;MODE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;tcp&amp;#34;&lt;/span&gt; -e &lt;span class=&#34;nv&#34;&gt;XPRA_HTML&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;yes&amp;#34;&lt;/span&gt; -e &lt;span class=&#34;nv&#34;&gt;DISPLAY&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;:14 -e &lt;span class=&#34;nv&#34;&gt;XPRA_PASSWORD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;111&lt;/span&gt; -p 10000:10000 jare/x11-bridge
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;E agora sim, executar a imagem contendo o modelo de simulação:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d --name netlogo --volumes-from x11-bridge -v path/to/your/results/folder:/home/results imagename
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;No meu caso:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker run -d --name netlogo --volumes-from x11-bridge -v /home/leonardogrando/Documentos/Drones_Docker/results/TestResults:/home/results dronethesis5
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;O nome do container ficou como &lt;code&gt;netlogo&lt;/code&gt;, a pasta de resultados ficou &lt;code&gt;/home/leonardogrando/Documentos/Drones_Docker/results/TestResults&lt;/code&gt; e a imagem utilizada foi &lt;code&gt;dronethesis5&lt;/code&gt; .&lt;/p&gt;
+&lt;p&gt;Agora, para acessar o modelo, basta abrir no navegador:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;http://localhost:10000/index.html?encoding&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;rgb32&lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;password&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;111&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Rodando o container&#34; srcset=&#34;
+               /post/containernetlogo/img/004_huc3baa0f846a9f835ab646789fc8698ba_356941_b337c8c504b769f80781ad330c40bcb9.webp 400w,
+               /post/containernetlogo/img/004_huc3baa0f846a9f835ab646789fc8698ba_356941_43b5151abe4f00ed9a5d002859bf61a8.webp 760w,
+               /post/containernetlogo/img/004_huc3baa0f846a9f835ab646789fc8698ba_356941_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://lgrando1.github.io/post/containernetlogo/img/004_huc3baa0f846a9f835ab646789fc8698ba_356941_b337c8c504b769f80781ad330c40bcb9.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;429&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h2 id=&#34;5-realizando-os-experimentos&#34;&gt;5. Realizando os experimentos&lt;/h2&gt;
+&lt;p&gt;Agora você pode acessar o BehaviorSpace para realizar o delineamento do experimento:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Experimento 1&#34; srcset=&#34;
+               /post/containernetlogo/img/005_hu74016db3897c53d0179d3ca82439bce4_101463_fc69b3ef0627a09cbf9a046d733ec1cd.webp 400w,
+               /post/containernetlogo/img/005_hu74016db3897c53d0179d3ca82439bce4_101463_7f0140ed5b0071c5d0fb216f89fa5cf6.webp 760w,
+               /post/containernetlogo/img/005_hu74016db3897c53d0179d3ca82439bce4_101463_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://lgrando1.github.io/post/containernetlogo/img/005_hu74016db3897c53d0179d3ca82439bce4_101463_fc69b3ef0627a09cbf9a046d733ec1cd.webp&#34;
+               width=&#34;546&#34;
+               height=&#34;760&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Ao clicar em &lt;code&gt;Run&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Experimento 2&#34; srcset=&#34;
+               /post/containernetlogo/img/007_hu5cc835b77db7971670ecc066b00b3144_42861_77f617c8dbd3c4e01148d10830afb332.webp 400w,
+               /post/containernetlogo/img/007_hu5cc835b77db7971670ecc066b00b3144_42861_c3225d1abf4d4d8042885916d08b62c1.webp 760w,
+               /post/containernetlogo/img/007_hu5cc835b77db7971670ecc066b00b3144_42861_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://lgrando1.github.io/post/containernetlogo/img/007_hu5cc835b77db7971670ecc066b00b3144_42861_77f617c8dbd3c4e01148d10830afb332.webp&#34;
+               width=&#34;379&#34;
+               height=&#34;302&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Você podera alterar o local onde o BehaviorSpace irá salvar as planilhas com os resultados (pasta &lt;code&gt;results&lt;/code&gt;):&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Experimento 3&#34; srcset=&#34;
+               /post/containernetlogo/img/008_hu36f9d2e168a23d9a8cccaf7e9d3d4f07_42677_09b0ca2d46a89c4bd59b5d9a77820d20.webp 400w,
+               /post/containernetlogo/img/008_hu36f9d2e168a23d9a8cccaf7e9d3d4f07_42677_4b5a6c886b2a607a72304531d5e49eb5.webp 760w,
+               /post/containernetlogo/img/008_hu36f9d2e168a23d9a8cccaf7e9d3d4f07_42677_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://lgrando1.github.io/post/containernetlogo/img/008_hu36f9d2e168a23d9a8cccaf7e9d3d4f07_42677_09b0ca2d46a89c4bd59b5d9a77820d20.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;285&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Assim você poderá acessar os resultados fora do container e realizar a mineração de dados:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Experimento 3&#34; srcset=&#34;
+               /post/containernetlogo/img/008_hu36f9d2e168a23d9a8cccaf7e9d3d4f07_42677_09b0ca2d46a89c4bd59b5d9a77820d20.webp 400w,
+               /post/containernetlogo/img/008_hu36f9d2e168a23d9a8cccaf7e9d3d4f07_42677_4b5a6c886b2a607a72304531d5e49eb5.webp 760w,
+               /post/containernetlogo/img/008_hu36f9d2e168a23d9a8cccaf7e9d3d4f07_42677_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://lgrando1.github.io/post/containernetlogo/img/008_hu36f9d2e168a23d9a8cccaf7e9d3d4f07_42677_09b0ca2d46a89c4bd59b5d9a77820d20.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;285&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;h1 id=&#34;6-parando-os-containers&#34;&gt;6. Parando os containers&lt;/h1&gt;
+&lt;p&gt;Para parar os containers, utilize os comandos:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker stop netlogo
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker stop x11-bridge
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Experimento 3&#34; srcset=&#34;
+               /post/containernetlogo/img/010_hu215af2b69929e852c87df8d375558d2f_152564_a6644cde62b897dbfb47a0c9d440ced0.webp 400w,
+               /post/containernetlogo/img/010_hu215af2b69929e852c87df8d375558d2f_152564_3aa30972a75fb4ebe23048b578f0947c.webp 760w,
+               /post/containernetlogo/img/010_hu215af2b69929e852c87df8d375558d2f_152564_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://lgrando1.github.io/post/containernetlogo/img/010_hu215af2b69929e852c87df8d375558d2f_152564_a6644cde62b897dbfb47a0c9d440ced0.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;251&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;E os resultados continuarão na pasta &lt;code&gt;results&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;7-compartilhando-sua-imagem-no-hub-docker&#34;&gt;7. Compartilhando sua imagem no Hub Docker.&lt;/h2&gt;
+&lt;p&gt;Primeiro você precisara ter um login no site Docker.com e terá que logar na sua conta com o comando:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker login
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Depois você terá que criar uma imagem com o seu usuário docker, no meu caso: &lt;code&gt;leogrand1&lt;/code&gt;, não esqueça de substituir com o seu usuário Docker:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker build --build-arg &lt;span class=&#34;nv&#34;&gt;MODEL_NAME&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;DroneThesis.nlogo --build-arg &lt;span class=&#34;nv&#34;&gt;NETLOGO_VERSION&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;6.4.0 -t leogrand1/codigodrones:1.0 .
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Agora você podera avaliar suas imagens com o comando&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker images
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Experimento 3&#34; srcset=&#34;
+               /post/containernetlogo/img/011_hu76b28bd546279348541c9ae3236eb625_58152_9dc54b25678db0918416b8d9d5a8605a.webp 400w,
+               /post/containernetlogo/img/011_hu76b28bd546279348541c9ae3236eb625_58152_f764041e71cef8c2804bac5309aa793f.webp 760w,
+               /post/containernetlogo/img/011_hu76b28bd546279348541c9ae3236eb625_58152_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://lgrando1.github.io/post/containernetlogo/img/011_hu76b28bd546279348541c9ae3236eb625_58152_9dc54b25678db0918416b8d9d5a8605a.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;151&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;E por fim subir a versão desejada (não esqueça de substituir com o seu usuário Docker):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker image push leogrand1/codigodrones:1.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Experimento 3&#34; srcset=&#34;
+               /post/containernetlogo/img/012_hu30df92b83e8a3bab356d6efbc619fc0e_87250_a3419fdc3d18fb6088446a0264e5b480.webp 400w,
+               /post/containernetlogo/img/012_hu30df92b83e8a3bab356d6efbc619fc0e_87250_dfea3c7920449ab4ab56b81eacbb9bf6.webp 760w,
+               /post/containernetlogo/img/012_hu30df92b83e8a3bab356d6efbc619fc0e_87250_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://lgrando1.github.io/post/containernetlogo/img/012_hu30df92b83e8a3bab356d6efbc619fc0e_87250_a3419fdc3d18fb6088446a0264e5b480.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;186&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Agora você pode acessar esta imagem na sua conta do Docker Hub:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;d-flex justify-content-center&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img alt=&#34;Experimento 3&#34; srcset=&#34;
+               /post/containernetlogo/img/013_hu8b5bbd144a564df7d33eeba48ea81239_121715_22ba84bc91d63ff8c2ab59377512d68a.webp 400w,
+               /post/containernetlogo/img/013_hu8b5bbd144a564df7d33eeba48ea81239_121715_cb7773a4cd2d6b9701ba6e76726355b9.webp 760w,
+               /post/containernetlogo/img/013_hu8b5bbd144a564df7d33eeba48ea81239_121715_1200x1200_fit_q75_h2_lanczos_3.webp 1200w&#34;
+               src=&#34;https://lgrando1.github.io/post/containernetlogo/img/013_hu8b5bbd144a564df7d33eeba48ea81239_121715_22ba84bc91d63ff8c2ab59377512d68a.webp&#34;
+               width=&#34;760&#34;
+               height=&#34;258&#34;
+               loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Este container pode ser &lt;a href=&#34;https://hub.docker.com/r/leogrand1/codigodrones&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;obtido aqui&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;docker pull leogrand1/codigodrones
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Para conhecer mais sobre este procedimento de push de imagens docker, &lt;a href=&#34;https://training.play-with-docker.com/beginner-linux/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;recomendo este tutorial.&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;7-conclusão&#34;&gt;7. Conclusão&lt;/h2&gt;
+&lt;p&gt;Este post não substitui o &lt;a href=&#34;https://forum.comses.net/t/containerizing-a-netlogo-model-gui-version/8236/1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;post original&lt;/a&gt;, sendo que o objetivo aqui é auxiliar pesquisadores que falam português e utilizam Linux.&lt;/p&gt;
+&lt;h2 id=&#34;referencias&#34;&gt;Referencias&lt;/h2&gt;
+&lt;p&gt;GRANDO, Leonardo; URSINI, Edson Luiz. Study for optimization of battery consumption for unmanned aerial vehicles. Disponível em: &lt;a href=&#34;https://redu.unicamp.br/citation?persistentId=doi:10.25824/redu/QGAUPI&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://redu.unicamp.br/citation?persistentId=doi:10.25824/redu/QGAUPI&lt;/a&gt;. Acesso em: 10 maio 2025.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Containerizing a NetLogo model - GUI version.&lt;/strong&gt; CoMSES Net Discourse Forums. Disponível em: &lt;a href=&#34;https://forum.comses.net/t/containerizing-a-netlogo-model-gui-version/8236/1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://forum.comses.net/t/containerizing-a-netlogo-model-gui-version/8236/1&lt;/a&gt;. Acesso em: 10 maio 2025.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Install.&lt;/strong&gt; Docker Documentation. Disponível em: &lt;a href=&#34;https://docs.docker.com/engine/install/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://docs.docker.com/engine/install/&lt;/a&gt;. Acesso em: 10 maio 2025.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;jare/x11-bridge.&lt;/strong&gt; Disponível em: &lt;a href=&#34;https://hub.docker.com/r/jare/x11-bridge&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://hub.docker.com/r/jare/x11-bridge&lt;/a&gt;. Acesso em: 10 maio 2025.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>WSC 2024</title>
