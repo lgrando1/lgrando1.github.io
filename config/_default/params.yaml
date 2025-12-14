@@ -179,13 +179,13 @@ hugoblox:
   # User comments system
   # ────────────────────────────────────────────────────────────────────────────
   comments:
-    enable: false
-    provider: "" # giscus | disqus | commento
+    enable: true
+    provider: "giscus" # giscus | disqus | commento
     giscus:
-      repo: ""
-      repo_id: ""
-      category: ""
-      category_id: ""
+      repo: "lgrando1/discussao"
+      repo_id: "R_kgDOQopR-w"
+      category: "General"
+      category_id: "DIC_kwDOQopR-84CzyVm"
     disqus:
       shortname: ""
     commento:

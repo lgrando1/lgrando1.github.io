@@ -53,3 +53,18 @@ security:
   _merge: deep
 sitemap:
   _merge: deep
+
+comments:
+        enabled: true
+        provider: giscus
+
+        giscus:
+            repo: lgrando1/discussao
+            repoID: R_kgDOQopR-w
+            category: General
+            categoryID: DIC_kwDOQopR-84CzyVm
+            mapping: pathname
+            lightTheme:
+            darkTheme:
+            reactionsEnabled: 1
+            emitMetadata: 0
