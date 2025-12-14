@@ -1,4 +1,8 @@
 ---
-title: Blog
+cms_exclude: true
+header:
+  caption: ""
+  image: ""
+title: Posts
 view: article-grid
 ---

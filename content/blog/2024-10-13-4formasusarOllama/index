@@ -1,0 +1,166 @@
+---
+title: 'Como Integrar um LLM Offline ao Seu Computador: Quatro Abordagens'
+date: '2024-10-13'
+slug: 4waysllms
+categories: []
+tags: [GPT, prompt,VS Code, engineering, IA, AI, Offline]
+hidden: true
+subtitle: ''
+summary: 'Executando Ferramentas LLM Offline no Android com o Termux'
+authors: []
+lastmod: '2024-10-13T14:11:20-03:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+---
+
+Outros posts sobre o tema em:
+
+[Como Criar um Pipeline em Python para Testar Modelos no Hugging Face](https://lgrando1.github.io/post/hface/)
+
+[Dicas de Engenharia de Prompt](https://lgrando1.github.io/post/prompt1/)
+
+[Parte 1 - Instalando o Ollama no Linux](https://lgrando1.github.io/post/ollama/)
+
+[Parte 2 - Instalando o Ollama no Windows](https://lgrando1.github.io/post/ollamawin/)
+
+[Parte 3 - Instalando o Ollama no Android pt.1](https://lgrando1.github.io/post/llmandroid/)
+
+[Parte 4 - Instalando o Ollama no Android pt.2](https://lgrando1.github.io/post/llmtermux)
+
+No vídeo apresento quatro formas de você integrar uma LLM Off-line no seu fluxo de trabalho:
+
+{{< youtube id="ES_FWZnWwRM" >}}
+
+Lembrando que estas aplicações, por rodarem de forma Off-line vai depender muito do poder computacional do seu computador, da quantidade de memoria RAM e da presença e poder de processamento de sua GPU.
+
+Neste vídeo utilizo um Acer Nitro notebook Acer com uma CPU Core i5 9300H, 16 GB de RAM e uma GPU Nvidia GeForce GTX 1650.  
+
+![infohw](neofetch.png)
+
+Importante: Nunca utilizar LLMs como oráculos ou como fonte de informações, já encontrei vários erros tanto em modelos online ou offline. Usar apenas como suporte para suas atividades.  
+
+## 1. No Terminal: 
+
+Acesse e utilize um LLM diretamente pelo terminal pelo [Ollama](https://ollama.com/), aproveitando sua flexibilidade e eficiência. Os links acima ensino como instalar ele no [Windows](https://lgrando1.github.io/post/ollamawin/), [Linux](https://lgrando1.github.io/post/llmandroid/),  [Android via aplicativo](https://lgrando1.github.io/post/llmandroid/) e [via Termux](https://lgrando1.github.io/post/llmtermux). 
+
+![Autocomplete](09.png)
+
+Alguns comandos interessantes:
+
+1. Para listar os modelos baixados na sua máquina
+
+```bash
+ollama list
+```
+
+2. Para rodar o modelo, caso você não tenha este modelo ele vai efetuar o download e ativar o mesmo de forma local.
+
+```bash
+ollama run <modelo>
+```
+Para obter informações sobre a estatistica de performance do modelo em questão, incluir --verbose no final
+
+```bash
+ollama run <modelo> --verbose
+```
+![Autocomplete](10.png)
+
+Para sair do modelo é só digitar:
+
+```bash
+/bye
+```
+ou Control + D para sair.
+
+
+## 2. Em uma Interface Gráfica (GUI): 
+
+Neste exemplo, utilizarei a interface disponível em [OpenWebUI](https://openwebui.com/), que instalei via [Docker](https://docs.openwebui.com/getting-started/) para uma experiência mais intuitiva e que permite alterar/testar facilmente parâmetros do modelo utilizado.
+
+Após a instalação do OpenWebUI, que no meu caso fiz via [Docker](https://docs.openwebui.com/getting-started/) 
+
+![Autocomplete](11.png)
+
+é só acessar o mesmo em seu navegador:
+
+![Autocomplete](12.png)
+
+Ele vai pedir para criar uma conta para controle do acesso de usuários. 
+
+Observe que ele tem uma interface intuitiva, inclusive próxima a de outros LLMs online, é só escolher o modelo e comecar a utilizar
+
+![Autocomplete](13.png)
+
+![Autocomplete](14.png)
+
+Observe que ele possui controles para você realizar alterações de parametros do modelo.
+
+![Autocomplete](15.png)
+
+Não vou extender muito, mas o OpenWebUI permite muitas personalizações para realizar engenharia de Prompt.
+
+## 3. Como Extensão de Navegador: 
+
+Utilize o LLM através de uma [extensão de navegador Chrome](https://chromewebstore.google.com/detail/ollama-ui/cmgdpmlhgjhoadnonobjeekmfcehffco). Para isso, confira a [Ollama UI](https://github.com/ollama-ui/ollama-ui), que oferece fácil integração. Ele permite escolher os vários modelos LLM que você tem em seu computador e permite salvar seus Chats. Para ativa-lo é só clicar no icone da extensão.
+
+![Autocomplete](08.png)
+
+## 4. Em Aplicativos como o VSCode: 
+
+Existem várias extensões disponíveis para [integrar LLMs a diversos aplicativos como o VS Code, o Obsidian, etc](https://github.com/ollama/ollama#extensions--plugins). Neste vídeo, utilizei o [CodeGPT](https://codegpt.co/) no [VS Code](https://marketplace.visualstudio.com/items?itemName=DanielSanMedium.dscodegpt&ssr=false#overview), que proporciona funcionalidades adicionais diretamente no ambiente de desenvolvimento como auto-complete e um chat integrado com o seu código. Aqui encontrei um pouco de dificuldade em encontrar um modelo que rodasse neste computador. Para o recurso de auto complete o unico modelo que rodou em meus testes foi o Qwen2.5.  
+
+![Autocomplete](01.png)
+
+Conforme você for escrevendo o código ele ira sugerindo possíveis abordagens, aparece em cinza, só apertar TAB, como neste caso que escrevi uma função para encontrar numeros fibonacci, mas aqui na minha máquina é um processo lento:
+![Autocomplete](02.png)
+
+Você pode ver que elee está rodando com um comando:
+
+```bash
+ollama ps
+```
+
+![Autocomplete](03.png)
+
+
+Já para o Chat integrado para auxiliar no contexto do seu código, você pode escolher vários provedores, no meu caso o Ollama, e vários modelos, onde ele permite efetuar o download caso você não tenha no seu computador. No meu setup funcionou o Llama3.2:3B e o Granite-code:3b. 
+
+![Autocomplete](04.png)
+
+
+No meu caso o Granite foi melhor, permitindo o uso dos comandos /Fix (ele corrige seu código), /Explain (ele explica seu código), /Refactor (ele refatora seu código), /Document (Documenta seu código) e /Unit Test (ele cria unidades de testes para seu código). 
+
+![Autocomplete](05.png)
+
+Criando uma unidade de teste para este código: 
+
+![Autocomplete](06.png)
+
+Observe que agora ele está usando o Modelo Granite
+
+![Autocomplete](07.png)
+
+
+Lembrando que todas estas quatro aplicações ainda são experimentais e devem ser validadas antes de qualquer aplicação.
+
+
+[1] https://openwebui.com/
+
+[2] https://docs.openwebui.com/getting-started/
+
+[3] https://github.com/ollama-ui/ollama-ui?tab=readme-ov-file
+
+[4] https://chromewebstore.google.com/detail/ollama-ui/cmgdpmlhgjhoadnonobjeekmfcehffco
+
+[5] https://github.com/ollama/ollama#extensions--plugins
+
+[6] https://codegpt.co/
+
+[7] https://marketplace.visualstudio.com/items?itemName=DanielSanMedium.dscodegpt&ssr=false#overview
+
+
+Sucesso a todos! 
