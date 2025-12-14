@@ -129,19 +129,16 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   seo:
     # Browser tab title override (defaults to identity.name if not set)
-    title: ""
+    title: "Leonardo Grando | Technology PhD"
     # For local_business identity type only
     location:
       address:
-        street: ""
-        city: ""
-        region: ""
-        postal_code: ""
-        country: ""
+        city: "Piracicaba"
+        region: "SP"
+        country: "Brasil"
       coordinates:
         latitude: null
         longitude: null
-      phone: ""
     # AI/LLM crawler guidance (llms.txt)
     ai:
       allow:
