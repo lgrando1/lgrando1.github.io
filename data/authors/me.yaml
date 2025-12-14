@@ -1,117 +1,98 @@
-schema: hugoblox/author/v1
-slug: me
+schema: "hugoblox/author/v1"
+slug: "me"
 is_owner: true
-
 name:
-  display: Dr. Leonardo Grando
-  given: Leonardo
-  family: Grando
-  pronouns: he/him
-
+  display: "Dr. Leonardo Grando"
+  given: "Leonardo"
+  family: "Grando"
+  pronouns: "he/him"
 postnominals:
-  - Ph.D.
-  - M.Sc.
-
+  - "Ph.D."
+  - "M.Sc."
 status:
   icon: "🎓"
+role: "Professor & Researcher"
+bio: "Dr. Leonardo Grando is a researcher focused on Complex Systems, Artificial Intelligence, and Agent-Based Simulation (NetLogo).\ 
 
-role: Professor & Researcher
-
-bio: |
-  Dr. Leonardo Grando is a researcher focused on Complex Systems, Artificial Intelligence, and Agent-Based Simulation (NetLogo). 
-  He holds a Ph.D. in Technology from UNICAMP and works as an Assistant Professor at UNASP, pushing the boundaries of Educational Technology and IoT.
-
+  He holds a Ph.D. in Technology from UNICAMP and works as an Assistant Professor at UNASP, pushing the boundaries of Educational Technology and IoT.\n"
 affiliations:
-  - name: UNICAMP
-    url: https://www.unicamp.br/
-  - name: UNASP
-    url: https://www.unasp.br/
-
+  - name: "UNICAMP"
+    url: "https://www.unicamp.br/"
+  - name: "UNASP"
+    url: "https://www.unasp.br/"
 links:
-  - icon: hero/envelope
-    url: mailto:lgrando@gmail.com
-    label: E-mail Me
-  - icon: academicons/lattes
-    url: http://lattes.cnpq.br/1278197446520776
-    label: Lattes CV
-  - icon: academicons/orcid
-    url: https://orcid.org/0000-0002-0448-209X
-    label: ORCID
-  - icon: academicons/google-scholar
-    url: https://scholar.google.com/citations?user=cXC9OsoAAAAJ
-    label: Google Scholar
-  - icon: brands/github
-    url: https://github.com/lgrando1
-    label: GitHub
-  - icon: brands/linkedin
-    url: https://www.linkedin.com/in/lgrando123/
-    label: LinkedIn
-  - icon: hero/globe-alt
-    url: https://lgrando1.github.io/
-    label: Personal Website
-
+  - icon: "hero/envelope"
+    url: "mailto:lgrando@gmail.com"
+    label: "E-mail Me"
+  - icon: "academicons/lattes"
+    url: "http://lattes.cnpq.br/1278197446520776"
+    label: "Lattes CV"
+  - icon: "academicons/orcid"
+    url: "https://orcid.org/0000-0002-0448-209X"
+    label: "ORCID"
+  - icon: "brands/github"
+    url: "https://github.com/lgrando1"
+    label: "GitHub"
+  - icon: "brands/linkedin"
+    url: "https://www.linkedin.com/in/lgrando123/"
+    label: "LinkedIn"
 interests:
-  - Artificial Intelligence & ML
-  - Agent-Based Simulation (NetLogo)
-  - Internet of Things (IoT) & Drones
-  - Data Science & Mining
-  - Educational Technology
-
+  - "Artificial Intelligence & ML"
+  - "Agent-Based Simulation (NetLogo)"
+  - "Internet of Things (IoT) & Drones"
+  - "Data Science & Mining"
+  - "Educational Technology"
 education:
-  - degree: Ph.D. in Technology
-    institution: UNICAMP - State University of Campinas
-    start: 2020-03-01
-    end: 2025-12-14
-    summary: |
-      Research focused on Complex Systems and Technology.
-  
-  - degree: Technologist in Systems Analysis
-    institution: UNICID - Cidade de São Paulo University
-    start: 2022-01-01
-    end: 2024-12-31
-
-  - degree: M.Sc. in Technology
-    institution: UNICAMP - State University of Campinas
-    start: 2018-01-01
-    end: 2020-12-31
-
-  - degree: MBA in Quality Management
-    institution: FATEP
-    start: 2014-01-01
-    end: 2015-12-31
-
-  - degree: B.S. Materials Engineering
-    institution: UNESP - Guaratinguetá
-    start: 2004-01-01
-    end: 2009-12-31
-
+  - degree: "Ph.D. in Technology"
+    institution: "UNICAMP - State University of Campinas"
+    start: "2020-03-01"
+    end: "2025-12-14"
+    summary: "Research focused on Complex Systems and Technology.\n"
+  - degree: "Technologist in Systems Analysis"
+    institution: "UNICID - Cidade de São Paulo University"
+    start: "2022-01-01"
+    end: "2024-12-31"
+  - degree: "M.Sc. in Technology"
+    institution: "UNICAMP - State University of Campinas"
+    start: "2018-01-01"
+    end: "2020-12-31"
+  - degree: "MBA in Quality Management"
+    institution: "FATEP"
+    start: "2014-01-01"
+    end: "2015-12-31"
+  - degree: "B.S. Materials Engineering"
+    institution: "UNESP - Guaratinguetá"
+    start: "2004-01-01"
+    end: "2009-12-31"
 experience:
-  - role: Assistant Professor
-    org: UNASP
-    start: 2021-01-01
-    summary: |
-      Teaching Computer Science and Technology courses.
-  
-  - role: Researcher
-    org: UNICAMP
-    start: 2018-01-01
-    summary: |
-      Conducting research on AI, Networks, and Complex Systems.
-
+  - role: "Assistant Professor"
+    org: "UNASP"
+    start: "2021-01-01"
+    summary: "Teaching Computer Science and Technology courses.\n"
+  - role: "Researcher"
+    org: "UNICAMP"
+    start: "2018-01-01"
+    summary: "Conducting research on AI, Networks, and Complex Systems.\n"
 skills:
-  - name: Technical Skills
+  - name: "Technical Skills"
     items:
-      - label: Python
+      - label: "Python"
         level: 5
-      - label: NetLogo
+      - label: "NetLogo"
         level: 5
-      - label: Machine Learning
+      - label: "Machine Learning"
         level: 4
-      - label: Data Analysis
+      - label: "Data Analysis"
         level: 4
-  - name: Languages
+  - name: "Languages"
     items:
-      - label: Portuguese
+      - label: "Portuguese"
         level: 5
-      - label: English
+      - label: "English"
         level: 4
+ids:
+  orcid: "0000-0002-0448-209X"
+  google_scholar: "cXC9OsoAAAAJ"
+  research_gate: "Leonardo-Grando?ev=hdr_xprf"
+  arxiv: "lgrando"
+weight: null
