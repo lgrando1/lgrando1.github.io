@@ -16,7 +16,7 @@ author_notes:
   - 'Equal contribution'
 
 date: '2020-11-04T00:00:00Z'
-doi: '10.1109/IEMCON51383.2020.9284939'
+# doi: '10.1109/IEMCON51383.2020.9284939' # <--- REMOVIDO
 
 # Schedule page publish date (NOT publication's date).
 #publishDate: '2017-01-01T00:00:00Z'
@@ -43,16 +43,17 @@ featured: true
 
 # Custom links (uncomment lines below)
 links:
-#- name: Custom Link
-#   url: https://ieeexplore.ieee.org/document/9284939/
-url_pdf: 'https://ieeexplore.ieee.org/document/9284939/'
-# url_code: 'https://github.com/wowchemy/wowchemy-hugo-themes'
-# url_dataset: 'https://github.com/wowchemy/wowchemy-hugo-themes'
-# url_poster: ''
-# url_project: ''
-# url_slides: ''
-# url_source: 'https://github.com/wowchemy/wowchemy-hugo-themes'
-# url_video: 'https://youtube.com'
+  - name: PDF (IEEE Xplore)
+    url: 'https://ieeexplore.ieee.org/document/9284939/'
+    icon: hero/document-text
+  
+# Os campos abaixo foram removidos ou são redundantes com a nova estrutura de `links`:
+# url_pdf: 'https://ieeexplore.ieee.org/document/9284939/' # <--- REMOVIDO
+
+# Novo bloco para DOI (Identificadores)
+hugoblox:
+  ids:
+    doi: '10.1109/IEMCON51383.2020.9284939'
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -76,7 +77,3 @@ url_pdf: 'https://ieeexplore.ieee.org/document/9284939/'
 #   Otherwise, set `slides: ""`.
 #slides: example
 ---
-
-
-
-

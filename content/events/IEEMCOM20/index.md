@@ -23,8 +23,19 @@ publishDate: "2023-12-12T00:00:00Z"
 summary: "I presented our paper **Drones Swarm Recharging : Modeling using Agent-Based Simulation** at the 11th IEMCOM, where we received the Best Paper Certificate in the Internet of Things category."
 tags: ["Agent-Based", "Simulation", "presentation"]
 title: IEEMCON 2020
-#url_code: ""
-url_pdf: "https://lgrando1.github.io/uploads/BestArticle.png"
-#url_slides: https://lgrando1.github.io/uploads/resume.pdf
-#url_video: ""
+
+# Custom links (url_pdf foi removido)
+links:
+  - name: Certificado de Best Paper
+    url: "https://lgrando1.github.io/uploads/BestArticle.png"
+    icon: hero/trophy
+  - name: Artigo (IEEE Xplore)
+    url: 'https://ieeexplore.ieee.org/document/9284939/' # Assumi que este é o DOI/Link principal do artigo da IEMCON que estava no outro arquivo.
+    icon: hero/document-text
+    
+# Os campos abaixo foram removidos ou são redundantes com a nova estrutura de `links`:
+# url_code: ""
+# url_pdf: "https://lgrando1.github.io/uploads/BestArticle.png" # <--- REMOVIDO
+# url_slides: https://lgrando1.github.io/uploads/resume.pdf
+# url_video: ""
 ---

@@ -13,7 +13,7 @@ author_notes:
   - 'Equal contribution'
 
 date: '2009-12-04T00:00:00Z'
-doi: 'http://dx.doi.org/10.13140/RG.2.2.35007.42401'
+# doi: 'http://dx.doi.org/10.13140/RG.2.2.35007.42401' # <--- REMOVIDO
 
 # Schedule page publish date (NOT publication's date).
 #publishDate: '2017-01-01T00:00:00Z'
@@ -38,11 +38,14 @@ tags: [Glass, Simulation, JAVA, Crystallization]
 # Display this page in the Featured widget?
 featured: true
 
-# Custom links (uncomment lines below)
+# Custom links (substituindo url_pdf)
 links:
-#- name: Custom Link
-#   url: https://ieeexplore.ieee.org/document/9284939/
-url_pdf: 'https://lgrando1.github.io/uploads/TGLeonardoGrando.pdf'
+  - name: PDF (Tese)
+    url: 'https://lgrando1.github.io/uploads/TGLeonardoGrando.pdf'
+    icon: hero/document-text
+    
+# Os campos abaixo foram removidos ou são redundantes com a nova estrutura de `links`:
+# url_pdf: 'https://lgrando1.github.io/uploads/TGLeonardoGrando.pdf' # <--- REMOVIDO
 # url_code: 'https://github.com/wowchemy/wowchemy-hugo-themes'
 # url_dataset: 'https://github.com/wowchemy/wowchemy-hugo-themes'
 # url_poster: ''
@@ -50,6 +53,11 @@ url_pdf: 'https://lgrando1.github.io/uploads/TGLeonardoGrando.pdf'
 # url_slides: ''
 # url_source: 'https://github.com/wowchemy/wowchemy-hugo-themes'
 # url_video: 'https://youtube.com'
+
+# Novo bloco para DOI (Identificadores)
+hugoblox:
+  ids:
+    doi: 'http://dx.doi.org/10.13140/RG.2.2.35007.42401'
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -73,7 +81,3 @@ url_pdf: 'https://lgrando1.github.io/uploads/TGLeonardoGrando.pdf'
 #   Otherwise, set `slides: ""`.
 #slides: example
 ---
-
-
-
-

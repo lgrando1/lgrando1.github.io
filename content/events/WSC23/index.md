@@ -23,9 +23,16 @@ publishDate: "2023-12-12T00:00:00Z"
 summary: "I presented our work: **Modeling and Simulation for Farming Drone Battery Recharging** at the Simulation Around the World (SATW) Track."
 tags: ["Agent-Based", "Simulation", "presentation", "Drones", "Farm" ]
 title: WSC 2023
-#url_code: ""
-#url_pdf: "https://lgrando1.github.io/uploads/WSC23.pdf"
-url_slides: "https://lgrando1.github.io/uploads/WSC23.pdf"
-#url_video: ""
----
 
+# Custom links para Slides/PDF (url_slides foi removido)
+links:
+  - name: Slides (PDF)
+    url: "https://lgrando1.github.io/uploads/WSC23.pdf"
+    icon: hero/presentation-chart-line
+
+# Os campos abaixo foram removidos ou são redundantes com a nova estrutura de `links`:
+# url_code: ""
+# url_pdf: "https://lgrando1.github.io/uploads/WSC23.pdf" # <--- Deixado comentado, era o link do PDF
+# url_slides: "https://lgrando1.github.io/uploads/WSC23.pdf" # <--- REMOVIDO
+# url_video: ""
+---

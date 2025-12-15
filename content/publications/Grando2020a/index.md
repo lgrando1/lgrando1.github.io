@@ -10,7 +10,7 @@ authors:
 # Author notes (optional)
 
 date: '2020-08-21T00:00:00Z'
-doi: 'https://doi.org/10.47749/T/UNICAMP.2020.1149276'
+# doi: 'https://doi.org/10.47749/T/UNICAMP.2020.1149276' # <--- REMOVIDO
 
 # Schedule page publish date (NOT publication's date).
 #publishDate: '2017-01-01T00:00:00Z'
@@ -35,11 +35,14 @@ tags: [Drones, Simulation, Agent-Based, Nash Equilibrium]
 # Display this page in the Featured widget?
 featured: true
 
-# Custom links (uncomment lines below)
+# Custom links (substituindo url_pdf)
 links:
-#- name: Custom Link
-#   url: https://ieeexplore.ieee.org/document/9284939/
-url_pdf: 'http://repositorio.unicamp.br/Acervo/Detalhe/1149276'
+  - name: PDF (UNICAMP Repositório)
+    url: 'http://repositorio.unicamp.br/Acervo/Detalhe/1149276'
+    icon: hero/document-text
+    
+# Os campos abaixo foram removidos ou são redundantes com a nova estrutura de `links`:
+# url_pdf: 'http://repositorio.unicamp.br/Acervo/Detalhe/1149276' # <--- REMOVIDO
 # url_code: 'https://github.com/wowchemy/wowchemy-hugo-themes'
 # url_dataset: 'https://github.com/wowchemy/wowchemy-hugo-themes'
 # url_poster: ''
@@ -47,6 +50,11 @@ url_pdf: 'http://repositorio.unicamp.br/Acervo/Detalhe/1149276'
 # url_slides: ''
 # url_source: 'https://github.com/wowchemy/wowchemy-hugo-themes'
 # url_video: 'https://youtube.com'
+
+# Novo bloco para DOI (Identificadores)
+hugoblox:
+  ids:
+    doi: 'https://doi.org/10.47749/T/UNICAMP.2020.1149276'
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -70,7 +78,3 @@ url_pdf: 'http://repositorio.unicamp.br/Acervo/Detalhe/1149276'
 #   Otherwise, set `slides: ""`.
 #slides: example
 ---
-
-
-
-

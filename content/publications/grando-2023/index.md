@@ -42,11 +42,14 @@ tags: [Drones, Simulation, Agent-Based, Precision Agriculture]
 # Display this page in the Featured widget?
 featured: true
 
-# Custom links (uncomment lines below)
+# Custom links (substituindo url_pdf)
 links:
-#- name: Custom Link
-#   url: https://ieeexplore.ieee.org/document/9284939/
-url_pdf: 'https://informs-sim.org/wsc23papers/satwcea107.pdf'
+  - name: PDF (WSC 2023)
+    url: 'https://informs-sim.org/wsc23papers/satwcea107.pdf'
+    icon: hero/document-text
+    
+# Os campos abaixo foram removidos ou são redundantes com a nova estrutura de `links`:
+# url_pdf: 'https://informs-sim.org/wsc23papers/satwcea107.pdf' # <--- REMOVIDO
 # url_code: 'https://github.com/wowchemy/wowchemy-hugo-themes'
 # url_dataset: 'https://github.com/wowchemy/wowchemy-hugo-themes'
 # url_poster: ''
@@ -77,7 +80,3 @@ url_pdf: 'https://informs-sim.org/wsc23papers/satwcea107.pdf'
 #   Otherwise, set `slides: ""`.
 #slides: example
 ---
-
-
-
-

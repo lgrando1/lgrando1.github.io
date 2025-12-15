@@ -44,9 +44,12 @@ featured: true
 
 # Custom links (uncomment lines below)
 links:
-#- name: Custom Link
-#   url: https://ieeexplore.ieee.org/document/9284939/
-url_pdf: 'https://www.mdpi.com/2504-446X/9/1/40'
+  - name: PDF (MDPI Drones)
+    url: 'https://www.mdpi.com/2504-446X/9/1/40'
+    icon: hero/document-text
+
+# Os campos abaixo foram removidos ou são redundantes com a nova estrutura de `links`:
+# url_pdf: 'https://www.mdpi.com/2504-446X/9/1/40' # <--- REMOVIDO
 # url_code: 'https://github.com/wowchemy/wowchemy-hugo-themes'
 # url_dataset: 'https://github.com/wowchemy/wowchemy-hugo-themes'
 # url_poster: ''
@@ -77,7 +80,3 @@ url_pdf: 'https://www.mdpi.com/2504-446X/9/1/40'
 #   Otherwise, set `slides: ""`.
 #slides: example
 ---
-
-
-
-

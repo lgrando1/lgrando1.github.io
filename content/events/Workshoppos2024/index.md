@@ -23,9 +23,16 @@ publishDate: "2024-11-19T13:30:00Z"
 summary: "I presented the status of my September 2024 Ph.D. research **Análise de consumo de bateria de dispositivos usados em IoT (Internet das Coisas)** at the XV FT Unicamp Workshop."
 tags: ["Agent-Based", "Simulation", "presentation", "Drones", "Farm" ]
 title: "XV Workshop da Pós Graduação da Faculdade de Tecnologia - UNICAMP"
-#url_code: ""
-url_pdf: "https://lgrando1.github.io/uploads/workshoppos2024.png"
-#url_slides: https://lgrando1.github.io/uploads/workshoppos2024.png
-#url_video: ""
----
 
+# Custom links para PDF (url_pdf foi removido)
+links:
+  - name: PDF
+    url: "https://lgrando1.github.io/uploads/workshoppos2024.png"
+    icon: hero/document-text
+
+# Os campos abaixo foram removidos ou são redundantes com a nova estrutura de `links`:
+# url_code: ""
+# url_pdf: "https://lgrando1.github.io/uploads/workshoppos2024.png" # <--- REMOVIDO
+# url_slides: https://lgrando1.github.io/uploads/workshoppos2024.png # <--- Deixado comentado. Se precisar de link de slides, adicione ao bloco 'links'
+# url_video: ""
+---
