@@ -4,9 +4,9 @@ title: 'Agent-Based Model For Analysis of Cervical Cancer Detection'
 # Authors
 authors:
   - Juan F Galindo Jaramillo
-  - admin
+  - me
   - Jose Roberto Emiliano Leite
-  - Edson L. Ursini
+  - Edson Luiz Ursini
 
 # Author notes (optional)
 author_notes:
