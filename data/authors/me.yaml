@@ -46,7 +46,7 @@ education:
   - degree: "Ph.D. in Technology"
     institution: "UNICAMP - State University of Campinas"
     start: "2020-03-01"
-    end: "2025-12-14"
+    end: "2025-02-21"
     summary: "Research focused on Complex Systems and Technology.\n"
   - degree: "Technologist in Systems Analysis"
     institution: "UNICID - Cidade de São Paulo University"
@@ -55,24 +55,158 @@ education:
   - degree: "M.Sc. in Technology"
     institution: "UNICAMP - State University of Campinas"
     start: "2018-01-01"
-    end: "2020-12-31"
+    end: "2020-09-18"
   - degree: "MBA in Quality Management"
     institution: "FATEP"
     start: "2014-01-01"
-    end: "2015-12-31"
+    end: "2015-10-31"
   - degree: "B.S. Materials Engineering"
     institution: "UNESP - Guaratinguetá"
     start: "2004-01-01"
     end: "2009-12-31"
 experience:
   - role: "Assistant Professor"
-    org: "UNASP"
-    start: "2021-01-01"
-    summary: "Teaching Computer Science and Technology courses.\n"
-  - role: "Researcher"
-    org: "UNICAMP"
-    start: "2018-01-01"
-    summary: "Conducting research on AI, Networks, and Complex Systems.\n"
+    org: "UNISAL"
+    start: "2025-08-15"
+    end: ""
+    summary: "Lecturer for Computer Engineering.\ 
+
+
+      August - December 2024 (4 credits)
+
+
+      - IHC-UX (6th semester, Bachelor’s in Computer Engineering)\n"
+  - role: "High School Teacher (Technical Classes)"
+    org: "Governo Estado São Paulo"
+    start: "2025-04-01"
+    end: ""
+    summary: "Responsibilities include: Lecturer for second and third year of the technical high school in System Development Course.
+
+
+      April - December 2025 (16 credits)
+
+
+      - Career and skills for the job market in systems development
+
+      - Software development processes and agile methodologies
+
+      - Computer networks and cloud information security
+
+      - Front-end programming
+
+      - Multidisciplinary project in systems development"
+    button:
+      text: ""
+      url: "https://listaprojetos2025-tcc.vercel.app/"
+      icon: ""
+  - role: "Assistant Professor"
+    org: "Centro Universitário Adventista de São Paulo"
+    start: "2024-08-01"
+    end: "2025-12-30"
+    summary: "Lecturer for System Information and Computer Engineering. Deliver engaging lectures and facilitate discussions to enhance students’ understanding of key concepts in System Information and Computer Engineering.
+
+
+      Guidance for students on final course work and scientific initiation
+
+
+      Classes taught:
+
+
+      August - December 2025 (13 credits)
+
+
+      - Database Management (4th semester, Bachelor’s in System Information; 6th semester, Bachelor’s in Computer Engineering)
+
+      - Algorithms construction and Programming (6th semester, Bachelor’s in System Information)
+
+
+      February - July 2025 (15 credits)
+
+
+      - Operational Systems (3rd semester, Bachelor’s in System Information)
+
+      - Database Modelling (3rd semester, Bachelor’s in System Information; 5th semester, Bachelor’s in Computer Engineering)
+
+      - Distributed Systems (7th semester, Bachelor’s in System Information)
+
+
+      August - December 2024 (13 credits)
+
+
+      - Web Programming (6th semester, Bachelor’s in System Information)
+
+      - Database Management (4th semester, Bachelor’s in System Information; 6th semester, Bachelor’s in Computer Engineering)
+
+      - Information Cybersecurity (6th semester, Bachelor’s in System Information)"
+  - role: "Ph.D. Research Activities "
+    org: "University of Campinas (UNICAMP)"
+    start: "2021-03-01"
+    end: "2025-02-27"
+    summary: "CAPES Ph.D. Scholarship Holder (since Mar. 2021).
+
+
+      Project: IoT (UAVs) power supply devices recharging coordination using agent-based modeling to perform simulations.
+
+
+      Unicamp Teacher Internship Programme (PED) participation:
+
+      - 2021 Second Semester (Level C) - Taught TT413 - Métodos Matemáticos para Telecomunicacões focusing on complex numbers in telecommunications applications.
+
+      - 2022 First Semester (Level C) - Delivered lectures for EB102 - Geometria Analítica e Álgebra Linear, covering general linear algebra and vector calculus.
+
+      - 2023 Second Semester (Level B) - Returned to teach TT413 - Métodos Matemáticos para Telecomunicações, reinforcing concepts of complex numbers in telecommunications."
+    button:
+      text: "Thesis"
+      url: "https://www.repositorio.unicamp.br/acervo/detalhe/1499477"
+      icon: ""
+  - role: "High School Teacher (PEB I)"
+    org: "Governo Estado São Paulo"
+    start: "2020-03-06"
+    end: "2021-02-20"
+    summary: "Responsibilities include:
+
+
+      - Teaching: Instructed classes in Chemistry, Mathematics, and Technology, fostering student engagement and understanding of core concepts.
+
+
+      - Online Class Support: Provided implementation support for online teaching tools, including Google Classroom and Google Meet, to enhance the virtual learning experience during the COVID-19 pandemic."
+  - role: "Assembly Shop Plenary Production Analyst"
+    org: "Hyundai Motor Brasil"
+    start: "2011-08-01"
+    end: "2019-05-20"
+    summary: "Responsibilities include:
+
+
+      - Problem Solving: Expertise in identifying and resolving quality, safety, and productivity issues in assembly processes.
+
+
+      - Data Analysis: Proficient in analyzing key performance indicators (KPIs) to support decision-making and improve operational efficiency.
+
+
+      - Team Leadership: Strong ability to support and enhance team wellbeing, fostering a positive and productive work environment.
+
+
+      - Project Management: Experienced in overseeing start-up projects, including implementation of organizational methodologies like 5S.
+
+
+      - Process Improvement: Skilled in applying lean principles and continuous improvement strategies to optimize assembly operations."
+  - role: "Trainee Production Engineer"
+    org: "Kania Ind. e Com. de Acumuladores LTDA"
+    start: "2009-09-01"
+    end: "2011-06-15"
+    summary: "Responsibilities include:
+
+
+      - Automotive Battery Production Optimization: Expertise in implementing strategies to enhance production efficiency and quality in automotive battery manufacturing.
+
+
+      - Maintenance Management: Skilled in support maintenance programs to minimize downtime and ensure the reliability of production equipment.
+
+
+      - Ergonomics Enhancement: Knowledgeable in ergonomics to improve workplace safety and comfort, leading to increased productivity and reduced injury risk.
+
+
+      - Productivity Improvement: Proficient in identifying and executing productivity enhancements through process analysis and best practices."
 skills:
   - name: "Technical Skills"
     items:

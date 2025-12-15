@@ -184,8 +184,8 @@ hugoblox:
     giscus:
       repo: "lgrando1/discussao"
       repo_id: "R_kgDOQopR-w"
-      category: "General"
-      category_id: "DIC_kwDOQopR-84CzyVm"
+      category: "Announcements"
+      category_id: "DIC_kwDOQopR-84CzyVl"
     disqus:
       shortname: ""
     commento:
@@ -258,7 +258,7 @@ hugoblox:
   # Privacy and compliance features
   # ────────────────────────────────────────────────────────────────────────────
   privacy:
-    enable: false
+    enable: true
     anonymize_analytics: true
 
   # ────────────────────────────────────────────────────────────────────────────

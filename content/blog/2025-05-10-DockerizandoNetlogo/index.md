@@ -2,6 +2,7 @@
 title: "Criando um container Docker para seu modelo de simulação do NetLogo"
 date: 2025-05-10
 tags: ["Docker", "NetLogo", "Simulation", "Agent-Based"]
+commentable: true
 categories: ["Tutoriais"]
 description: "Como criar um container Docker para o seu modelo de simulação por agentes"
 summary: "Criando um container para facilitar o processo de replicação do seu experimento"
