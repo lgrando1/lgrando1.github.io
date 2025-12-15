@@ -19,6 +19,8 @@ Bem-vindo ao curso completo de Sistemas Operacionais. Aqui você aprenderá desd
 
 Este curso foi estruturado para guiar você pelos conceitos teóricos e práticos essenciais.
 
+Este curso é baseado [neste conteúdo](https://unasp-aulas.github.io/sistemas-operacionais/#/title-slide) desenvolvido pelo [Professor Thiago Pires](https://github.com/th1460/)
+
 ## Módulos do Curso
 
 {{< cards >}}
