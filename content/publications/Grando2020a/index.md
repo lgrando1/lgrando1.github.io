@@ -32,7 +32,7 @@ tags:
   - Game Theory
 
 # Display this page in the Featured widget?
-featured: true
+featured: false
 
 # Novo bloco para DOI (Identificadores)
 hugoblox:

@@ -1,9 +1,8 @@
 ---
-title: "Agent-Based Simulation of UAV Battery Recharging for IoT Applications: Precision Agriculture, Disaster Recovery, and Dengue Vector Control"
+title: "Agent-based Simulation for Drone Charging in an Internet of Things Environment System"
 
 authors:
   - me
-  - Juan F Galindo Jaramillo
   - Jose Roberto Emiliano Leite
   - Edson Luiz Ursini
 
@@ -11,49 +10,60 @@ author_notes:
   - "Equal contribution"
   - "Equal contribution"
   - "Equal contribution"
-  - "Equal contribution"
 
-date: "2025-03-08T00:00:00Z"
+date: "2025-09-13T00:00:00Z"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2025-03-08T00:00:00Z"
+publishDate: "2025-09-13T00:00:00Z"
 
+# Publication type.
+# Accepts a single type but formatted as a YAML list (for Hugo requirements).
+# Enter a publication type from the CSL standard.
 publication_types: ["article"]
 
-publication: ""
-publication_short: ""
+# Publication name and optional abbreviated publication name.
+publication: "In *arXiv*"
+publication_short: "In *arXiv*"
 
-abstract: The low battery autonomy of Unnamed Aerial Vehicles (UAVs or drones) can make smart farming (precision agriculture), disaster recovery, and the fighting against dengue vector applications difficult. This article considers two approaches, first enumerating the characteristics observed in these three IoT application types and then modeling an UAV's battery recharge coordination using the Agent-Based Simulation (ABS) approach. In this way, we propose that each drone inside the swarm does not communicate concerning this recharge coordination decision, reducing energy usage and permitting remote usage. A total of 6000 simulations were run to evaluate how two proposed policies, the BaseLine (BL) and ChargerThershold (CT) coordination recharging policy, behave in 30 situations regarding how each simulation sets conclude the simulation runs and how much time they work until recharging results. CT policy shows more reliable results in extreme system usage. This work conclusion presents the potential of these three IoT applications to achieve their perpetual service without communication between drones and ground stations. This work can be a baseline for future policies and simulation parameter enhancements.
+abstract: This paper presents an agent-based simulation model for coordinating battery recharging in drone swarms, focusing on applications in Internet of Things (IoT) and Industry 4.0 environments. The proposed model includes a detailed description of the simulation methodology, system architecture, and implementation. One practical use case is explored; Smart Farming, highlighting how autonomous coordination strategies can optimize battery usage and mission efficiency in large-scale drone deployments. This work uses a machine learning technique to analyze the agent-based simulation sensitivity analysis output results.
 
-summary: Agent-Based Simulation (ABS) model for UAV battery recharge coordination in Precision Agriculture, Disaster Recovery, and Dengue control, proposing policies to reduce communication overhead.
+# Summary. An optional shortened abstract.
+summary: An agent-based simulation model for coordinating drone swarm battery recharging in IoT and Smart Farming environments, utilizing machine learning for sensitivity analysis.
 
 tags:
   - Drones
-  - Energy Management
-  - Disaster
+  - Multiagent Systems
   - IoT
-  - Battery
-  - Precision Agriculture
+  - Smart Farming
+  - Simulation
+  - Machine Learning
 
 featured: true
 
-# Identificadores automáticos (Gera o botão Preprint e Citação)
+# Identificadores automáticos
 hugoblox:
   ids:
-    arxiv: 2503.12685
-    # Se quiser o botão DOI também, descomente a linha abaixo (baseado no arXiv):
-    # doi: '10.48550/arXiv.2503.12685'
+    doi: '10.48550/arXiv.2509.10867'
+    arxiv: 2509.10867
 
-# Links manuais (Apenas PDF para evitar botões duplicados)
+# Links específicos para Preprint (arXiv)
 links:
+  - type: preprint
+    provider: arxiv
+    id: 2509.10867
   - type: pdf
-    url: 'https://arxiv.org/pdf/2503.12685'
+    url: 'https://arxiv.org/pdf/2509.10867'
 
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder. 
 image:
   caption: ''
   focal_point: ""
   preview_only: false
 
+# Associated Projects (optional).
 projects: []
+
+# Slides (optional).
 slides: ""
 ---
