@@ -1,6 +1,6 @@
 ---
 title: "Fundamentos e Estruturas"
-type: book
+type: docs
 weight: 10
 date: 2025-01-01
 ---

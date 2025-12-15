@@ -1,7 +1,7 @@
 ---
 title: "Prática: Linux, Docker e AWS"
 date: 2025-01-01
-type: book
+type: docs
 weight: 60
 ---
 
