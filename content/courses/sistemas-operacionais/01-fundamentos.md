@@ -2,6 +2,7 @@
 title: "Fundamentos e Estruturas"
 type: book
 weight: 10
+date: 2025-01-01
 ---
 
 > **A função do sistema operacional é fornecer aos programas do usuário um modelo do computador melhor**, mais simples e mais limpo, assim como lidar com o gerenciamento de todos os recursos mencionados. *A maioria dos computadores tem dois modos de operação: **modo núcleo e modo usuário.***

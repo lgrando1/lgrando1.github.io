@@ -1,10 +1,11 @@
 ---
 title: "Sistemas Operacionais"
 linkTitle: "Sistemas Operacionais"
-summary: "Curso completo abrangendo fundamentos de SO, gerenciamento de processos, memória, sistemas de arquivos e prática com Linux e Docker."
-date: 2025-01-01
+summary: "Curso completo de SO."
+date: 2024-01-01
 type: book
 toc: true
+draft: false
 ---
 
 ## Bem-vindo ao curso

@@ -1,37 +1,71 @@
 ---
 title: "Escalonamento de CPU (Scheduling)"
+date: 2025-01-01
 type: book
 weight: 30
 ---
 
-> *O scheduling da CPU é a base dos sistemas operacionais multiprogramados. Alternando a CPU entre os processos, o sistema operacional pode tornar o computador mais produtivo.*
+> *O scheduling (escalonamento) da CPU é a base dos sistemas operacionais multiprogramados. Alternando a CPU entre os processos, o sistema torna o computador mais produtivo.*
 
-## O Problema
-Se apenas uma CPU está disponível, **uma escolha precisa ser feita sobre qual processo será executado**. A parte do sistema operacional que faz esta escolha é o **escalonador (scheduler)**.
+## O Problema do Escalonamento
 
-### Ciclo de Picos de CPU e I/O
-Processos alternam entre **picos de CPU** (cálculo) e **picos de I/O** (espera por disco/rede). O scheduler deve aproveitar os momentos de espera de I/O de um processo para dar a CPU a outro.
+Se apenas uma CPU está disponível, **uma escolha precisa ser feita sobre qual processo será executado**. A parte do sistema operacional que faz esta escolha é o **Escalonador (Scheduler)**.
 
-### Tipos de Escalonamento
-* **Sem Preempção (Cooperativo):** O processo mantém a CPU até terminar ou fazer uma chamada de espera voluntária.
-* **Com Preempção:** O SO pode interromper um processo à força (ex: interrupção de relógio) para dar a vez a outro.
+### Ciclo de Picos (Bursts)
+Os processos não usam a CPU o tempo todo de forma igual. Eles alternam entre:
+1.  **Pico de CPU:** O programa está calculando, processando dados.
+2.  **Pico de I/O:** O programa está esperando o disco, a rede ou o usuário digitar algo.
 
-## Critérios de Avaliação
-* **Utilização da CPU:** Manter a CPU ocupada (40% a 90%).
-* **Throughput:** Número de processos concluídos por unidade de tempo.
-* **Turnaround:** Tempo total desde a submissão até a conclusão do processo.
-* **Tempo de espera:** Tempo gasto esperando na fila de prontos.
+> **Objetivo:** O SO deve aproveitar quando um processo entra em *Pico de I/O* (espera) para dar a CPU para outro processo que precisa de *Pico de CPU*.
+
+---
+
+## Tipos de Escalonamento
+
+### 1. Sem Preempção (Cooperativo)
+Uma vez que a CPU é dada a um processo, ele a mantém até que termine ou faça uma chamada de sistema (como esperar por I/O) voluntariamente.
+* *Problema:* Se o programa travar num loop infinito, o computador congela.
+
+### 2. Com Preempção
+O SO pode interromper um processo à força (usando um relógio de hardware/interrupção) para dar a vez a outro. É o modelo usado em todos os sistemas modernos (Windows, Linux, macOS, Android).
+
+### O Despachante (Dispatcher)
+É o módulo que efetivamente realiza a troca:
+1.  Salva o contexto do processo atual.
+2.  Muda para o modo núcleo.
+3.  Salta para o local do novo programa.
+
+---
+
+## Critérios de Desempenho
+
+Como saber se um algoritmo de escalonamento é bom?
+* **Utilização da CPU:** Manter a CPU ocupada o máximo possível (ideal: 40% a 90%).
+* **Throughput:** Quantos processos são concluídos por hora/segundo.
+* **Turnaround:** Tempo total desde que você abriu o programa até ele terminar.
+* **Tempo de Espera:** Quanto tempo o processo ficou parado na fila de "Prontos".
+
+---
 
 ## Algoritmos de Scheduling
 
 ### 1. FCFS (First-Come, First-Served)
-O primeiro que chega é o primeiro a ser atendido. Simples, mas o tempo médio de espera pode ser longo (efeito comboio).
+O primeiro que chega é o primeiro a ser atendido. É como uma fila de banco.
+* **Vantagem:** Simples de implementar.
+* **Desvantagem:** Efeito Comboio (se um processo pesado chegar primeiro, todos os leves atrás dele ficam travados esperando).
 
 ### 2. SJF (Shortest Job First)
-Associa a cada processo a duração do próximo pico de CPU. A CPU é dada ao processo com o **menor** pico. Ótimo para throughput, mas difícil prever o futuro.
+O algoritmo olha para a fila e escolhe o processo que tem o **menor próximo pico de CPU**.
+* **Vantagem:** Garante o menor tempo médio de espera.
+* **Desvantagem:** Impossível saber o futuro com precisão (como saber quanto tempo o processo vai demorar?). Pode causar *Starvation* (processos longos nunca rodam).
 
-### 3. Prioridades
-A CPU é alocada ao processo com maior prioridade (definida interna ou externamente). Problema: *Starvation* (processos de baixa prioridade podem nunca executar).
+### 3. Por Prioridade
+Cada processo recebe um número de prioridade. A CPU vai para o de maior importância.
+* *Prioridade Estática:* Definida pelo administrador.
+* *Prioridade Dinâmica:* O SO aumenta a prioridade de quem espera muito.
 
 ### 4. Round-Robin (Circular)
-Cada processo recebe uma fatia de tempo (**quantum**). Se não terminar nesse tempo, sofre preempção e vai para o final da fila. É o sistema usado em computadores pessoais para dar a ilusão de interatividade.
+É o algoritmo clássico de sistemas de tempo compartilhado.
+* Cada processo recebe uma fatia de tempo (**Quantum**), geralmente 10-100ms.
+* Se o processo não terminar nesse tempo, ele sofre preempção e vai para o final da fila.
+* Isso garante que o sistema pareça interativo e responsivo.

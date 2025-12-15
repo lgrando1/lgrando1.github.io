@@ -1,34 +1,56 @@
 ---
 title: "Gerenciamento de Memória"
+date: 2025-01-01
 type: book
 weight: 40
 ---
 
-> *O espaço de endereçamento cria uma espécie de memória abstrata. É o conjunto de endereços que um processo pode usar.*
+> *O espaço de endereçamento cria uma espécie de memória abstrata. É o conjunto de endereços que um processo pode usar para endereçar a memória.*
 
-## Conceitos Básicos
-Dois problemas precisam ser resolvidos: **proteção** (um processo não pode escrever na memória do outro) e **realocação** (o programa pode ser carregado em qualquer lugar da RAM).
+## Conceitos Fundamentais
 
-### Swapping (Troca de Processos)
-Estratégia para lidar com falta de memória. Consiste em trazer um processo do disco para a RAM, executá-lo, e depois salvá-lo de volta no disco para dar lugar a outro.
+O gerenciador de memória tem duas funções vitais:
+1.  **Proteção:** Impedir que um processo (ex: Navegador) escreva na memória de outro (ex: Editor de Texto), o que causaria travamentos.
+2.  **Realocação:** Permitir que o programa seja carregado em qualquer lugar da memória RAM, não apenas no endereço fixo onde foi compilado.
+
+### Registradores Base e Limite
+A forma mais simples de proteção.
+* **Base:** Onde começa o programa na memória física.
+* **Limite:** Qual o tamanho do programa.
+* *Hardware:* Toda vez que o programa tenta acessar um endereço, a CPU verifica: `Base <= Endereço < Base+Limite`.
+
+---
+
+## Swapping (Troca de Processos)
+
+O que fazer quando a soma da memória exigida pelos programas abertos é maior que a RAM instalada?
+O **Swapping** move um processo inteiro que está ocioso da memória RAM para o Disco (HD/SSD), liberando espaço. Quando o usuário volta a usar aquele processo, o SO o traz de volta para a RAM.
 
 ### Gerenciamento de Espaços Livres
-* **Mapas de bits:** A memória é dividida em unidades de alocação; bits 0 indicam livre, 1 indicam ocupado.
-* **Listas encadeadas:** Uma lista mantém registro de segmentos livres e ocupados.
-    * *First fit:* Pega o primeiro buraco que couber.
-    * *Best fit:* Pega o menor buraco que couber (deixa sobras pequenas).
-    * *Worst fit:* Pega o maior buraco disponível.
+Como o SO sabe onde há buracos livres na RAM para colocar programas?
+1.  **Mapas de Bits:** A memória é dividida em blocos pequenos. Um bit 0 significa livre, 1 significa ocupado.
+2.  **Listas Encadeadas:** Uma lista `[Processo A] -> [Buraco Livre] -> [Processo B]`.
 
-## Memória Virtual e Paginação
+---
 
-> *Permite executar programas maiores que a memória física, movendo pedaços (páginas) entre RAM e disco.*
+## Memória Virtual
 
-### Paginação
-O espaço de endereçamento virtual é dividido em **páginas**. A memória física é dividida em **quadros de página**.
-A **MMU (Memory Management Unit)** mapeia endereços virtuais para físicos usando uma **Tabela de Páginas**.
+A memória virtual é uma técnica que permite executar programas que são **maiores do que a memória física** disponível. Ela quebra o programa em pedaços pequenos chamados **Páginas**.
+
+### Paginação (Paging)
+* **Endereço Virtual:** O endereço que o programa "pensa" que está usando.
+* **Endereço Físico:** O endereço real na RAM.
+* **MMU (Memory Management Unit):** Um chip no processador que traduz Virtual -> Físico em tempo real.
+
+### Tabela de Páginas
+É um "mapa" que diz: "A Página 1 do Word está no Quadro 500 da RAM".
 
 ### Falta de Página (Page Fault)
-Quando um programa tenta acessar um endereço que não está na RAM, ocorre uma falta de página. O SO deve:
-1.  Escolher uma página pouco usada na RAM para remover (swapping).
-2.  Carregar a página necessária do disco para a RAM.
-3.  Atualizar a tabela de páginas e retomar a execução.
+Ocorre quando o programa tenta acessar uma página que **não está na RAM** (está no disco).
+1.  A CPU gera uma interrupção (trap).
+2.  O SO assume o controle.
+3.  O SO escolhe uma página pouco usada na RAM para remover (**Page Replacement**).
+4.  O SO carrega a página necessária do disco para a RAM.
+5.  O programa continua como se nada tivesse acontecido.
+
+> *Isso explica por que o computador fica lento quando a RAM enche: o disco é milhares de vezes mais lento que a RAM, e o SO fica trocando páginas o tempo todo (Thrashing).*
