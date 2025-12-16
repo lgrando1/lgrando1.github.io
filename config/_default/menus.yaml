@@ -20,15 +20,15 @@ main:
     identifier: jdqGboFA
     url: experience/
     weight: 40
-  - name: Projects
-    identifier: xKj98AB-
-    url: projects/
-    weight: 50
   - name: Courses
     identifier: BAd0CSpk
     url: courses/
-    weight: 60
+    weight: 50
   - name: Blog
     identifier: 94xh77zJ
     url: /#news
+    weight: 60
+  - name: CV
+    identifier: cv
+    url: /cv/index.html/
     weight: 70

@@ -30,22 +30,24 @@ sections:
 
       # Name heading sizing to accommodate long or short names
       name:
-        size: balanced # Options: compact (long names), balanced (default), display (short names)
+        size: display # Options: compact (long names), balanced (default), display (short names)
 
       # Avatar customization
       avatar:
-        size: medium # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
+        size: xl # Options: small (150px), medium (200px, default), large (320px), xl (400px), xxl (500px)
         shape: circle # Options: circle (default), square, rounded
   - block: markdown
     content:
-      title: '📚 My Research'
-      subtitle: ''
+      title: '🚀 Mission & Research'
+      subtitle: 'Bridging Complex Systems and Educational Technology'
       text: |-
-        Use this area to speak to your mission. I'm a research scientist in the Moonshot team at DeepMind. I blog about machine learning, deep learning, and moonshots.
+        I am a **Ph.D. in Technology** from UNICAMP and a Researcher dedicated to exploring the boundaries of **Complex Systems**, **Artificial Intelligence**, and **Agent-Based Simulation (NetLogo)**. My work focuses on applying quantitative methods to solve real-world problems in **IoT (Internet of Things)** and engineering.
 
-        I apply a range of qualitative and quantitative methods to comprehensively investigate the role of science and technology in the economy.
+        With a strong background in industry (Hyundai) and academia, I currently serve as a Professor at **UNASP** and **UNISAL**, shaping the next generation of tech professionals in Computer Engineering and System Information.
 
-        Please reach out to collaborate 😃
+        I am always open to discussing **Data Science**, **Python automation**, and innovative educational projects.
+
+        **Have a project in mind? Please reach out to collaborate! 😃**
     design:
       columns: '1'
   - block: collection

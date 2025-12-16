@@ -16,10 +16,9 @@ bio: "Dr. Leonardo Grando is a researcher focused on Complex Systems, Artificial
 
   He holds a Ph.D. in Technology from UNICAMP and works as an Assistant Professor at UNASP, pushing the boundaries of Educational Technology and IoT.\n"
 affiliations:
-  - name: "UNICAMP"
-    url: "https://www.unicamp.br/"
-  - name: "UNASP"
-    url: "https://www.unasp.br/"
+  - name: "UNISAL"
+    url: "https://unisal.br/"
+
 links:
   - icon: "hero/envelope"
     url: "mailto:lgrando@gmail.com"
