@@ -228,8 +228,8 @@ hugoblox:
   # Source code repository for "Edit this page" links
   # ────────────────────────────────────────────────────────────────────────────
   repository:
-    enable: false
-    url: "" # e.g., https://github.com/username/repo
+    enable: true
+    url: "" # e.g., https://github.com/lgrando1/lgrando1.github.io
     branch: main
     content_dir: content
 
@@ -258,7 +258,7 @@ hugoblox:
   # Privacy and compliance features
   # ────────────────────────────────────────────────────────────────────────────
   privacy:
-    enable: falso
+    enable: false
     privacy_policy_url: "/privacy/"
     anonymize_analytics: true
 
