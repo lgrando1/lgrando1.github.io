@@ -21,8 +21,8 @@ hugoblox:
     social:
       twitter: lgrando123
     name: Leonardo Grando
-    tagline: Professor | Technology PhD.
-    description: Dr. Leonardo Grando is a Technology Ph.D, This reseach include IoT devices battery recharging coordinations process in Agent-Based Simulation.
+    tagline: Professor, Researcher & Technology Ph.D.
+    description: Technology Ph.D. with expertise in Complex Systems, Agent-Based Simulation, and IoT device coordination. Professor of Computer Engineering.
 
   # ────────────────────────────────────────────────────────────────────────────
   # THEME
@@ -114,7 +114,7 @@ hugoblox:
   # ────────────────────────────────────────────────────────────────────────────
   copyright:
     # Copyright notice - supports {year}, {name}, {license} placeholders
-    notice: "© {year} {name}. This work is licensed under {license} Este site não utiliza cookies de rastreamento. Comentários via GitHub."
+    notice: "© {year} {name}. This work is licensed under {license}. Este site não utiliza cookies de rastreamento ou coleta dados pessoais (LGPD)."
     license:
       type: cc # cc | all_rights | custom
       allow_derivatives: false
@@ -179,7 +179,7 @@ hugoblox:
   # User comments system
   # ────────────────────────────────────────────────────────────────────────────
   comments:
-    enable: true
+    enable: false
     provider: "giscus" # giscus | disqus | commento
     giscus:
       repo: "lgrando1/discussao"
@@ -258,7 +258,8 @@ hugoblox:
   # Privacy and compliance features
   # ────────────────────────────────────────────────────────────────────────────
   privacy:
-    enable: true
+    enable: falso
+    privacy_policy_url: "/privacy/"
     anonymize_analytics: true
 
   # ────────────────────────────────────────────────────────────────────────────
