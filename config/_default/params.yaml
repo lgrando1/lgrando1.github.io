@@ -228,8 +228,8 @@ hugoblox:
   # Source code repository for "Edit this page" links
   # ────────────────────────────────────────────────────────────────────────────
   repository:
-    enable: true
-    url: "" # e.g., https://github.com/lgrando1/lgrando1.github.io
+    enable: false
+    url: "https://github.com/lgrando1/lgrando1.github.io" # e.g., 
     branch: main
     content_dir: content
 
