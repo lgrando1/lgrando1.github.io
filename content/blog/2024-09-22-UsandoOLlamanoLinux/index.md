@@ -9,7 +9,7 @@ subtitle: ''
 summary: 'Executando Ferramentas LLM Offline no Linux'
 authors: []
 lastmod: '2024-09-21T01:09:20-03:00'
-featured: no
+featured: yes
 image:
   caption: ''
   focal_point: ''

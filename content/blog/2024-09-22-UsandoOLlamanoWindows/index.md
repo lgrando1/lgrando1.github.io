@@ -9,7 +9,7 @@ subtitle: ''
 summary: 'Executando Ferramentas LLM Offline no Windows e como realizar a transferencia de modelos offline'
 authors: []
 lastmod: '2024-10-12T14:11:20-03:00'
-featured: no
+featured: yes
 image:
   caption: ''
   focal_point: ''

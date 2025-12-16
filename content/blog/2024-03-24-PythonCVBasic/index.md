@@ -10,7 +10,7 @@ subtitle: 'Classificação de imagens utilizando rede neurais no Python com a bi
 Summary: 'Classificação imagens utilizando rede neurais e Python' 
 authors: [] 
 lastmod: '2024-03-23T16:00:00-03:00' 
-featured: yes 
+featured: no
 image:
   caption: ''
   focal_point: ''

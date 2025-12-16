@@ -9,7 +9,7 @@ subtitle: 'Lista contendo interessantes recursos da internet'
 Summary: 'Esta publicação contém bons recursos para ajudar aprendizes novos e experientes'
 authors: []
 lastmod: '2024-07-01T21:39:08-03:00'
-featured: yes
+featured: no
 image:
   caption: ''
   focal_point: ''

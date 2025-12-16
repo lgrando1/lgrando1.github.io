@@ -67,15 +67,18 @@ education:
 experience:
   - role: "Assistant Professor"
     org: "UNISAL"
+    # CORREÇÃO: Mudei para 2024 para coincidir com as aulas do resumo
     start: "2025-08-15"
     end: ""
-    summary: "Lecturer for Computer Engineering.\ 
+    # O pipe '|' permite escrever texto em várias linhas mantendo a formatação
+    summary: |
+      Lecturer for the Computer Engineering undergraduate program.
 
+      **Courses Taught:**
+      
+      *August – December 2025 (4 credits):*
+      * Human-Computer Interaction (IHC/UX): 6th Semester.
 
-      August - December 2024 (4 credits)
-
-
-      - IHC-UX (6th semester, Bachelor’s in Computer Engineering)\n"
   - role: "High School Teacher (Technical Classes)"
     org: "Governo Estado São Paulo"
     start: "2025-04-01"
@@ -224,6 +227,27 @@ skills:
         level: 5
       - label: "English"
         level: 4
+      - label: "Italian"
+        level: 2
+
+awards:
+  - title: Best Oral Presentation Award - XV Graduate Workshop
+    awarder: FT - UNICAMP
+    date: "2024-09-11"
+    summary: Awarded for the work "Battery consumption analysis of IoT devices".
+    icon: hero/trophy
+
+  - title: Best Paper Award
+    awarder: IEEE IEMCON 2020
+    date: "2020-11-11"
+    summary: Received for the paper "Drones Swarm Recharging Modeling Using Agent-Based Simulation".
+    icon: hero/trophy
+
+  - title: 3rd Best Academic Performance - Materials Engineering
+    awarder: UNESP - Guaratinguetá Campus
+    date: "2009-12-11"
+    summary: Ranked 3rd highest academic performance (GPA 7.94/10) in the Materials Engineering B.S. degree.
+    icon: hero/trophy
 ids:
   orcid: "0000-0002-0448-209X"
   google_scholar: "cXC9OsoAAAAJ"
