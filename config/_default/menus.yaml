@@ -24,11 +24,11 @@ main:
     identifier: BAd0CSpk
     url: courses/
     weight: 50
-  - name: Blog
-    identifier: 94xh77zJ
-    url: /#news
-    weight: 60
   - name: CV
     identifier: cv
     url: /cv/index.html/
+    weight: 60
+  - name: Blog
+    identifier: 94xh77zJ
+    url: /post
     weight: 70
