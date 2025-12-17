@@ -19,6 +19,7 @@ affiliations:
   - name: "UNISAL"
     url: "https://unisal.br/"
 
+
 links:
   - icon: "hero/envelope"
     url: "mailto:lgrando@gmail.com"
@@ -38,9 +39,7 @@ links:
   - icon: brands/telegram
     icon_pack: fab
     link: https://t.me/simulacao  # <-- Ajuste o link aqui
-  - icon: brands/mastodon
-    icon_pack: fab
-    link: https://mastodon.social/@profdrlgrando
+
 interests:
   - "Artificial Intelligence & ML"
   - "Agent-Based Simulation (NetLogo)"
