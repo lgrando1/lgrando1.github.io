@@ -6,7 +6,7 @@
 # Website name (set in params.yaml under hugoblox.branding.name)
 title: ''
 # Website URL
-baseURL: "https://lgrando1.github.io/"
+baseURL: "https://lgrando1.github.io"
 
 ############################
 ## LANGUAGE
@@ -63,3 +63,12 @@ cascade:
       path: /docs/**
     params:
       commentable: false # Disable on docs by default
+
+taxonomies:
+  author: authors
+  tag: tags
+  publication_type: publication_types
+
+# ADICIONE ESTAS LINHAS:
+permalinks:
+  post: /post/:slug/
