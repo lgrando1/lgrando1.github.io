@@ -1,17 +1,10 @@
 # Configuration of Hugo
-# Guide: https://docs.hugoblox.com/tutorial/
-# Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
-# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
-
-# Website name (set in params.yaml under hugoblox.branding.name)
-title: ''
-# Website URL
 baseURL: "https://lgrando1.github.io"
+title: "Leonardo Grando"
 
 ############################
 ## LANGUAGE
 ############################
-
 defaultContentLanguage: en
 hasCJKLanguage: false
 defaultContentLanguageInSubdir: false
@@ -20,7 +13,6 @@ removePathAccents: true
 ############################
 ## ADVANCED
 ############################
-
 build:
   writeStats: true
 enableGitInfo: false
@@ -32,43 +24,53 @@ enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
 ignoreFiles: [".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
 disableAliases: true
+
 outputs:
   home: [HTML, RSS, headers, redirects, backlinks]
   section: [HTML, RSS]
+
 imaging:
   resampleFilter: lanczos
   quality: 90
   anchor: smart
   hint: picture
+
 timeout: 600000
+
 taxonomies:
   author: authors
   tag: tags
   publication_type: publication_types
+
+# Configuração de URLs amigáveis
+permalinks:
+  post: /post/:slug/
+
+# Resolve o problema de nomes vazios em seções para o Google
+content:
+  page_types:
+    post:
+      name: "Blog"
+
 markup:
   _merge: deep
   highlight:
     lineNos: false
+
 security:
   _merge: deep
+
 sitemap:
   _merge: deep
+  changefreq: weekly
+  priority: 0.5
 
 cascade:
   - target:
       path: /post/**
     params:
-      commentable: true
+      commentable: false # Como você removeu o Giscus, deixei false
   - target:
       path: /docs/**
     params:
-      commentable: false # Disable on docs by default
-
-taxonomies:
-  author: authors
-  tag: tags
-  publication_type: publication_types
-
-# ADICIONE ESTAS LINHAS:
-permalinks:
-  post: /post/:slug/
+      commentable: false
