@@ -1,8 +1,14 @@
 ---
+title: Posts
+linkTitle: Posts
+url: post/
 cms_exclude: true
+type: page
+
 header:
   caption: ""
   image: ""
-title: Posts
-view: article-grid
+
+design:
+  view: article-grid
 ---
