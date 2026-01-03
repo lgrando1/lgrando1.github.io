@@ -77,7 +77,7 @@ sections:
       title: Recent & Upcoming Talks
       filters:
         folders:
-          - events
+          - talk
     design:
       view: card
   - block: collection
