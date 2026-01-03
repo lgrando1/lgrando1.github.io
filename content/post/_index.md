@@ -1,13 +1,11 @@
 ---
-title: Posts
-linkTitle: Posts
-url: post/
+title: "Blog"
+linkTitle: "Blog"
+summary: "Posts e Artigos"
+url: "/post/"
+slug: "post"
+type: "page"
 cms_exclude: true
-type: page
-
-header:
-  caption: ""
-  image: ""
 
 design:
   view: article-grid
