@@ -19,11 +19,7 @@ date_end: "2025-12-10T00:00:00Z"
 all_day: true
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors:
-  - Gabriel Cerqueira Pires
-  - admin
-  - José Roberto Emiliano Leite
-  - Edson Luiz Ursini
+authors: []
 
 tags:
   - Network Performance
